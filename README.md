@@ -79,3 +79,9 @@ datasets it was built from (public domain, CC BY 4.0, government open licences a
 - **Each release attaches its own `ATTRIBUTION.md`**, covering only the sources of the packs in
   that release. An app that ships or displays placewise data should show those credit lines and
   read each licence for its own obligations.
+
+## Disclaimer
+
+The data packs are provided "as is" and "where is", with no warranty of any kind and no legal
+liability for their use. Names, boundaries and other data may be wrong or out of date and are not
+an official determination of any territory's status. See [DISCLAIMER.md](DISCLAIMER.md).
