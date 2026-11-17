@@ -1,0 +1,182 @@
+{
+  "_comment": "Time zones of the Canada pack: a curated dataset (CC BY 4.0, see datasets/LICENSE.md). packbuild.timezones turns it into the can pack's `timezones` polygon layer, which answers for points in Canada before the world pack's coarser layer. `admin1` has one entry per feature of the pack's provinces layer (statcan:<PRUID>): an IANA zone, or an object with `zone` (the rest of the province) and `parts` (census divisions statcan:<CDUID> and subdivisions statcan:<CSDUID> -> zone; a subdivision listed inside a listed division takes its own zone). A zone can be a list: the unit is split along a line the pack doesn't draw; the first entry is its main zone and the nearest town inside it whose zone is listed decides. Every zone must exist in the tz database; `sources` name entries of the top-level `sources`.",
+  "country": "CA",
+  "tzdb": "2026f",
+  "sources": {
+    "tzdb": {
+      "title": "IANA Time Zone Database 2026f: zone.tab and the commentary in northamerica",
+      "url": "https://data.iana.org/time-zones/releases/tzdata2026f.tar.gz",
+      "licence": "public domain"
+    }
+  },
+  "admin1": {
+    "statcan:10": {
+      "zone": "America/St_Johns",
+      "parts": {
+        "statcan:1010": "America/Goose_Bay",
+        "statcan:1011": "America/Goose_Bay",
+        "statcan:1010001": "America/St_Johns",
+        "statcan:1010002": "America/St_Johns",
+        "statcan:1010003": "America/St_Johns",
+        "statcan:1010004": "America/St_Johns",
+        "statcan:1010005": "America/St_Johns",
+        "statcan:1010006": "America/St_Johns",
+        "statcan:1010007": "America/St_Johns",
+        "statcan:1010009": "America/St_Johns",
+        "statcan:1010010": "America/St_Johns",
+        "statcan:1010011": "America/St_Johns",
+        "statcan:1010013": "America/St_Johns",
+        "statcan:1010008": [
+          "America/St_Johns",
+          "America/Goose_Bay"
+        ],
+        "statcan:1010032": "America/Halifax",
+        "statcan:1010034": "America/Halifax"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Labrador (census divisions 10 and 11) is America/Goose_Bay, except its southeast corner, which keeps Newfoundland time ('the southeast corner, including Port Hope Simpson and Mary's Harbour, but excluding, say, Black Tickle', tzdb northamerica): the Labrador Straits towns, Port Hope Simpson, St. Lewis, Mary's Harbour, Charlottetown and Division No. 10, Subd. A; Subd. B (Black Tickle, the coast north to Cartwright) is split, so its towns decide. 'West Labrador' (Labrador City, Wabush) is listed with America/Halifax."
+    },
+    "statcan:11": "America/Halifax",
+    "statcan:12": {
+      "zone": "America/Halifax",
+      "parts": {
+        "statcan:1215": "America/Glace_Bay",
+        "statcan:1216": "America/Glace_Bay",
+        "statcan:1217": "America/Glace_Bay",
+        "statcan:1218": "America/Glace_Bay"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: America/Glace_Bay 'NS (Cape Breton)'; tzdb: Sydney 'shares the same time history as Glace Bay, so was likely to be the same across the island': the island's four counties (Inverness, Richmond, Cape Breton, Victoria)."
+    },
+    "statcan:13": "America/Moncton",
+    "statcan:24": {
+      "zone": "America/Toronto",
+      "parts": {
+        "statcan:2401": "America/Halifax",
+        "statcan:2406804": "America/Halifax",
+        "statcan:2498005": "America/Blanc-Sablon",
+        "statcan:2498010": "America/Blanc-Sablon",
+        "statcan:2498012": "America/Blanc-Sablon",
+        "statcan:2498014": "America/Blanc-Sablon",
+        "statcan:2498015": "America/Blanc-Sablon",
+        "statcan:2498802": "America/Blanc-Sablon",
+        "statcan:2498912": "America/Blanc-Sablon"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "tzdb northamerica: America/Halifax 'also applies to Îles-de-la-Madeleine and the Listuguj reserve' (Legal Time Act, CQLR c T-5.1); east of Natashquan (the Lower North Shore: Blanc-Sablon, Bonne-Espérance, Saint-Augustin, Gros-Mécatina, Côte-Nord-du-Golfe-du-Saint-Laurent, Pakuashipi, Petit-Mécatina) keeps Atlantic standard time all year, America/Blanc-Sablon (zone.tab)."
+    },
+    "statcan:35": {
+      "zone": "America/Toronto",
+      "parts": {
+        "statcan:3559": "America/Winnipeg",
+        "statcan:3560": "America/Winnipeg",
+        "statcan:3559001": "America/Atikokan",
+        "statcan:3560049": "America/Atikokan",
+        "statcan:3560055": "America/Atikokan",
+        "statcan:3558085": "America/Atikokan",
+        "statcan:3560050": "America/Toronto",
+        "statcan:3560051": "America/Toronto",
+        "statcan:3560052": "America/Toronto",
+        "statcan:3560053": "America/Toronto",
+        "statcan:3560078": "America/Toronto",
+        "statcan:3560079": "America/Toronto",
+        "statcan:3560081": "America/Toronto",
+        "statcan:3560086": "America/Toronto",
+        "statcan:3560091": "America/Toronto",
+        "statcan:3560093": "America/Toronto",
+        "statcan:3558080": "America/Winnipeg",
+        "statcan:3560090": [
+          "America/Winnipeg",
+          "America/Toronto"
+        ],
+        "statcan:3558090": [
+          "America/Toronto",
+          "America/Winnipeg"
+        ]
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Ontario's Time Act puts the part west of 90°W on Central time (America/Winnipeg), with the exceptions tzdb northamerica records (2026-09-21): the area around Big Trout Lake (Kitchenuhmaykoosib Aaki, Wapekeka, Kasabonika, Wawakapewin, Kingfisher, Wunnumin) aligns with Winnipeg east of 90°W; Upsala (in Thunder Bay, Unorganized) keeps Eastern west of it; Atikokan, Pickle Lake and Mishkeegogamang (Osnaburgh 63A, 63B) keep EST all year (America/Atikokan). Kenora District's subdivisions east of 90°W outside the Big Trout Lake area are Eastern. The two unorganized areas straddle 90°W, so their towns decide."
+    },
+    "statcan:46": "America/Winnipeg",
+    "statcan:47": {
+      "zone": "America/Regina",
+      "parts": {
+        "statcan:4708004": "America/Swift_Current",
+        "statcan:4717029": "America/Edmonton",
+        "statcan:4718049": "America/Winnipeg",
+        "statcan:4718051": "America/Winnipeg",
+        "statcan:4718052": "America/Winnipeg"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "tzdb northamerica: most of Saskatchewan is America/Regina; Swift Current (America/Swift_Current, zone.tab 'SK (midwest)'); Lloydminster is like Edmonton; Denare Beach and Creighton (and Flin Flon's Saskatchewan part) are like Winnipeg."
+    },
+    "statcan:48": "America/Edmonton",
+    "statcan:59": {
+      "zone": "America/Vancouver",
+      "parts": {
+        "statcan:5901": "America/Edmonton",
+        "statcan:5939007": "America/Edmonton",
+        "statcan:5939011": "America/Edmonton",
+        "statcan:5903004": "America/Creston",
+        "statcan:5903807": "America/Creston",
+        "statcan:5903013": "America/Creston",
+        "statcan:5903017": "America/Creston",
+        "statcan:5903010": [
+          "America/Creston",
+          "America/Vancouver"
+        ],
+        "statcan:5955": "America/Dawson_Creek",
+        "statcan:5959": "America/Fort_Nelson"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "tzdb northamerica: the Regional District of East Kootenay, the Town of Golden and Columbia Shuswap Area A (Rural Golden) are aligned with Alberta (America/Edmonton); Creston and the Creston Valley (Central Kootenay B and C) keep MST (America/Creston), Area A (Kootenay Lake's east shore) is listed with both; the Peace River Regional District is America/Dawson_Creek ('Dawson Cr, Ft St John'); the Northern Rockies Regional Municipality is America/Fort_Nelson."
+    },
+    "statcan:60": {
+      "zone": "America/Whitehorse",
+      "parts": {
+        "statcan:6001029": "America/Dawson",
+        "statcan:6001031": "America/Dawson"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: America/Dawson 'Yukon (west)', drawn as Dawson and Moosehide Creek; Whitehorse elsewhere."
+    },
+    "statcan:61": {
+      "zone": "America/Edmonton",
+      "parts": {
+        "statcan:6101": "America/Inuvik"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: America/Inuvik 'NT (west)', drawn as the Inuvik region (census division 6101); America/Edmonton elsewhere."
+    },
+    "statcan:62": {
+      "zone": "America/Iqaluit",
+      "parts": {
+        "statcan:6205": "America/Rankin_Inlet",
+        "statcan:6205014": "America/Atikokan",
+        "statcan:6208": "America/Cambridge_Bay",
+        "statcan:6204022": "America/Resolute"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Iqaluit (most of Nunavut: Qikiqtaaluk), Rankin Inlet (Kivalliq), Cambridge Bay (Kitikmeot: 'Gjoa Haven, Taloyoak and Pelly Bay all use Mountain', tzdb), Resolute, and Coral Harbour on EST all year (America/Atikokan)."
+    }
+  },
+  "shapes": []
+}

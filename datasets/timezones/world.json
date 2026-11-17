@@ -1,0 +1,1587 @@
+{
+  "_comment": "Time zones of the world pack: a curated dataset (CC BY 4.0, see datasets/LICENSE.md). packbuild.timezones turns it into the world pack's `timezones` polygon layer. `countries` has one entry per unit of the world pack's countries layer (Natural Earth admin-0, ids iso:XX or ne:XXX): an IANA zone name for a country with one zone, null where tzdb records no zone (the nearest-city rule answers), or an object with `zone` (the whole country, or the rest of it when `admin1` lists exceptions) and `admin1` (Natural Earth admin-1 ids -> zone; without `zone` every admin-1 unit of the country is listed). A zone can be a list: the unit is split along lines Natural Earth doesn't draw, the first entry is its main zone and the nearest city inside the unit whose zone is listed decides. `shapes` are hand-drawn areas (boxes as [south, west, north, east], or a polygon of [lat, lon] points) that take precedence inside the unit named by `within`. Every zone must exist in the tz database; `sources` name entries of the top-level `sources`.",
+  "tzdb": "2026f",
+  "sources": {
+    "tzdb": {
+      "title": "IANA Time Zone Database 2026f: zone.tab and the commentary in africa, antarctica, asia, australasia, backward, europe, northamerica and southamerica",
+      "url": "https://data.iana.org/time-zones/releases/tzdata2026f.tar.gz",
+      "licence": "public domain"
+    },
+    "tz-world": {
+      "title": "Eric Muller, tz_world (efele.net/maps/tz/world), written zone definitions",
+      "url": "http://efele.net/maps/tz/world/",
+      "licence": "CC0 1.0"
+    }
+  },
+  "countries": {
+    "iso:ID": {
+      "admin1": {
+        "iso:ID-AC": "Asia/Jakarta",
+        "iso:ID-SU": "Asia/Jakarta",
+        "iso:ID-SB": "Asia/Jakarta",
+        "iso:ID-RI": "Asia/Jakarta",
+        "iso:ID-KR": "Asia/Jakarta",
+        "iso:ID-JA": "Asia/Jakarta",
+        "iso:ID-BE": "Asia/Jakarta",
+        "iso:ID-SS": "Asia/Jakarta",
+        "iso:ID-BB": "Asia/Jakarta",
+        "iso:ID-LA": "Asia/Jakarta",
+        "iso:ID-BT": "Asia/Jakarta",
+        "iso:ID-JK": "Asia/Jakarta",
+        "iso:ID-JB": "Asia/Jakarta",
+        "iso:ID-JT": "Asia/Jakarta",
+        "iso:ID-YO": "Asia/Jakarta",
+        "iso:ID-JI": "Asia/Jakarta",
+        "iso:ID-KB": "Asia/Pontianak",
+        "iso:ID-KT": "Asia/Pontianak",
+        "iso:ID-KI": "Asia/Makassar",
+        "iso:ID-KS": "Asia/Makassar",
+        "iso:ID-BA": "Asia/Makassar",
+        "iso:ID-NB": "Asia/Makassar",
+        "iso:ID-NT": "Asia/Makassar",
+        "iso:ID-SN": "Asia/Makassar",
+        "iso:ID-SG": "Asia/Makassar",
+        "iso:ID-ST": "Asia/Makassar",
+        "iso:ID-SA": "Asia/Makassar",
+        "iso:ID-GO": "Asia/Makassar",
+        "iso:ID-SR": "Asia/Makassar",
+        "iso:ID-MA": "Asia/Jayapura",
+        "iso:ID-MU": "Asia/Jayapura",
+        "iso:ID-PA": "Asia/Jayapura",
+        "iso:ID-PB": "Asia/Jayapura"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Java, Sumatra / Borneo (west, central) / Borneo (east, south), Sulawesi, Bali, Nusa Tenggara / New Guinea, Maluku. Natural Earth's Kalimantan Timur includes today's Kalimantan Utara."
+    },
+    "iso:MY": {
+      "zone": "Asia/Kuala_Lumpur",
+      "admin1": {
+        "iso:MY-12": "Asia/Kuching",
+        "iso:MY-13": "Asia/Kuching",
+        "iso:MY-15": "Asia/Kuching"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Sabah, Sarawak (and Labuan)."
+    },
+    "iso:CL": {
+      "zone": "America/Santiago",
+      "admin1": {
+        "iso:CL-AI": "America/Coyhaique",
+        "iso:CL-MA": "America/Punta_Arenas"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Aysén Region, Magallanes Region; Easter Island is a shape."
+    },
+    "iso:BO": "America/La_Paz",
+    "iso:PE": "America/Lima",
+    "iso:AR": {
+      "admin1": {
+        "iso:AR-B": "America/Argentina/Buenos_Aires",
+        "iso:AR-C": "America/Argentina/Buenos_Aires",
+        "iso:AR-X": "America/Argentina/Cordoba",
+        "iso:AR-H": "America/Argentina/Cordoba",
+        "iso:AR-W": "America/Argentina/Cordoba",
+        "iso:AR-E": "America/Argentina/Cordoba",
+        "iso:AR-P": "America/Argentina/Cordoba",
+        "iso:AR-N": "America/Argentina/Cordoba",
+        "iso:AR-G": "America/Argentina/Cordoba",
+        "iso:AR-S": "America/Argentina/Cordoba",
+        "iso:AR-A": "America/Argentina/Salta",
+        "iso:AR-L": "America/Argentina/Salta",
+        "iso:AR-Q": "America/Argentina/Salta",
+        "iso:AR-R": "America/Argentina/Salta",
+        "iso:AR-Y": "America/Argentina/Jujuy",
+        "iso:AR-T": "America/Argentina/Tucuman",
+        "iso:AR-K": "America/Argentina/Catamarca",
+        "iso:AR-U": "America/Argentina/Catamarca",
+        "iso:AR-F": "America/Argentina/La_Rioja",
+        "iso:AR-J": "America/Argentina/San_Juan",
+        "iso:AR-M": "America/Argentina/Mendoza",
+        "iso:AR-D": "America/Argentina/San_Luis",
+        "iso:AR-Z": "America/Argentina/Rio_Gallegos",
+        "iso:AR-V": "America/Argentina/Ushuaia"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "By province, as zone.tab's comments list them (BA, CF / CB, CC, CN, ER, FM, MN, SE, SF / SA, LP, NQ, RN / JY / TM / CT, CH / LR / SJ / MZ / SL / SC / TF). All share one offset today; they differ before 2010."
+    },
+    "ne:ESB": {
+      "zone": null,
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Dhekelia Sovereign Base Area: no tzdb record. No zone: the nearest-city rule answers, as before."
+    },
+    "iso:CY": {
+      "zone": "Asia/Nicosia",
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Natural Earth draws Northern Cyprus as its own unit (ne:CYN, Asia/Famagusta)."
+    },
+    "iso:IN": "Asia/Kolkata",
+    "iso:CN": {
+      "zone": "Asia/Shanghai",
+      "admin1": {
+        "iso:CN-XJ": "Asia/Urumqi"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Asia/Urumqi 'Xinjiang Time'; Beijing Time elsewhere."
+    },
+    "iso:IL": "Asia/Jerusalem",
+    "iso:PS": {
+      "admin1": {
+        "iso:PS-GZZ": "Asia/Gaza",
+        "iso:PS-WBK": "Asia/Hebron"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Gaza Strip, West Bank."
+    },
+    "iso:LB": "Asia/Beirut",
+    "iso:ET": "Africa/Addis_Ababa",
+    "iso:SS": "Africa/Juba",
+    "iso:SO": "Africa/Mogadishu",
+    "iso:KE": "Africa/Nairobi",
+    "iso:MW": "Africa/Blantyre",
+    "iso:TZ": "Africa/Dar_es_Salaam",
+    "iso:SY": "Asia/Damascus",
+    "ne:SOL": {
+      "zone": "Africa/Mogadishu",
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Somaliland keeps Somalia's time (tzdb zone.tab: SO Africa/Mogadishu)."
+    },
+    "iso:FR": {
+      "zone": "Europe/Paris",
+      "admin1": {
+        "iso:FR-GF": "America/Cayenne",
+        "iso:FR-MQ": "America/Martinique",
+        "iso:FR-GP": "America/Guadeloupe",
+        "iso:FR-RE": "Indian/Reunion",
+        "iso:FR-YT": "Indian/Mayotte"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Natural Earth's France includes the overseas departments, each with its own zone.tab zone (GF, MQ, GP, RE, YT)."
+    },
+    "iso:SR": "America/Paramaribo",
+    "iso:GY": "America/Guyana",
+    "iso:KR": "Asia/Seoul",
+    "iso:KP": "Asia/Pyongyang",
+    "iso:MA": "Africa/Casablanca",
+    "iso:EH": "Africa/El_Aaiun",
+    "iso:CR": "America/Costa_Rica",
+    "iso:NI": "America/Managua",
+    "iso:CG": "Africa/Brazzaville",
+    "iso:CD": {
+      "admin1": {
+        "iso:CD-KN": "Africa/Kinshasa",
+        "iso:CD-BC": "Africa/Kinshasa",
+        "iso:CD-BN": "Africa/Kinshasa",
+        "iso:CD-EQ": "Africa/Kinshasa",
+        "iso:CD-OR": "Africa/Lubumbashi",
+        "iso:CD-SK": "Africa/Lubumbashi",
+        "iso:CD-NK": "Africa/Lubumbashi",
+        "iso:CD-KA": "Africa/Lubumbashi",
+        "iso:CD-KW": "Africa/Lubumbashi",
+        "iso:CD-KE": "Africa/Lubumbashi",
+        "iso:CD-MA": "Africa/Lubumbashi"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "West (Kinshasa, Kongo Central, the former Bandundu and Équateur) and east (zone.tab 'Dem. Rep. of Congo (west)' / '(east)'), by the eleven former provinces Natural Earth draws."
+    },
+    "iso:BT": "Asia/Thimphu",
+    "iso:UA": {
+      "zone": "Europe/Kyiv",
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: most of Ukraine. Natural Earth's de facto Ukraine excludes Crimea (see iso:RU)."
+    },
+    "iso:BY": "Europe/Minsk",
+    "iso:NA": "Africa/Windhoek",
+    "iso:ZA": "Africa/Johannesburg",
+    "iso:MF": "America/Marigot",
+    "iso:SX": "America/Lower_Princes",
+    "iso:OM": "Asia/Muscat",
+    "iso:UZ": {
+      "admin1": {
+        "iso:UZ-TO": "Asia/Tashkent",
+        "iso:UZ-TK": "Asia/Tashkent",
+        "iso:UZ-SI": "Asia/Tashkent",
+        "iso:UZ-JI": "Asia/Tashkent",
+        "iso:UZ-AN": "Asia/Tashkent",
+        "iso:UZ-NG": "Asia/Tashkent",
+        "iso:UZ-FA": "Asia/Tashkent",
+        "iso:UZ-SA": "Asia/Samarkand",
+        "iso:UZ-QA": "Asia/Samarkand",
+        "iso:UZ-SU": "Asia/Samarkand",
+        "iso:UZ-QR": "Asia/Samarkand",
+        "iso:UZ-NW": "Asia/Samarkand",
+        "iso:UZ-XO": "Asia/Samarkand",
+        "iso:UZ-BU": "Asia/Samarkand"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "East (Tashkent): the oblasts tzdb's asia file names with Tashkent in 1991 (Andijan, Jizzakh, Namangan, Sirdarya, Tashkent, Fergana) and Tashkent city; west (Samarkand): the rest."
+    },
+    "iso:KZ": {
+      "admin1": {
+        "iso:KZ-VOS": "Asia/Almaty",
+        "iso:KZ-ZHA": "Asia/Almaty",
+        "iso:KZ-YUZ": "Asia/Almaty",
+        "iso:KZ-SEV": "Asia/Almaty",
+        "iso:KZ-PAV": "Asia/Almaty",
+        "iso:KZ-AKM": "Asia/Almaty",
+        "iso:KZ-KAR": "Asia/Almaty",
+        "iso:KZ-AST": "Asia/Almaty",
+        "ne:KAZ-3207": "Asia/Almaty",
+        "ne:KAZ-4829": "Asia/Almaty",
+        "iso:KZ-KZY": "Asia/Qyzylorda",
+        "iso:KZ-KUS": "Asia/Qostanay",
+        "iso:KZ-AKT": "Asia/Aqtobe",
+        "iso:KZ-MAN": "Asia/Aqtau",
+        "iso:KZ-ATY": "Asia/Atyrau",
+        "iso:KZ-ZAP": "Asia/Oral"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "By region, as tzdb's asia file lists them (Asia/Almaty: Abai, Aqmola, Almaty, Almaty city, Astana, East Kazakhstan, Jambyl, Jetisu, Karaganda, North Kazakhstan, Pavlodar, Shymkent, Turkistan, Ulytau). Natural Earth draws the regions before 2022 (South Kazakhstan for Turkistan and Shymkent; no Abai, Jetisu or Ulytau). One offset since 2024."
+    },
+    "iso:TJ": "Asia/Dushanbe",
+    "iso:LT": "Europe/Vilnius",
+    "iso:BR": {
+      "admin1": {
+        "iso:BR-AC": "America/Rio_Branco",
+        "iso:BR-AM": "America/Manaus",
+        "iso:BR-RR": "America/Boa_Vista",
+        "iso:BR-RO": "America/Porto_Velho",
+        "iso:BR-PA": [
+          "America/Belem",
+          "America/Santarem"
+        ],
+        "iso:BR-AP": "America/Belem",
+        "iso:BR-MA": "America/Fortaleza",
+        "iso:BR-PI": "America/Fortaleza",
+        "iso:BR-CE": "America/Fortaleza",
+        "iso:BR-RN": "America/Fortaleza",
+        "iso:BR-PB": "America/Fortaleza",
+        "iso:BR-PE": "America/Recife",
+        "iso:BR-AL": "America/Maceio",
+        "iso:BR-SE": "America/Maceio",
+        "iso:BR-BA": "America/Bahia",
+        "iso:BR-TO": "America/Araguaina",
+        "iso:BR-MS": "America/Campo_Grande",
+        "iso:BR-MT": "America/Cuiaba",
+        "iso:BR-GO": "America/Sao_Paulo",
+        "iso:BR-DF": "America/Sao_Paulo",
+        "iso:BR-MG": "America/Sao_Paulo",
+        "iso:BR-ES": "America/Sao_Paulo",
+        "iso:BR-RJ": "America/Sao_Paulo",
+        "iso:BR-SP": "America/Sao_Paulo",
+        "iso:BR-PR": "America/Sao_Paulo",
+        "iso:BR-SC": "America/Sao_Paulo",
+        "iso:BR-RS": "America/Sao_Paulo"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "By state (zone.tab). Pará is split along the river Xingu (tzdb southamerica), which Natural Earth doesn't draw, so the nearest city decides between Belém and Santarém time (one offset since 2008). West Amazonas and the Atlantic islands are shapes."
+    },
+    "iso:UY": "America/Montevideo",
+    "iso:MN": {
+      "zone": "Asia/Ulaanbaatar",
+      "admin1": {
+        "iso:MN-071": "Asia/Hovd",
+        "iso:MN-043": "Asia/Hovd",
+        "iso:MN-046": "Asia/Hovd"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Asia/Hovd 'Bayan-Olgii, Hovd, Uvs'."
+    },
+    "iso:RU": {
+      "admin1": {
+        "iso:RU-KGD": "Europe/Kaliningrad",
+        "iso:RU-MOW": "Europe/Moscow",
+        "iso:RU-MOS": "Europe/Moscow",
+        "iso:RU-SPE": "Europe/Moscow",
+        "iso:RU-LEN": "Europe/Moscow",
+        "iso:RU-PSK": "Europe/Moscow",
+        "iso:RU-NGR": "Europe/Moscow",
+        "iso:RU-TVE": "Europe/Moscow",
+        "iso:RU-SMO": "Europe/Moscow",
+        "iso:RU-BRY": "Europe/Moscow",
+        "iso:RU-KLU": "Europe/Moscow",
+        "iso:RU-ORL": "Europe/Moscow",
+        "iso:RU-KRS": "Europe/Moscow",
+        "iso:RU-BEL": "Europe/Moscow",
+        "iso:RU-VOR": "Europe/Moscow",
+        "iso:RU-LIP": "Europe/Moscow",
+        "iso:RU-TAM": "Europe/Moscow",
+        "iso:RU-RYA": "Europe/Moscow",
+        "iso:RU-TUL": "Europe/Moscow",
+        "iso:RU-VLA": "Europe/Moscow",
+        "iso:RU-IVA": "Europe/Moscow",
+        "iso:RU-YAR": "Europe/Moscow",
+        "iso:RU-KOS": "Europe/Moscow",
+        "iso:RU-VLG": "Europe/Moscow",
+        "iso:RU-ARK": "Europe/Moscow",
+        "iso:RU-NEN": "Europe/Moscow",
+        "iso:RU-KO": "Europe/Moscow",
+        "iso:RU-MUR": "Europe/Moscow",
+        "iso:RU-KR": "Europe/Moscow",
+        "iso:RU-NIZ": "Europe/Moscow",
+        "iso:RU-CU": "Europe/Moscow",
+        "iso:RU-ME": "Europe/Moscow",
+        "iso:RU-MO": "Europe/Moscow",
+        "iso:RU-PNZ": "Europe/Moscow",
+        "iso:RU-TA": "Europe/Moscow",
+        "iso:RU-KL": "Europe/Moscow",
+        "iso:RU-STA": "Europe/Moscow",
+        "iso:RU-KDA": "Europe/Moscow",
+        "iso:RU-AD": "Europe/Moscow",
+        "iso:RU-KC": "Europe/Moscow",
+        "iso:RU-KB": "Europe/Moscow",
+        "iso:RU-SE": "Europe/Moscow",
+        "iso:RU-IN": "Europe/Moscow",
+        "iso:RU-CE": "Europe/Moscow",
+        "iso:RU-DA": "Europe/Moscow",
+        "iso:RU-ROS": "Europe/Moscow",
+        "iso:RU-KIR": "Europe/Kirov",
+        "iso:RU-VGG": "Europe/Volgograd",
+        "iso:RU-AST": "Europe/Astrakhan",
+        "iso:RU-SAR": "Europe/Saratov",
+        "iso:RU-ULY": "Europe/Ulyanovsk",
+        "iso:RU-SAM": "Europe/Samara",
+        "iso:RU-UD": "Europe/Samara",
+        "iso:RU-PER": "Asia/Yekaterinburg",
+        "iso:RU-BA": "Asia/Yekaterinburg",
+        "iso:RU-ORE": "Asia/Yekaterinburg",
+        "iso:RU-SVE": "Asia/Yekaterinburg",
+        "iso:RU-CHE": "Asia/Yekaterinburg",
+        "iso:RU-KGN": "Asia/Yekaterinburg",
+        "iso:RU-TYU": "Asia/Yekaterinburg",
+        "iso:RU-KHM": "Asia/Yekaterinburg",
+        "iso:RU-YAN": "Asia/Yekaterinburg",
+        "iso:RU-OMS": "Asia/Omsk",
+        "iso:RU-NVS": "Asia/Novosibirsk",
+        "iso:RU-ALT": "Asia/Barnaul",
+        "iso:RU-AL": "Asia/Barnaul",
+        "iso:RU-TOM": "Asia/Tomsk",
+        "iso:RU-KEM": "Asia/Novokuznetsk",
+        "iso:RU-KYA": "Asia/Krasnoyarsk",
+        "iso:RU-KK": "Asia/Krasnoyarsk",
+        "iso:RU-TY": "Asia/Krasnoyarsk",
+        "iso:RU-IRK": "Asia/Irkutsk",
+        "iso:RU-BU": "Asia/Irkutsk",
+        "iso:RU-ZAB": "Asia/Chita",
+        "iso:RU-AMU": "Asia/Yakutsk",
+        "iso:RU-KHA": "Asia/Vladivostok",
+        "iso:RU-PRI": "Asia/Vladivostok",
+        "iso:RU-YEV": "Asia/Vladivostok",
+        "iso:RU-MAG": "Asia/Magadan",
+        "iso:RU-SAK": "Asia/Sakhalin",
+        "iso:RU-KAM": "Asia/Kamchatka",
+        "iso:RU-CHU": "Asia/Anadyr",
+        "iso:RU-SA": [
+          "Asia/Yakutsk",
+          "Asia/Khandyga",
+          "Asia/Ust-Nera",
+          "Asia/Srednekolymsk"
+        ],
+        "iso:UA-43": "Europe/Simferopol",
+        "iso:UA-40": "Europe/Simferopol",
+        "ne:RUS+99?": "Asia/Yekaterinburg"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "By federal subject (zone.tab and tzdb's europe and asia files). Natural Earth draws Crimea and Sevastopol (iso:UA-43, iso:UA-40) in Russia, which administers them: Europe/Simferopol. Sakha is split by districts Natural Earth doesn't draw (Khandyga: Tomponsky, Ust-Maysky; Ust-Nera: Oymyakonsky; Srednekolymsk: the east), so the nearest city decides. The North Kuril Islands (Asia/Srednekolymsk) are a shape. ne:RUS+99? is an islet off Yamal."
+    },
+    "iso:CZ": "Europe/Prague",
+    "iso:DE": {
+      "zone": "Europe/Berlin",
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Europe/Busingen (the Büsingen exclave) is not drawn: Natural Earth puts the exclave in Switzerland, whose zone has the same rules."
+    },
+    "iso:EE": "Europe/Tallinn",
+    "iso:LV": "Europe/Riga",
+    "iso:NO": {
+      "zone": "Europe/Oslo",
+      "admin1": {
+        "iso:NO-21": "Arctic/Longyearbyen",
+        "ne:BVT+00?": null
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Svalbard: zone.tab SJ Arctic/Longyearbyen. Bouvet Island: never inhabited (tzdb antarctica), no zone."
+    },
+    "iso:SE": "Europe/Stockholm",
+    "iso:FI": "Europe/Helsinki",
+    "iso:VN": "Asia/Ho_Chi_Minh",
+    "iso:KH": "Asia/Phnom_Penh",
+    "iso:LU": "Europe/Luxembourg",
+    "iso:AE": "Asia/Dubai",
+    "iso:BE": "Europe/Brussels",
+    "iso:GE": "Asia/Tbilisi",
+    "iso:MK": "Europe/Skopje",
+    "iso:AL": "Europe/Tirane",
+    "iso:AZ": "Asia/Baku",
+    "iso:XK": {
+      "zone": "Europe/Belgrade",
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "tzdb's europe file lists Kosovo under Europe/Belgrade; Kosovo has no zone.tab line."
+    },
+    "iso:TR": "Europe/Istanbul",
+    "iso:ES": {
+      "zone": "Europe/Madrid",
+      "admin1": {
+        "iso:ES-CE": "Africa/Ceuta",
+        "iso:ES-ML": "Africa/Ceuta",
+        "iso:ES-TF": "Atlantic/Canary",
+        "iso:ES-GC": "Atlantic/Canary"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Ceuta and Melilla; the Canary Islands (both provinces)."
+    },
+    "iso:LA": "Asia/Vientiane",
+    "iso:KG": "Asia/Bishkek",
+    "iso:AM": "Asia/Yerevan",
+    "iso:DK": "Europe/Copenhagen",
+    "iso:LY": "Africa/Tripoli",
+    "iso:TN": "Africa/Tunis",
+    "iso:RO": "Europe/Bucharest",
+    "iso:HU": "Europe/Budapest",
+    "iso:SK": "Europe/Bratislava",
+    "iso:PL": "Europe/Warsaw",
+    "iso:IE": "Europe/Dublin",
+    "iso:GB": "Europe/London",
+    "iso:GR": "Europe/Athens",
+    "iso:ZM": "Africa/Lusaka",
+    "iso:SL": "Africa/Freetown",
+    "iso:GN": "Africa/Conakry",
+    "iso:LR": "Africa/Monrovia",
+    "iso:CF": "Africa/Bangui",
+    "iso:SD": "Africa/Khartoum",
+    "iso:DJ": "Africa/Djibouti",
+    "iso:ER": "Africa/Asmara",
+    "iso:AT": "Europe/Vienna",
+    "iso:IQ": "Asia/Baghdad",
+    "iso:IT": "Europe/Rome",
+    "iso:CH": "Europe/Zurich",
+    "iso:IR": "Asia/Tehran",
+    "iso:NL": {
+      "zone": "Europe/Amsterdam",
+      "admin1": {
+        "iso:NL-BQ1": "America/Kralendijk",
+        "iso:NL-BQ2": "America/Kralendijk",
+        "iso:NL-BQ3": "America/Kralendijk"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Natural Earth's Netherlands includes Bonaire, Sint Eustatius and Saba (zone.tab: BQ America/Kralendijk)."
+    },
+    "iso:LI": "Europe/Vaduz",
+    "iso:CI": "Africa/Abidjan",
+    "iso:RS": "Europe/Belgrade",
+    "iso:ML": "Africa/Bamako",
+    "iso:SN": "Africa/Dakar",
+    "iso:NG": "Africa/Lagos",
+    "iso:BJ": "Africa/Porto-Novo",
+    "iso:AO": "Africa/Luanda",
+    "iso:HR": "Europe/Zagreb",
+    "iso:SI": "Europe/Ljubljana",
+    "iso:QA": "Asia/Qatar",
+    "iso:SA": "Asia/Riyadh",
+    "iso:BW": "Africa/Gaborone",
+    "iso:ZW": "Africa/Harare",
+    "iso:PK": "Asia/Karachi",
+    "iso:BG": "Europe/Sofia",
+    "iso:TH": "Asia/Bangkok",
+    "iso:SM": "Europe/San_Marino",
+    "iso:HT": "America/Port-au-Prince",
+    "iso:DO": "America/Santo_Domingo",
+    "iso:TD": "Africa/Ndjamena",
+    "iso:KW": "Asia/Kuwait",
+    "iso:SV": "America/El_Salvador",
+    "iso:GT": "America/Guatemala",
+    "iso:TL": "Asia/Dili",
+    "iso:BN": "Asia/Brunei",
+    "iso:MC": "Europe/Monaco",
+    "iso:DZ": "Africa/Algiers",
+    "iso:MZ": "Africa/Maputo",
+    "iso:SZ": "Africa/Mbabane",
+    "iso:BI": "Africa/Bujumbura",
+    "iso:RW": "Africa/Kigali",
+    "iso:MM": "Asia/Yangon",
+    "iso:BD": "Asia/Dhaka",
+    "iso:AD": "Europe/Andorra",
+    "iso:AF": "Asia/Kabul",
+    "iso:ME": "Europe/Podgorica",
+    "iso:BA": "Europe/Sarajevo",
+    "iso:UG": "Africa/Kampala",
+    "ne:USG": {
+      "zone": null,
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Guantanamo Bay Naval Base: no tzdb record. No zone: the nearest-city rule answers, as before."
+    },
+    "iso:CU": "America/Havana",
+    "iso:HN": "America/Tegucigalpa",
+    "iso:EC": {
+      "zone": "America/Guayaquil",
+      "admin1": {
+        "iso:EC-W": "Pacific/Galapagos"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab."
+    },
+    "iso:CO": "America/Bogota",
+    "iso:PY": "America/Asuncion",
+    "ne:BRI": {
+      "zone": "America/Sao_Paulo",
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Brazilian Island (Ilha Brasileira), administered by Brazil from Rio Grande do Sul (zone.tab: America/Sao_Paulo covers RS)."
+    },
+    "iso:PT": {
+      "zone": "Europe/Lisbon",
+      "admin1": {
+        "iso:PT-30": "Atlantic/Madeira",
+        "iso:PT-20": "Atlantic/Azores"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab."
+    },
+    "iso:MD": "Europe/Chisinau",
+    "iso:TM": "Asia/Ashgabat",
+    "iso:JO": "Asia/Amman",
+    "iso:NP": "Asia/Kathmandu",
+    "iso:LS": "Africa/Maseru",
+    "iso:CM": "Africa/Douala",
+    "iso:GA": "Africa/Libreville",
+    "iso:NE": "Africa/Niamey",
+    "iso:BF": "Africa/Ouagadougou",
+    "iso:TG": "Africa/Lome",
+    "iso:GH": "Africa/Accra",
+    "iso:GW": "Africa/Bissau",
+    "iso:GI": "Europe/Gibraltar",
+    "iso:US": {
+      "admin1": {
+        "iso:US-AL": "America/Chicago",
+        "iso:US-AR": "America/Chicago",
+        "iso:US-IL": "America/Chicago",
+        "iso:US-IA": "America/Chicago",
+        "iso:US-LA": "America/Chicago",
+        "iso:US-MN": "America/Chicago",
+        "iso:US-MS": "America/Chicago",
+        "iso:US-MO": "America/Chicago",
+        "iso:US-OK": "America/Chicago",
+        "iso:US-WI": "America/Chicago",
+        "iso:US-CT": "America/New_York",
+        "iso:US-DE": "America/New_York",
+        "iso:US-DC": "America/New_York",
+        "iso:US-GA": "America/New_York",
+        "iso:US-ME": "America/New_York",
+        "iso:US-MD": "America/New_York",
+        "iso:US-MA": "America/New_York",
+        "iso:US-NH": "America/New_York",
+        "iso:US-NJ": "America/New_York",
+        "iso:US-NY": "America/New_York",
+        "iso:US-NC": "America/New_York",
+        "iso:US-OH": "America/New_York",
+        "iso:US-PA": "America/New_York",
+        "iso:US-RI": "America/New_York",
+        "iso:US-SC": "America/New_York",
+        "iso:US-VT": "America/New_York",
+        "iso:US-VA": "America/New_York",
+        "iso:US-WV": "America/New_York",
+        "iso:US-CO": "America/Denver",
+        "iso:US-MT": "America/Denver",
+        "iso:US-NM": "America/Denver",
+        "iso:US-UT": "America/Denver",
+        "iso:US-WY": "America/Denver",
+        "iso:US-CA": "America/Los_Angeles",
+        "iso:US-WA": "America/Los_Angeles",
+        "iso:US-HI": "Pacific/Honolulu",
+        "iso:US-AK": [
+          "America/Anchorage",
+          "America/Juneau",
+          "America/Sitka",
+          "America/Metlakatla",
+          "America/Yakutat",
+          "America/Nome"
+        ],
+        "iso:US-AZ": [
+          "America/Phoenix",
+          "America/Denver"
+        ],
+        "iso:US-FL": [
+          "America/New_York",
+          "America/Chicago"
+        ],
+        "iso:US-ID": [
+          "America/Boise",
+          "America/Los_Angeles"
+        ],
+        "iso:US-IN": [
+          "America/Indiana/Indianapolis",
+          "America/Chicago",
+          "America/New_York",
+          "America/Kentucky/Louisville",
+          "America/Indiana/Vincennes",
+          "America/Indiana/Winamac",
+          "America/Indiana/Marengo",
+          "America/Indiana/Petersburg",
+          "America/Indiana/Vevay",
+          "America/Indiana/Tell_City",
+          "America/Indiana/Knox"
+        ],
+        "iso:US-KS": [
+          "America/Chicago",
+          "America/Denver"
+        ],
+        "iso:US-KY": [
+          "America/New_York",
+          "America/Chicago",
+          "America/Kentucky/Louisville",
+          "America/Kentucky/Monticello"
+        ],
+        "iso:US-MI": [
+          "America/Detroit",
+          "America/Menominee"
+        ],
+        "iso:US-NE": [
+          "America/Chicago",
+          "America/Denver"
+        ],
+        "iso:US-NV": [
+          "America/Los_Angeles",
+          "America/Denver"
+        ],
+        "iso:US-ND": [
+          "America/Chicago",
+          "America/Denver",
+          "America/North_Dakota/Center",
+          "America/North_Dakota/New_Salem",
+          "America/North_Dakota/Beulah"
+        ],
+        "iso:US-OR": [
+          "America/Los_Angeles",
+          "America/Boise"
+        ],
+        "iso:US-SD": [
+          "America/Chicago",
+          "America/Denver"
+        ],
+        "iso:US-TN": [
+          "America/Chicago",
+          "America/New_York"
+        ],
+        "iso:US-TX": [
+          "America/Chicago",
+          "America/Denver"
+        ]
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "By state; a state that zone lines cross lists its zones, and in the world pack the nearest city decides among them. The US pack draws them by county (datasets/timezones/usa.json). The western Aleutians are a shape."
+    },
+    "iso:CA": {
+      "admin1": {
+        "iso:CA-BC": [
+          "America/Vancouver",
+          "America/Edmonton",
+          "America/Dawson_Creek",
+          "America/Fort_Nelson",
+          "America/Creston"
+        ],
+        "iso:CA-AB": "America/Edmonton",
+        "iso:CA-SK": [
+          "America/Regina",
+          "America/Swift_Current",
+          "America/Edmonton",
+          "America/Winnipeg"
+        ],
+        "iso:CA-MB": "America/Winnipeg",
+        "iso:CA-ON": [
+          "America/Toronto",
+          "America/Winnipeg",
+          "America/Atikokan"
+        ],
+        "iso:CA-QC": [
+          "America/Toronto",
+          "America/Halifax",
+          "America/Blanc-Sablon"
+        ],
+        "iso:CA-NB": "America/Moncton",
+        "iso:CA-PE": "America/Halifax",
+        "iso:CA-NS": [
+          "America/Halifax",
+          "America/Glace_Bay"
+        ],
+        "iso:CA-NL": [
+          "America/St_Johns",
+          "America/Goose_Bay",
+          "America/Halifax"
+        ],
+        "iso:CA-YT": [
+          "America/Whitehorse",
+          "America/Dawson"
+        ],
+        "iso:CA-NT": [
+          "America/Edmonton",
+          "America/Inuvik"
+        ],
+        "iso:CA-NU": [
+          "America/Iqaluit",
+          "America/Rankin_Inlet",
+          "America/Cambridge_Bay",
+          "America/Resolute",
+          "America/Atikokan"
+        ]
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "By province; the split provinces follow municipal lines Natural Earth doesn't draw, so in the world pack the nearest city decides among their zones. The Canada pack draws them (datasets/timezones/can.json)."
+    },
+    "iso:MX": {
+      "zone": "America/Mexico_City",
+      "admin1": {
+        "iso:MX-SON": "America/Hermosillo",
+        "iso:MX-BCN": "America/Tijuana",
+        "iso:MX-CHH": [
+          "America/Chihuahua",
+          "America/Ciudad_Juarez",
+          "America/Ojinaga"
+        ],
+        "iso:MX-COA": [
+          "America/Monterrey",
+          "America/Matamoros"
+        ],
+        "iso:MX-NLE": [
+          "America/Monterrey",
+          "America/Matamoros"
+        ],
+        "iso:MX-TAM": [
+          "America/Monterrey",
+          "America/Matamoros"
+        ],
+        "iso:MX-DUR": "America/Monterrey",
+        "iso:MX-ROO": "America/Cancun",
+        "iso:MX-CAM": "America/Merida",
+        "iso:MX-YUC": "America/Merida",
+        "ne:MEX+99?": "America/Merida",
+        "iso:MX-NAY": [
+          "America/Mazatlan",
+          "America/Bahia_Banderas"
+        ],
+        "iso:MX-BCS": "America/Mazatlan",
+        "iso:MX-SIN": "America/Mazatlan"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "By state (zone.tab). The US border strips (Ciudad Juárez, Ojinaga, Matamoros) and Bahía de Banderas are municipios Natural Earth doesn't draw, so in those states the nearest city decides. ne:MEX+99? is an islet off Yucatán."
+    },
+    "iso:BZ": "America/Belize",
+    "iso:PA": "America/Panama",
+    "iso:VE": "America/Caracas",
+    "iso:PG": {
+      "zone": "Pacific/Port_Moresby",
+      "admin1": {
+        "iso:PG-NSB": "Pacific/Bougainville"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab."
+    },
+    "iso:EG": "Africa/Cairo",
+    "iso:YE": "Asia/Aden",
+    "iso:MR": "Africa/Nouakchott",
+    "iso:GQ": "Africa/Malabo",
+    "iso:GM": "Africa/Banjul",
+    "iso:HK": "Asia/Hong_Kong",
+    "iso:VA": "Europe/Vatican",
+    "ne:CYN": {
+      "zone": "Asia/Famagusta",
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Asia/Famagusta, Northern Cyprus."
+    },
+    "ne:CNM": {
+      "zone": null,
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "United Nations Buffer Zone in Cyprus: no tzdb record. No zone: the nearest-city rule answers, as before."
+    },
+    "ne:KAS": {
+      "zone": "Asia/Kolkata",
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Siachen Glacier: administered by India, so India's zone (zone.tab: IN Asia/Kolkata). Under a worldview that reports the area as another single-zone country, the engine reports that country's zone."
+    },
+    "ne:KAB": {
+      "zone": null,
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Baikonur (leased to Russia): no tzdb record. No zone: the nearest-city rule answers, as before."
+    },
+    "ne:WSB": {
+      "zone": null,
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Akrotiri Sovereign Base Area: no tzdb record. No zone: the nearest-city rule answers, as before."
+    },
+    "ne:SPI": {
+      "zone": null,
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Southern Patagonian Ice Field: undemarcated, uninhabited. No zone: the nearest-city rule answers, as before."
+    },
+    "ne:BRT": {
+      "zone": null,
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Bir Tawil: claimed by no country, uninhabited. No zone: the nearest-city rule answers, as before."
+    },
+    "iso:AQ": {
+      "zone": null,
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Antarctica has no zone outside its research stations; each station keeps the zone zone.tab gives it, drawn as a box around the station (shapes). Elsewhere the nearest-city rule answers, as before."
+    },
+    "iso:AU": {
+      "admin1": {
+        "iso:AU-WA": "Australia/Perth",
+        "iso:AU-NT": "Australia/Darwin",
+        "iso:AU-SA": "Australia/Adelaide",
+        "iso:AU-QLD": "Australia/Brisbane",
+        "ne:AUS-2654": [
+          "Australia/Sydney",
+          "Australia/Broken_Hill"
+        ],
+        "ne:AUS-1932": "Australia/Sydney",
+        "iso:AU-VIC": "Australia/Melbourne",
+        "iso:AU-TAS": "Australia/Hobart",
+        "ne:AUS+00?": "Antarctica/Macquarie",
+        "ne:AUS-2659": "Australia/Lord_Howe",
+        "iso:AU-ACT": "Australia/Sydney"
+      },
+      "sources": [
+        "tzdb",
+        "tz-world"
+      ],
+      "notes": "States and territories. New South Wales is split: Broken Hill means the County of Yancowinna (tzdb australasia, 'Yancowinna'), which Natural Earth doesn't draw, so the nearest city decides between Sydney and Broken Hill time. Eucla is a shape. Australia/Lindeman (the Whitsunday Islands) is not drawn: it has matched Brisbane since 1992."
+    },
+    "iso:GL": {
+      "zone": "America/Nuuk",
+      "admin1": {
+        "ne:GRL-2742": "America/Danmarkshavn",
+        "ne:GRL-2738": "America/Thule"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Danmarkshavn 'National Park (east coast)', Thule 'Thule/Pituffik'; Scoresbysund/Ittoqqortoormiit is a shape."
+    },
+    "iso:FJ": "Pacific/Fiji",
+    "iso:NZ": {
+      "zone": "Pacific/Auckland",
+      "admin1": {
+        "iso:NZ-CIT": "Pacific/Chatham"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Chatham Islands. Natural Earth's New Zealand includes Tokelau (a shape, zone.tab TK Pacific/Fakaofo)."
+    },
+    "iso:NC": "Pacific/Noumea",
+    "iso:MG": "Indian/Antananarivo",
+    "iso:PH": "Asia/Manila",
+    "iso:LK": "Asia/Colombo",
+    "iso:CW": "America/Curacao",
+    "iso:AW": "America/Aruba",
+    "iso:BS": "America/Nassau",
+    "iso:TC": "America/Grand_Turk",
+    "iso:TW": "Asia/Taipei",
+    "iso:JP": "Asia/Tokyo",
+    "iso:PM": "America/Miquelon",
+    "iso:IS": "Atlantic/Reykjavik",
+    "iso:PN": "Pacific/Pitcairn",
+    "iso:PF": {
+      "zone": "Pacific/Tahiti",
+      "admin1": {
+        "ne:PYF-4967": "Pacific/Marquesas"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Society Islands / Marquesas Islands; the Gambier Islands are a shape inside Natural Earth's Tuamotu-Gambier."
+    },
+    "iso:TF": "Indian/Kerguelen",
+    "iso:SC": "Indian/Mahe",
+    "iso:KI": {
+      "zone": "Pacific/Tarawa",
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Gilbert Islands; the Phoenix and Line Islands are shapes (Natural Earth draws Kiribati as one unit)."
+    },
+    "iso:MH": {
+      "zone": "Pacific/Majuro",
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab; Kwajalein is a shape."
+    },
+    "iso:TT": "America/Port_of_Spain",
+    "iso:GD": "America/Grenada",
+    "iso:VC": "America/St_Vincent",
+    "iso:BB": "America/Barbados",
+    "iso:LC": "America/St_Lucia",
+    "iso:DM": "America/Dominica",
+    "iso:UM": {
+      "admin1": {
+        "iso:UM-67": "Pacific/Honolulu",
+        "iso:UM-79": "Pacific/Wake",
+        "iso:UM-71": "Pacific/Midway",
+        "iso:UM-86": null,
+        "iso:UM-81": null,
+        "iso:UM-84": null,
+        "iso:UM-76": null,
+        "iso:UM-95": null
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Midway, Wake; Johnston Atoll follows Honolulu (tzdb backward: Pacific/Johnston links to Pacific/Honolulu). Jarvis, Baker, Howland, Navassa and Palmyra are uninhabited: no zone."
+    },
+    "iso:MS": "America/Montserrat",
+    "iso:AG": "America/Antigua",
+    "iso:KN": "America/St_Kitts",
+    "iso:VI": "America/St_Thomas",
+    "iso:BL": "America/St_Barthelemy",
+    "iso:PR": "America/Puerto_Rico",
+    "iso:AI": "America/Anguilla",
+    "iso:VG": "America/Tortola",
+    "iso:JM": "America/Jamaica",
+    "iso:KY": "America/Cayman",
+    "iso:BM": "Atlantic/Bermuda",
+    "iso:HM": {
+      "zone": null,
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Heard Island and McDonald Islands: uninhabited (tzdb antarctica). No zone: the nearest-city rule answers, as before."
+    },
+    "iso:SH": "Atlantic/St_Helena",
+    "iso:MU": "Indian/Mauritius",
+    "iso:KM": "Indian/Comoro",
+    "iso:ST": "Africa/Sao_Tome",
+    "iso:CV": "Atlantic/Cape_Verde",
+    "iso:MT": "Europe/Malta",
+    "iso:JE": "Europe/Jersey",
+    "iso:GG": "Europe/Guernsey",
+    "iso:IM": "Europe/Isle_of_Man",
+    "iso:AX": "Europe/Mariehamn",
+    "iso:FO": "Atlantic/Faroe",
+    "ne:IOA": {
+      "admin1": {
+        "ne:IOA-1928": "Indian/Cocos",
+        "ne:IOA-2652": "Indian/Christmas"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: CC Indian/Cocos, CX Indian/Christmas."
+    },
+    "iso:IO": "Indian/Chagos",
+    "iso:SG": "Asia/Singapore",
+    "iso:NF": "Pacific/Norfolk",
+    "iso:CK": "Pacific/Rarotonga",
+    "iso:TO": "Pacific/Tongatapu",
+    "iso:WF": "Pacific/Wallis",
+    "iso:WS": "Pacific/Apia",
+    "iso:SB": "Pacific/Guadalcanal",
+    "iso:TV": "Pacific/Funafuti",
+    "iso:MV": "Indian/Maldives",
+    "iso:NR": "Pacific/Nauru",
+    "iso:FM": {
+      "admin1": {
+        "iso:FM-KSA": "Pacific/Kosrae",
+        "iso:FM-PNI": "Pacific/Pohnpei",
+        "iso:FM-TRK": "Pacific/Chuuk",
+        "iso:FM-YAP": "Pacific/Chuuk"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Chuuk/Truk, Yap / Pohnpei / Kosrae."
+    },
+    "iso:GS": "Atlantic/South_Georgia",
+    "iso:FK": "Atlantic/Stanley",
+    "iso:VU": "Pacific/Efate",
+    "iso:NU": "Pacific/Niue",
+    "iso:AS": "Pacific/Pago_Pago",
+    "iso:PW": "Pacific/Palau",
+    "iso:GU": "Pacific/Guam",
+    "iso:MP": "Pacific/Saipan",
+    "iso:BH": "Asia/Bahrain",
+    "ne:CSI": {
+      "zone": null,
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Coral Sea Islands: tzdb 'no times are set'. No zone: the nearest-city rule answers, as before."
+    },
+    "ne:PGA": {
+      "zone": null,
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Spratly Islands (Natural Earth's name field reads Wake Island): tzdb 'Spratly Is: no information'. No zone: the nearest-city rule answers, as before."
+    },
+    "ne:CLP": {
+      "zone": null,
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Clipperton Island: uninhabited (tzdb australasia). No zone: the nearest-city rule answers, as before."
+    },
+    "iso:MO": "Asia/Macau",
+    "ne:ATC": {
+      "zone": null,
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Ashmore and Cartier Islands: tzdb 'no times are set'. No zone: the nearest-city rule answers, as before."
+    },
+    "ne:BJN": {
+      "zone": null,
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Bajo Nuevo Bank: uninhabited reef, no tzdb record. No zone: the nearest-city rule answers, as before."
+    },
+    "ne:SER": {
+      "zone": null,
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Serranilla Bank: uninhabited reef, no tzdb record. No zone: the nearest-city rule answers, as before."
+    },
+    "ne:SCR": {
+      "zone": null,
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Scarborough Shoal: uninhabited reef, no tzdb record. No zone: the nearest-city rule answers, as before."
+    }
+  },
+  "shapes": [
+    {
+      "id": "tz:eucla",
+      "name": "Eucla (Central Western Time)",
+      "zone": "Australia/Eucla",
+      "within": "iso:AU-WA",
+      "boxes": [
+        [
+          -33.0,
+          125.5,
+          -31.3,
+          129.0
+        ]
+      ],
+      "sources": [
+        "tzdb",
+        "tz-world"
+      ],
+      "notes": "The Eyre Highway strip from the South Australian border (129°E) to just east of Caiguna (125.5°E), as tzdb's australasia file describes it (Cocklebiddy, Madura, Mundrabilla, Eucla, Border Village); the northern edge at 31.3°S is tz_world's (CC0). An approximation: the zone has no legal boundary."
+    },
+    {
+      "id": "tz:west-amazonas",
+      "name": "West Amazonas",
+      "zone": "America/Eirunepe",
+      "within": "iso:BR-AM",
+      "polygon": [
+        [
+          -4.2525,
+          -69.9381
+        ],
+        [
+          -9.5867,
+          -67.5425
+        ],
+        [
+          -11.5,
+          -67.5425
+        ],
+        [
+          -11.5,
+          -75.0
+        ],
+        [
+          -4.2525,
+          -75.0
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "tzdb southamerica: 'The great circle line from Tabatinga to Porto Acre divides east from west Amazonas'. Drawn as the straight line between the two towns (within a few hundred metres of the great circle), closed to the west; only points Natural Earth places in Amazonas count, and north of Tabatinga's latitude stays east."
+    },
+    {
+      "id": "tz:atlantic-islands-brazil",
+      "name": "Brazil's Atlantic islands",
+      "zone": "America/Noronha",
+      "within": "iso:BR",
+      "boxes": [
+        [
+          -4.0,
+          -32.6,
+          -3.7,
+          -32.3
+        ],
+        [
+          -4.0,
+          -33.9,
+          -3.8,
+          -33.7
+        ],
+        [
+          0.8,
+          -29.5,
+          1.0,
+          -29.2
+        ],
+        [
+          -20.6,
+          -29.4,
+          -20.4,
+          -28.8
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab 'Atlantic islands': Fernando de Noronha, and the unsettled Rocas Atoll, St Peter and St Paul Archipelago, Trindade and Martim Vaz (tzdb southamerica)."
+    },
+    {
+      "id": "tz:easter-island",
+      "name": "Easter Island",
+      "zone": "Pacific/Easter",
+      "within": "iso:CL",
+      "boxes": [
+        [
+          -27.25,
+          -109.5,
+          -27.0,
+          -109.2
+        ],
+        [
+          -26.5,
+          -105.5,
+          -26.4,
+          -105.3
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Easter Island (with Salas y Gómez); Natural Earth draws it in Valparaíso."
+    },
+    {
+      "id": "tz:scoresbysund",
+      "name": "Ittoqqortoormiit",
+      "zone": "America/Scoresbysund",
+      "within": "iso:GL",
+      "boxes": [
+        [
+          70.3,
+          -22.6,
+          70.7,
+          -21.4
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Scoresbysund/Ittoqqortoormiit, the settlement only."
+    },
+    {
+      "id": "tz:phoenix-islands",
+      "name": "Phoenix Islands",
+      "zone": "Pacific/Kanton",
+      "within": "iso:KI",
+      "boxes": [
+        [
+          -5.0,
+          -175.0,
+          -2.5,
+          -170.5
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Phoenix Islands."
+    },
+    {
+      "id": "tz:line-islands",
+      "name": "Line Islands",
+      "zone": "Pacific/Kiritimati",
+      "within": "iso:KI",
+      "boxes": [
+        [
+          -12.0,
+          -162.0,
+          5.0,
+          -150.0
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Line Islands."
+    },
+    {
+      "id": "tz:kwajalein",
+      "name": "Kwajalein Atoll",
+      "zone": "Pacific/Kwajalein",
+      "within": "iso:MH",
+      "boxes": [
+        [
+          8.6,
+          166.8,
+          9.3,
+          167.9
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Kwajalein."
+    },
+    {
+      "id": "tz:tokelau",
+      "name": "Tokelau",
+      "zone": "Pacific/Fakaofo",
+      "within": "iso:NZ",
+      "boxes": [
+        [
+          -9.5,
+          -172.6,
+          -8.4,
+          -171.0
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab TK; Natural Earth's New Zealand includes Tokelau."
+    },
+    {
+      "id": "tz:gambier",
+      "name": "Gambier Islands",
+      "zone": "Pacific/Gambier",
+      "within": "iso:PF",
+      "boxes": [
+        [
+          -23.4,
+          -135.2,
+          -22.9,
+          -134.7
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Gambier Islands."
+    },
+    {
+      "id": "tz:north-kurils",
+      "name": "North Kuril Islands",
+      "zone": "Asia/Srednekolymsk",
+      "within": "iso:RU-SAK",
+      "boxes": [
+        [
+          48.3,
+          153.5,
+          51.0,
+          157.5
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: Asia/Srednekolymsk 'Sakha (E), N Kuril Is'. The box takes in Severo-Kurilsky District (Shumshu, Paramushir, Onekotan, Shiashkotan and their neighbours); an approximation of the district."
+    },
+    {
+      "id": "tz:western-aleutians",
+      "name": "Western Aleutians",
+      "zone": "America/Adak",
+      "within": "iso:US-AK",
+      "boxes": [
+        [
+          50.5,
+          -180.0,
+          55.0,
+          -169.5
+        ],
+        [
+          50.5,
+          171.0,
+          54.0,
+          180.0
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "tzdb northamerica: 'America/Adak is for the Aleutian Islands that are part of Alaska and are west of 169.5° W'; south of 55°N, so the Pribilofs keep Alaska time."
+    },
+    {
+      "id": "tz:station-mcmurdo",
+      "name": "McMurdo station",
+      "zone": "Antarctica/McMurdo",
+      "within": "iso:AQ",
+      "boxes": [
+        [
+          -78.083,
+          165.6,
+          -77.583,
+          167.6
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab station coordinates, ±0.25° latitude and ±1° longitude."
+    },
+    {
+      "id": "tz:station-casey",
+      "name": "Casey station",
+      "zone": "Antarctica/Casey",
+      "within": "iso:AQ",
+      "boxes": [
+        [
+          -66.533,
+          109.517,
+          -66.033,
+          111.517
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab station coordinates, ±0.25° latitude and ±1° longitude."
+    },
+    {
+      "id": "tz:station-davis",
+      "name": "Davis station",
+      "zone": "Antarctica/Davis",
+      "within": "iso:AQ",
+      "boxes": [
+        [
+          -68.833,
+          76.967,
+          -68.333,
+          78.967
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab station coordinates, ±0.25° latitude and ±1° longitude."
+    },
+    {
+      "id": "tz:station-dumontdurville",
+      "name": "DumontDUrville station",
+      "zone": "Antarctica/DumontDUrville",
+      "within": "iso:AQ",
+      "boxes": [
+        [
+          -66.917,
+          139.017,
+          -66.417,
+          141.017
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab station coordinates, ±0.25° latitude and ±1° longitude."
+    },
+    {
+      "id": "tz:station-mawson",
+      "name": "Mawson station",
+      "zone": "Antarctica/Mawson",
+      "within": "iso:AQ",
+      "boxes": [
+        [
+          -67.85,
+          61.883,
+          -67.35,
+          63.883
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab station coordinates, ±0.25° latitude and ±1° longitude."
+    },
+    {
+      "id": "tz:station-palmer",
+      "name": "Palmer station",
+      "zone": "Antarctica/Palmer",
+      "within": "iso:AQ",
+      "boxes": [
+        [
+          -65.05,
+          -65.1,
+          -64.55,
+          -63.1
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab station coordinates, ±0.25° latitude and ±1° longitude."
+    },
+    {
+      "id": "tz:station-rothera",
+      "name": "Rothera station",
+      "zone": "Antarctica/Rothera",
+      "within": "iso:AQ",
+      "boxes": [
+        [
+          -67.817,
+          -69.133,
+          -67.317,
+          -67.133
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab station coordinates, ±0.25° latitude and ±1° longitude."
+    },
+    {
+      "id": "tz:station-syowa",
+      "name": "Syowa station",
+      "zone": "Antarctica/Syowa",
+      "within": "iso:AQ",
+      "boxes": [
+        [
+          -69.256,
+          38.59,
+          -68.756,
+          40.59
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab station coordinates, ±0.25° latitude and ±1° longitude."
+    },
+    {
+      "id": "tz:station-troll",
+      "name": "Troll station",
+      "zone": "Antarctica/Troll",
+      "within": "iso:AQ",
+      "boxes": [
+        [
+          -72.261,
+          1.535,
+          -71.761,
+          3.535
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab station coordinates, ±0.25° latitude and ±1° longitude."
+    },
+    {
+      "id": "tz:station-vostok",
+      "name": "Vostok station",
+      "zone": "Antarctica/Vostok",
+      "within": "iso:AQ",
+      "boxes": [
+        [
+          -78.65,
+          105.9,
+          -78.15,
+          107.9
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab station coordinates, ±0.25° latitude and ±1° longitude."
+    },
+    {
+      "id": "tz:south-pole",
+      "name": "Amundsen-Scott South Pole Station",
+      "zone": "Antarctica/McMurdo",
+      "within": "iso:AQ",
+      "boxes": [
+        [
+          -90.0,
+          -180.0,
+          -89.75,
+          180.0
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "zone.tab: 'New Zealand time - McMurdo, South Pole'."
+    }
+  ]
+}
