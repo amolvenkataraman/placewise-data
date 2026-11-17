@@ -1,0 +1,219 @@
+{
+  "_comment": "Other names of cities that no region in datasets/regions covers: airport codes, nicknames and former or local names, each mapped to the city's English name, country (ISO 3166-1 alpha-2) and admin1 (ISO 3166-2 suffix, where the country has a table). packbuild.cities checks every target against GeoNames and writes src/placewise/constants/countries/city_aliases.py (python -m packbuild.cities).",
+  "aliases": {
+    "PDX": {
+      "city": "Portland",
+      "country": "US",
+      "admin1": "OR"
+    },
+    "PHX": {
+      "city": "Phoenix",
+      "country": "US",
+      "admin1": "AZ"
+    },
+    "DT": {
+      "city": "Detroit",
+      "country": "US",
+      "admin1": "MI"
+    },
+    "DEN": {
+      "city": "Denver",
+      "country": "US",
+      "admin1": "CO"
+    },
+    "SLC": {
+      "city": "Salt Lake City",
+      "country": "US",
+      "admin1": "UT"
+    },
+    "STL": {
+      "city": "St. Louis",
+      "country": "US",
+      "admin1": "MO"
+    },
+    "NOLA": {
+      "city": "New Orleans",
+      "country": "US",
+      "admin1": "LA"
+    },
+    "LV": {
+      "city": "Las Vegas",
+      "country": "US",
+      "admin1": "NV"
+    },
+    "Vegas": {
+      "city": "Las Vegas",
+      "country": "US",
+      "admin1": "NV"
+    },
+    "SD": {
+      "city": "San Diego",
+      "country": "US",
+      "admin1": "CA"
+    },
+    "PGH": {
+      "city": "Pittsburgh",
+      "country": "US",
+      "admin1": "PA"
+    },
+    "CLT": {
+      "city": "Charlotte",
+      "country": "US",
+      "admin1": "NC"
+    },
+    "SA": {
+      "city": "San Antonio",
+      "country": "US",
+      "admin1": "TX"
+    },
+    "AUS": {
+      "city": "Austin",
+      "country": "US",
+      "admin1": "TX"
+    },
+    "ATX": {
+      "city": "Austin",
+      "country": "US",
+      "admin1": "TX"
+    },
+    "JAX": {
+      "city": "Jacksonville",
+      "country": "US",
+      "admin1": "FL"
+    },
+    "CBUS": {
+      "city": "Columbus",
+      "country": "US",
+      "admin1": "OH"
+    },
+    "Indy": {
+      "city": "Indianapolis",
+      "country": "US",
+      "admin1": "IN"
+    },
+    "MKE": {
+      "city": "Milwaukee",
+      "country": "US",
+      "admin1": "WI"
+    },
+    "KC": {
+      "city": "Kansas City",
+      "country": "US",
+      "admin1": "MO"
+    },
+    "KCMO": {
+      "city": "Kansas City",
+      "country": "US",
+      "admin1": "MO"
+    },
+    "ORL": {
+      "city": "Orlando",
+      "country": "US",
+      "admin1": "FL"
+    },
+    "TPA": {
+      "city": "Tampa",
+      "country": "US",
+      "admin1": "FL"
+    },
+    "RVA": {
+      "city": "Richmond",
+      "country": "US",
+      "admin1": "VA"
+    },
+    "Bmore": {
+      "city": "Baltimore",
+      "country": "US",
+      "admin1": "MD"
+    },
+    "ABQ": {
+      "city": "Albuquerque",
+      "country": "US",
+      "admin1": "NM"
+    },
+    "Reno": {
+      "city": "Reno",
+      "country": "US",
+      "admin1": "NV"
+    },
+    "OKC": {
+      "city": "Oklahoma City",
+      "country": "US",
+      "admin1": "OK"
+    },
+    "CAL": {
+      "city": "Calgary",
+      "country": "CA",
+      "admin1": "AB"
+    },
+    "YYC": {
+      "city": "Calgary",
+      "country": "CA",
+      "admin1": "AB"
+    },
+    "EDM": {
+      "city": "Edmonton",
+      "country": "CA",
+      "admin1": "AB"
+    },
+    "YEG": {
+      "city": "Edmonton",
+      "country": "CA",
+      "admin1": "AB"
+    },
+    "WIN": {
+      "city": "Winnipeg",
+      "country": "CA",
+      "admin1": "MB"
+    },
+    "YWG": {
+      "city": "Winnipeg",
+      "country": "CA",
+      "admin1": "MB"
+    },
+    "Quebec City": {
+      "city": "Quebec City",
+      "country": "CA",
+      "admin1": "QC"
+    },
+    "Ville de Québec": {
+      "city": "Quebec City",
+      "country": "CA",
+      "admin1": "QC"
+    },
+    "YQB": {
+      "city": "Quebec City",
+      "country": "CA",
+      "admin1": "QC"
+    },
+    "YHZ": {
+      "city": "Halifax",
+      "country": "CA",
+      "admin1": "NS"
+    },
+    "HK": {
+      "city": "Hong Kong",
+      "country": "HK"
+    },
+    "SG": {
+      "city": "Singapore",
+      "country": "SG"
+    },
+    "Frankfurt": {
+      "city": "Frankfurt am Main",
+      "country": "DE"
+    },
+    "Cologne": {
+      "city": "Cologne",
+      "country": "DE"
+    },
+    "Zurich": {
+      "city": "Zurich",
+      "country": "CH"
+    },
+    "Saigon": {
+      "city": "Ho Chi Minh City",
+      "country": "VN"
+    }
+  }
+}

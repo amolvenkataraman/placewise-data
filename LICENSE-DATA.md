@@ -16,3 +16,6 @@ was built from.
 placewise's full source list is in
 [ATTRIBUTION.md](https://github.com/amolvenkataraman/placewise/blob/master/ATTRIBUTION.md) in the
 placewise repository.
+
+The curated datasets in [`datasets/`](datasets/) are placewise's own work, licensed CC BY 4.0
+(see [`datasets/LICENSE.md`](datasets/LICENSE.md)).

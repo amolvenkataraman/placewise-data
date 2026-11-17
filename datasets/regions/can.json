@@ -1,0 +1,273 @@
+{
+  "_comment": "Metro and vernacular regions of Canada: a curated dataset (CC BY 4.0, see datasets/LICENSE.md). packbuild.regions turns it into src/placewise/constants/countries/regions.py for location search (python -m packbuild.regions), and packbuild.regions_layer into the country pack's `regions` polygon layer. Fields: id (stable, region:<slug>), short_name (what a parsed place's `region` holds), name, country (ISO 3166-1 alpha-2), admin1 (every subdivision the region reaches into, by its ISO 3166-2 suffix), aliases, kind (metro: a statistical metro area; official-planning: an area a public body plans or governs as one; vernacular: a name in common use, drawn with official units), members (the official units whose union is the region, as ids in the country pack: census:<county GEOID>, statcan:<CDUID, CSDUID or CMAPUID>, pin:<PIN code>; the pack build fails if one is missing), districts (India only: the districts the definition names, as the India Post directory spells them; members are exactly the PIN areas filed under them), definition (title and url of the source that defines the region), search_as (optional: location search reads this region's names as that region, and has no entry for it), principal_cities (well-known member cities and their admin1, so a parsed city can be placed in the region offline), city_aliases (other names of member cities -> the name placewise prefers) and notes (why the region is drawn as it is).",
+  "regions": [
+    {
+      "id": "region:gta",
+      "short_name": "GTA",
+      "name": "Greater Toronto Area",
+      "country": "CA",
+      "admin1": [
+        "ON"
+      ],
+      "aliases": [
+        "Greater Toronto",
+        "Toronto Area",
+        "Toronto Metro"
+      ],
+      "kind": "vernacular",
+      "members": [
+        "statcan:3518",
+        "statcan:3519",
+        "statcan:3520",
+        "statcan:3521",
+        "statcan:3524"
+      ],
+      "definition": {
+        "title": "Ontario Ministry of Finance, Ontario population projections: the Greater Toronto Area (Toronto, Durham, Halton, Peel and York)",
+        "url": "https://www.ontario.ca/page/ontario-population-projections"
+      },
+      "principal_cities": {
+        "Toronto": "ON",
+        "North York": "ON",
+        "Scarborough": "ON",
+        "Etobicoke": "ON",
+        "Mississauga": "ON",
+        "Brampton": "ON",
+        "Markham": "ON",
+        "Vaughan": "ON",
+        "Richmond Hill": "ON",
+        "Oakville": "ON",
+        "Burlington": "ON",
+        "Milton": "ON",
+        "Oshawa": "ON",
+        "Whitby": "ON",
+        "Ajax": "ON",
+        "Pickering": "ON",
+        "Newmarket": "ON",
+        "Aurora": "ON",
+        "Caledon": "ON",
+        "Hamilton": "ON"
+      },
+      "city_aliases": {
+        "TOR": "Toronto",
+        "YYZ": "Toronto",
+        "North York": "Toronto"
+      },
+      "notes": "Toronto and the regional municipalities of Durham, Halton, Peel and York (census divisions 3520, 3518, 3524, 3521, 3519). Location search reads the GTHA as the GTA, so Hamilton is listed among its cities; the packs draw the GTHA as a region of its own."
+    },
+    {
+      "id": "region:gtha",
+      "short_name": "GTHA",
+      "name": "Greater Toronto and Hamilton Area",
+      "country": "CA",
+      "admin1": [
+        "ON"
+      ],
+      "aliases": [
+        "Greater Toronto & Hamilton Area",
+        "Greater Toronto Hamilton Area"
+      ],
+      "kind": "official-planning",
+      "members": [
+        "statcan:3518",
+        "statcan:3519",
+        "statcan:3520",
+        "statcan:3521",
+        "statcan:3524",
+        "statcan:3525"
+      ],
+      "definition": {
+        "title": "Metrolinx Act, 2006 (S.O. 2006, c. 16), s. 1: the regional transportation area (Toronto, Durham, Halton, Hamilton, Peel and York)",
+        "url": "https://www.ontario.ca/laws/statute/06g16"
+      },
+      "search_as": "region:gta",
+      "notes": "The GTA and the City of Hamilton (census division 3525): the area Metrolinx plans transit for."
+    },
+    {
+      "id": "region:golden-horseshoe",
+      "short_name": "Golden Horseshoe",
+      "name": "Greater Golden Horseshoe",
+      "country": "CA",
+      "admin1": [
+        "ON"
+      ],
+      "aliases": [
+        "GGH",
+        "Greater Golden Horseshoe Area"
+      ],
+      "kind": "official-planning",
+      "members": [
+        "statcan:3514",
+        "statcan:3515",
+        "statcan:3516",
+        "statcan:3518",
+        "statcan:3519",
+        "statcan:3520",
+        "statcan:3521",
+        "statcan:3522",
+        "statcan:3523",
+        "statcan:3524",
+        "statcan:3525",
+        "statcan:3526",
+        "statcan:3529",
+        "statcan:3530",
+        "statcan:3543",
+        "statcan:3528018",
+        "statcan:3528035",
+        "statcan:3528037"
+      ],
+      "definition": {
+        "title": "O. Reg. 416/05, Growth Plan Areas (Places to Grow Act, 2005), s. 2: the Greater Golden Horseshoe growth plan area",
+        "url": "https://www.ontario.ca/laws/regulation/050416"
+      },
+      "notes": "The growth plan area of the Growth Plan for the Greater Golden Horseshoe: Brant, Brantford, Dufferin, Durham, Guelph, Haldimand, Halton, Hamilton, Kawartha Lakes, Niagara, Northumberland, Peel, Peterborough (city and county), Simcoe (with Barrie and Orillia), Toronto, Waterloo, Wellington and York. Drawn as census divisions, where the separated cities sit inside their county's division, plus Haldimand County (CSD 3528018; Norfolk County, the rest of its division, is outside) and the parts of Six Nations 40 and New Credit 40A in that division, so reserve land inside the area is drawn in although the plan does not apply to it. Section 2 was revoked on 20 October 2024 (O. Reg. 328/24) when the Provincial Planning Statement replaced the Growth Plan; the area is still the usual definition of the Golden Horseshoe."
+    },
+    {
+      "id": "region:metro-vancouver",
+      "short_name": "Metro Vancouver",
+      "name": "Metro Vancouver",
+      "country": "CA",
+      "admin1": [
+        "BC"
+      ],
+      "aliases": [
+        "Greater Vancouver",
+        "Greater Vancouver Area",
+        "Vancouver Area",
+        "Vancouver Metro"
+      ],
+      "kind": "official-planning",
+      "members": [
+        "statcan:5915"
+      ],
+      "definition": {
+        "title": "Metro Vancouver Regional District (census division 5915, Greater Vancouver)",
+        "url": "https://metrovancouver.org/"
+      },
+      "principal_cities": {
+        "Vancouver": "BC",
+        "Burnaby": "BC",
+        "Surrey": "BC",
+        "Richmond": "BC",
+        "Coquitlam": "BC",
+        "North Vancouver": "BC",
+        "West Vancouver": "BC",
+        "New Westminster": "BC",
+        "Delta": "BC",
+        "Langley": "BC",
+        "Port Moody": "BC",
+        "Maple Ridge": "BC"
+      },
+      "city_aliases": {
+        "VAN": "Vancouver",
+        "YVR": "Vancouver"
+      },
+      "notes": "The Metro Vancouver Regional District (Greater Vancouver), British Columbia."
+    },
+    {
+      "id": "region:greater-montreal",
+      "short_name": "Greater Montreal",
+      "name": "Greater Montreal",
+      "country": "CA",
+      "admin1": [
+        "QC"
+      ],
+      "aliases": [
+        "Montreal Area",
+        "Montreal Metro",
+        "Grand Montréal",
+        "Montreal Metropolitan Community"
+      ],
+      "kind": "metro",
+      "members": [
+        "statcan:24462"
+      ],
+      "definition": {
+        "title": "Statistics Canada, Dictionary, Census of Population 2021: census metropolitan area (CMA)",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=geo009"
+      },
+      "principal_cities": {
+        "Montreal": "QC",
+        "Montréal": "QC",
+        "Laval": "QC",
+        "Longueuil": "QC",
+        "Brossard": "QC",
+        "Terrebonne": "QC",
+        "Saint-Laurent": "QC"
+      },
+      "city_aliases": {
+        "MTL": "Montreal",
+        "YUL": "Montreal"
+      },
+      "notes": "Drawn as the Montreal census metropolitan area (CMA 462). The Montreal Metropolitan Community (82 municipalities) is slightly smaller; it is not a census unit."
+    },
+    {
+      "id": "region:ottawa-gatineau",
+      "short_name": "Ottawa-Gatineau",
+      "name": "National Capital Region (Canada)",
+      "country": "CA",
+      "admin1": [
+        "ON",
+        "QC"
+      ],
+      "aliases": [
+        "Ottawa Gatineau",
+        "National Capital Region of Canada",
+        "Canada's Capital Region",
+        "Ottawa Area"
+      ],
+      "kind": "metro",
+      "members": [
+        "statcan:35505",
+        "statcan:24505"
+      ],
+      "definition": {
+        "title": "Statistics Canada, Dictionary, Census of Population 2021: census metropolitan area (CMA)",
+        "url": "https://www12.statcan.gc.ca/census-recensement/2021/ref/dict/az/Definition-eng.cfm?ID=geo009"
+      },
+      "principal_cities": {
+        "Ottawa": "ON",
+        "Kanata": "ON",
+        "Nepean": "ON",
+        "Gatineau": "QC"
+      },
+      "city_aliases": {
+        "OTT": "Ottawa",
+        "YOW": "Ottawa"
+      },
+      "notes": "Canada's National Capital Region, across the Ontario-Quebec border, drawn as the Ottawa - Gatineau census metropolitan area (CMA 505, both provincial parts). The National Capital Act's region is smaller than the CMA and is not made of whole census units."
+    },
+    {
+      "id": "region:waterloo-region",
+      "short_name": "Waterloo Region",
+      "name": "Waterloo Region",
+      "country": "CA",
+      "admin1": [
+        "ON"
+      ],
+      "aliases": [
+        "Region of Waterloo",
+        "Kitchener-Waterloo",
+        "Kitchener Waterloo",
+        "Kitchener-Waterloo-Cambridge"
+      ],
+      "kind": "official-planning",
+      "members": [
+        "statcan:3530"
+      ],
+      "definition": {
+        "title": "Region of Waterloo (Regional Municipality of Waterloo, census division 3530)",
+        "url": "https://www.regionofwaterloo.ca/"
+      },
+      "principal_cities": {
+        "Kitchener": "ON",
+        "Waterloo": "ON",
+        "Cambridge": "ON"
+      },
+      "city_aliases": {
+        "KW": "Kitchener"
+      },
+      "notes": "The Regional Municipality of Waterloo, Ontario: Kitchener, Waterloo and Cambridge."
+    }
+  ]
+}

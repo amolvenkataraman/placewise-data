@@ -2,8 +2,20 @@
 
 Release hosting for the data packs of [placewise](https://github.com/amolvenkataraman/placewise),
 an offline geocoder. The packs are built from public open datasets by placewise's `packbuild/`
-tooling and published here as **GitHub release assets only**. No data is ever committed: this
-repository's git history holds only this README, the data licence note and a `.gitignore`.
+tooling and published here as **GitHub release assets**: packs are never committed.
+
+The repository's git does hold the small **curated datasets** placewise maintains by hand, in
+[`datasets/`](datasets/) under CC BY 4.0 ([`datasets/LICENSE.md`](datasets/LICENSE.md)):
+
+| Folder | What it is |
+|---|---|
+| `datasets/country_groups/` | Geographic and legal country groups (continents, UN M49, EU, Schengen, NATO ...) with dated memberships and sources |
+| `datasets/regions/` | Metro and vernacular regions per country (GTA, GTHA, Bay Area, Delhi NCR ...) with official member units and cited definitions |
+| `datasets/cities/` | City aliases and nicknames (YYZ, Philly, Bangalore ...) |
+
+placewise's `packbuild` reads them from a checkout of this repository beside the placewise one
+(`../placewise-data/datasets`, or `$PACKBUILD_DATASETS`), validates them, and generates the offline
+copies placewise ships and the packs' curated layers. Changes to them are ordinary pull requests.
 
 ## What a release contains
 

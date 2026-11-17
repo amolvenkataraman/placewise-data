@@ -1,0 +1,781 @@
+{
+  "_comment": "Metro and vernacular regions of United States: a curated dataset (CC BY 4.0, see datasets/LICENSE.md). packbuild.regions turns it into src/placewise/constants/countries/regions.py for location search (python -m packbuild.regions), and packbuild.regions_layer into the country pack's `regions` polygon layer. Fields: id (stable, region:<slug>), short_name (what a parsed place's `region` holds), name, country (ISO 3166-1 alpha-2), admin1 (every subdivision the region reaches into, by its ISO 3166-2 suffix), aliases, kind (metro: a statistical metro area; official-planning: an area a public body plans or governs as one; vernacular: a name in common use, drawn with official units), members (the official units whose union is the region, as ids in the country pack: census:<county GEOID>, statcan:<CDUID, CSDUID or CMAPUID>, pin:<PIN code>; the pack build fails if one is missing), districts (India only: the districts the definition names, as the India Post directory spells them; members are exactly the PIN areas filed under them), definition (title and url of the source that defines the region), search_as (optional: location search reads this region's names as that region, and has no entry for it), principal_cities (well-known member cities and their admin1, so a parsed city can be placed in the region offline), city_aliases (other names of member cities -> the name placewise prefers) and notes (why the region is drawn as it is).",
+  "regions": [
+    {
+      "id": "region:sf-bay-area",
+      "short_name": "Bay Area",
+      "name": "San Francisco Bay Area",
+      "country": "US",
+      "admin1": [
+        "CA"
+      ],
+      "aliases": [
+        "SF Bay Area",
+        "SFBA",
+        "San Francisco Bay Area",
+        "SF Bay",
+        "Silicon Valley",
+        "Bay Area Region"
+      ],
+      "kind": "official-planning",
+      "members": [
+        "census:06001",
+        "census:06013",
+        "census:06041",
+        "census:06055",
+        "census:06075",
+        "census:06081",
+        "census:06085",
+        "census:06095",
+        "census:06097"
+      ],
+      "definition": {
+        "title": "Association of Bay Area Governments (ABAG) and Metropolitan Transportation Commission: the nine Bay Area counties",
+        "url": "https://abag.ca.gov/"
+      },
+      "principal_cities": {
+        "San Francisco": "CA",
+        "South San Francisco": "CA",
+        "Oakland": "CA",
+        "Berkeley": "CA",
+        "Emeryville": "CA",
+        "San Jose": "CA",
+        "Palo Alto": "CA",
+        "Mountain View": "CA",
+        "Sunnyvale": "CA",
+        "Santa Clara": "CA",
+        "Menlo Park": "CA",
+        "Redwood City": "CA",
+        "Cupertino": "CA",
+        "Fremont": "CA",
+        "San Mateo": "CA",
+        "Milpitas": "CA",
+        "Foster City": "CA",
+        "Burlingame": "CA",
+        "San Bruno": "CA",
+        "Hayward": "CA",
+        "Pleasanton": "CA",
+        "Walnut Creek": "CA",
+        "Los Gatos": "CA",
+        "Los Altos": "CA",
+        "San Carlos": "CA",
+        "Belmont": "CA",
+        "Campbell": "CA",
+        "Livermore": "CA",
+        "Daly City": "CA",
+        "San Rafael": "CA",
+        "San Ramon": "CA",
+        "San Leandro": "CA",
+        "Napa": "CA",
+        "Santa Rosa": "CA"
+      },
+      "city_aliases": {
+        "SF": "San Francisco",
+        "South SF": "South San Francisco",
+        "SFO": "San Francisco",
+        "SSF": "South San Francisco",
+        "SJ": "San Jose",
+        "SJC": "San Jose"
+      },
+      "notes": "The nine counties ABAG and MTC plan for: Alameda, Contra Costa, Marin, Napa, San Francisco, San Mateo, Santa Clara, Solano and Sonoma. Silicon Valley, its southern part, is read as the Bay Area by location search; it has no county-based outline (it would be a hand-drawn shape)."
+    },
+    {
+      "id": "region:greater-los-angeles",
+      "short_name": "Greater Los Angeles",
+      "name": "Greater Los Angeles",
+      "country": "US",
+      "admin1": [
+        "CA"
+      ],
+      "aliases": [
+        "Greater LA",
+        "LA Metro",
+        "Los Angeles Metro",
+        "Los Angeles Area",
+        "LA Area",
+        "Los Angeles Metropolitan Area"
+      ],
+      "kind": "metro",
+      "members": [
+        "census:06037",
+        "census:06059"
+      ],
+      "definition": {
+        "title": "OMB Bulletin 23-01 delineation (July 2023): Los Angeles-Long Beach-Anaheim, CA Metropolitan Statistical Area (CBSA 31080)",
+        "url": "https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html"
+      },
+      "principal_cities": {
+        "Los Angeles": "CA",
+        "Santa Monica": "CA",
+        "Pasadena": "CA",
+        "Burbank": "CA",
+        "Long Beach": "CA",
+        "Irvine": "CA",
+        "Anaheim": "CA",
+        "Santa Ana": "CA",
+        "Culver City": "CA",
+        "El Segundo": "CA",
+        "Torrance": "CA",
+        "Hawthorne": "CA",
+        "Costa Mesa": "CA",
+        "Newport Beach": "CA",
+        "Huntington Beach": "CA"
+      },
+      "city_aliases": {
+        "LA": "Los Angeles",
+        "LAX": "Los Angeles"
+      },
+      "notes": "The Los Angeles-Long Beach-Anaheim MSA: Los Angeles and Orange counties, California. The wider Los Angeles CSA (348) adds Riverside, San Bernardino and Ventura counties."
+    },
+    {
+      "id": "region:new-york-metro",
+      "short_name": "NYC",
+      "name": "New York metropolitan area",
+      "country": "US",
+      "admin1": [
+        "NY",
+        "NJ",
+        "CT",
+        "PA"
+      ],
+      "aliases": [
+        "New York Metro",
+        "NYC Metro",
+        "NY Metro",
+        "New York Metropolitan Area",
+        "Greater New York",
+        "Tri-State Area",
+        "New York Area",
+        "NYC Area",
+        "New York City Metropolitan Area"
+      ],
+      "kind": "metro",
+      "members": [
+        "census:09120",
+        "census:09190",
+        "census:34003",
+        "census:34013",
+        "census:34017",
+        "census:34019",
+        "census:34021",
+        "census:34023",
+        "census:34025",
+        "census:34027",
+        "census:34029",
+        "census:34031",
+        "census:34035",
+        "census:34037",
+        "census:34039",
+        "census:36005",
+        "census:36027",
+        "census:36047",
+        "census:36059",
+        "census:36061",
+        "census:36071",
+        "census:36079",
+        "census:36081",
+        "census:36085",
+        "census:36087",
+        "census:36103",
+        "census:36105",
+        "census:36111",
+        "census:36119",
+        "census:42103"
+      ],
+      "definition": {
+        "title": "OMB Bulletin 23-01 delineation (July 2023): New York-Newark, NY-NJ-CT-PA Combined Statistical Area (CSA 408)",
+        "url": "https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html"
+      },
+      "principal_cities": {
+        "New York City": "NY",
+        "Manhattan": "NY",
+        "Brooklyn": "NY",
+        "Queens": "NY",
+        "Bronx": "NY",
+        "Staten Island": "NY",
+        "Long Island City": "NY",
+        "White Plains": "NY",
+        "Yonkers": "NY",
+        "Jersey City": "NJ",
+        "Newark": "NJ",
+        "Hoboken": "NJ",
+        "Edison": "NJ",
+        "Morristown": "NJ",
+        "Stamford": "CT",
+        "Greenwich": "CT"
+      },
+      "city_aliases": {
+        "NYC": "New York City",
+        "New York City": "New York City",
+        "New York": "New York City",
+        "NY City": "New York City",
+        "NY": "New York City"
+      },
+      "notes": "The New York-Newark CSA (the Tri-State Area): New York City, Long Island and the Hudson Valley, northern New Jersey, southwestern Connecticut and Pike County, Pennsylvania."
+    },
+    {
+      "id": "region:greater-boston",
+      "short_name": "Greater Boston",
+      "name": "Greater Boston",
+      "country": "US",
+      "admin1": [
+        "MA",
+        "NH"
+      ],
+      "aliases": [
+        "Greater Boston Area",
+        "Boston Area",
+        "Boston Metro",
+        "Metro Boston",
+        "Boston Metropolitan Area"
+      ],
+      "kind": "metro",
+      "members": [
+        "census:25009",
+        "census:25017",
+        "census:25021",
+        "census:25023",
+        "census:25025",
+        "census:33015",
+        "census:33017"
+      ],
+      "definition": {
+        "title": "OMB Bulletin 23-01 delineation (July 2023): Boston-Cambridge-Newton, MA-NH Metropolitan Statistical Area (CBSA 14460)",
+        "url": "https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html"
+      },
+      "principal_cities": {
+        "Boston": "MA",
+        "Cambridge": "MA",
+        "Somerville": "MA",
+        "Waltham": "MA",
+        "Newton": "MA",
+        "Quincy": "MA",
+        "Burlington": "MA",
+        "Woburn": "MA",
+        "Needham": "MA",
+        "Wellesley": "MA",
+        "Framingham": "MA",
+        "Lowell": "MA",
+        "Brookline": "MA",
+        "Watertown": "MA",
+        "Lexington": "MA"
+      },
+      "city_aliases": {
+        "BOS": "Boston"
+      },
+      "notes": "The Boston-Cambridge-Newton MSA, which reaches into Rockingham and Strafford counties, New Hampshire. Nashua (Hillsborough County) is in the Boston CSA but not the MSA, so it is not a principal city here."
+    },
+    {
+      "id": "region:greater-seattle",
+      "short_name": "Greater Seattle",
+      "name": "Greater Seattle",
+      "country": "US",
+      "admin1": [
+        "WA"
+      ],
+      "aliases": [
+        "Greater Seattle Area",
+        "Seattle Area",
+        "Seattle Metro",
+        "Seattle Metropolitan Area",
+        "Puget Sound",
+        "Puget Sound Region"
+      ],
+      "kind": "metro",
+      "members": [
+        "census:53033",
+        "census:53053",
+        "census:53061"
+      ],
+      "definition": {
+        "title": "OMB Bulletin 23-01 delineation (July 2023): Seattle-Tacoma-Bellevue, WA Metropolitan Statistical Area (CBSA 42660)",
+        "url": "https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html"
+      },
+      "principal_cities": {
+        "Seattle": "WA",
+        "Bellevue": "WA",
+        "Redmond": "WA",
+        "Kirkland": "WA",
+        "Tacoma": "WA",
+        "Everett": "WA",
+        "Bothell": "WA",
+        "Renton": "WA",
+        "Issaquah": "WA",
+        "Kent": "WA",
+        "Sammamish": "WA",
+        "Lynnwood": "WA",
+        "Woodinville": "WA",
+        "Federal Way": "WA"
+      },
+      "city_aliases": {
+        "SEA": "Seattle"
+      },
+      "notes": "The Seattle-Tacoma-Bellevue MSA around Puget Sound, Washington: King, Pierce and Snohomish counties."
+    },
+    {
+      "id": "region:dallas-fort-worth",
+      "short_name": "DFW",
+      "name": "Dallas-Fort Worth metroplex",
+      "country": "US",
+      "admin1": [
+        "TX"
+      ],
+      "aliases": [
+        "Dallas-Fort Worth",
+        "Dallas Fort Worth",
+        "Dallas/Fort Worth",
+        "Metroplex",
+        "DFW Metroplex",
+        "Dallas-Fort Worth Metroplex",
+        "DFW Area",
+        "Dallas Area"
+      ],
+      "kind": "metro",
+      "members": [
+        "census:48085",
+        "census:48113",
+        "census:48121",
+        "census:48139",
+        "census:48231",
+        "census:48251",
+        "census:48257",
+        "census:48367",
+        "census:48397",
+        "census:48439",
+        "census:48497"
+      ],
+      "definition": {
+        "title": "OMB Bulletin 23-01 delineation (July 2023): Dallas-Fort Worth-Arlington, TX Metropolitan Statistical Area (CBSA 19100)",
+        "url": "https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html"
+      },
+      "principal_cities": {
+        "Dallas": "TX",
+        "Fort Worth": "TX",
+        "Arlington": "TX",
+        "Plano": "TX",
+        "Irving": "TX",
+        "Frisco": "TX",
+        "Richardson": "TX",
+        "Garland": "TX",
+        "McKinney": "TX",
+        "Denton": "TX",
+        "Addison": "TX",
+        "Carrollton": "TX",
+        "Grapevine": "TX",
+        "Southlake": "TX",
+        "Allen": "TX",
+        "Lewisville": "TX",
+        "Coppell": "TX"
+      },
+      "notes": "The Dallas-Fort Worth-Arlington MSA (the Metroplex), North Texas."
+    },
+    {
+      "id": "region:greater-houston",
+      "short_name": "Greater Houston",
+      "name": "Greater Houston",
+      "country": "US",
+      "admin1": [
+        "TX"
+      ],
+      "aliases": [
+        "Houston Area",
+        "Houston Metro",
+        "Houston Metropolitan Area"
+      ],
+      "kind": "metro",
+      "members": [
+        "census:48015",
+        "census:48039",
+        "census:48071",
+        "census:48157",
+        "census:48167",
+        "census:48201",
+        "census:48291",
+        "census:48339",
+        "census:48407",
+        "census:48473"
+      ],
+      "definition": {
+        "title": "OMB Bulletin 23-01 delineation (July 2023): Houston-Pasadena-The Woodlands, TX Metropolitan Statistical Area (CBSA 26420)",
+        "url": "https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html"
+      },
+      "principal_cities": {
+        "Houston": "TX",
+        "The Woodlands": "TX",
+        "Sugar Land": "TX",
+        "Katy": "TX",
+        "Pearland": "TX"
+      },
+      "city_aliases": {
+        "HOU": "Houston"
+      },
+      "notes": "The Houston-Pasadena-The Woodlands MSA, Texas."
+    },
+    {
+      "id": "region:washington-metro",
+      "short_name": "DMV",
+      "name": "Washington metropolitan area",
+      "country": "US",
+      "admin1": [
+        "DC",
+        "MD",
+        "VA",
+        "WV"
+      ],
+      "aliases": [
+        "DC Metro",
+        "DC Metro Area",
+        "DC Area",
+        "Washington DC Metro",
+        "Washington DC Area",
+        "Washington Metropolitan Area",
+        "Greater Washington",
+        "Washington DC Metropolitan Area"
+      ],
+      "kind": "metro",
+      "members": [
+        "census:11001",
+        "census:24017",
+        "census:24021",
+        "census:24031",
+        "census:24033",
+        "census:51013",
+        "census:51043",
+        "census:51047",
+        "census:51059",
+        "census:51061",
+        "census:51107",
+        "census:51153",
+        "census:51157",
+        "census:51177",
+        "census:51179",
+        "census:51187",
+        "census:51510",
+        "census:51600",
+        "census:51610",
+        "census:51630",
+        "census:51683",
+        "census:51685",
+        "census:54037"
+      ],
+      "definition": {
+        "title": "OMB Bulletin 23-01 delineation (July 2023): Washington-Arlington-Alexandria, DC-VA-MD-WV Metropolitan Statistical Area (CBSA 47900)",
+        "url": "https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html"
+      },
+      "principal_cities": {
+        "Washington": "DC",
+        "Arlington": "VA",
+        "Alexandria": "VA",
+        "Reston": "VA",
+        "Herndon": "VA",
+        "McLean": "VA",
+        "Tysons": "VA",
+        "Fairfax": "VA",
+        "Chantilly": "VA",
+        "Bethesda": "MD",
+        "Rockville": "MD",
+        "Silver Spring": "MD",
+        "Gaithersburg": "MD",
+        "College Park": "MD"
+      },
+      "city_aliases": {
+        "DC": "Washington"
+      },
+      "notes": "The Washington-Arlington-Alexandria MSA: DC, Maryland and Virginia (with its independent cities), as people say it, and Jefferson County, West Virginia."
+    },
+    {
+      "id": "region:greater-philadelphia",
+      "short_name": "Greater Philadelphia",
+      "name": "Greater Philadelphia",
+      "country": "US",
+      "admin1": [
+        "PA",
+        "NJ",
+        "DE",
+        "MD"
+      ],
+      "aliases": [
+        "Philadelphia Area",
+        "Philadelphia Metro",
+        "Philly Area",
+        "Delaware Valley"
+      ],
+      "kind": "metro",
+      "members": [
+        "census:10003",
+        "census:24015",
+        "census:34005",
+        "census:34007",
+        "census:34015",
+        "census:34033",
+        "census:42017",
+        "census:42029",
+        "census:42045",
+        "census:42091",
+        "census:42101"
+      ],
+      "definition": {
+        "title": "OMB Bulletin 23-01 delineation (July 2023): Philadelphia-Camden-Wilmington, PA-NJ-DE-MD Metropolitan Statistical Area (CBSA 37980)",
+        "url": "https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html"
+      },
+      "principal_cities": {
+        "Philadelphia": "PA",
+        "King of Prussia": "PA",
+        "Conshohocken": "PA",
+        "Camden": "NJ",
+        "Cherry Hill": "NJ",
+        "Wilmington": "DE"
+      },
+      "city_aliases": {
+        "Philly": "Philadelphia",
+        "PHL": "Philadelphia"
+      },
+      "notes": "The Philadelphia-Camden-Wilmington MSA (the Delaware Valley): parts of Pennsylvania, New Jersey, Delaware and Cecil County, Maryland."
+    },
+    {
+      "id": "region:chicagoland",
+      "short_name": "Chicagoland",
+      "name": "Chicago metropolitan area",
+      "country": "US",
+      "admin1": [
+        "IL",
+        "IN",
+        "WI"
+      ],
+      "aliases": [
+        "Chicago Area",
+        "Greater Chicago",
+        "Chicago Metro",
+        "Chicago Metro Area",
+        "Chicago Metropolitan Area"
+      ],
+      "kind": "metro",
+      "members": [
+        "census:17031",
+        "census:17037",
+        "census:17043",
+        "census:17063",
+        "census:17089",
+        "census:17093",
+        "census:17097",
+        "census:17111",
+        "census:17197",
+        "census:18073",
+        "census:18089",
+        "census:18111",
+        "census:18127",
+        "census:55059"
+      ],
+      "definition": {
+        "title": "OMB Bulletin 23-01 delineation (July 2023): Chicago-Naperville-Elgin, IL-IN Metropolitan Statistical Area (CBSA 16980)",
+        "url": "https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html"
+      },
+      "principal_cities": {
+        "Chicago": "IL",
+        "Evanston": "IL",
+        "Naperville": "IL",
+        "Schaumburg": "IL",
+        "Oak Brook": "IL",
+        "Skokie": "IL",
+        "Deerfield": "IL",
+        "Northbrook": "IL",
+        "Gary": "IN",
+        "Hammond": "IN",
+        "Kenosha": "WI"
+      },
+      "city_aliases": {
+        "CHI": "Chicago"
+      },
+      "notes": "The Chicago-Naperville-Elgin MSA (Illinois and northwest Indiana) plus Kenosha County, Wisconsin, which was in the MSA until the 2023 delineation made it a metro of its own; it stays in the Chicago CSA."
+    },
+    {
+      "id": "region:metro-atlanta",
+      "short_name": "Metro Atlanta",
+      "name": "Metro Atlanta",
+      "country": "US",
+      "admin1": [
+        "GA"
+      ],
+      "aliases": [
+        "Atlanta Metro",
+        "Greater Atlanta",
+        "Atlanta Area",
+        "Atlanta Metropolitan Area"
+      ],
+      "kind": "metro",
+      "members": [
+        "census:13013",
+        "census:13015",
+        "census:13035",
+        "census:13045",
+        "census:13057",
+        "census:13063",
+        "census:13067",
+        "census:13077",
+        "census:13085",
+        "census:13089",
+        "census:13097",
+        "census:13113",
+        "census:13117",
+        "census:13121",
+        "census:13135",
+        "census:13143",
+        "census:13149",
+        "census:13151",
+        "census:13159",
+        "census:13187",
+        "census:13199",
+        "census:13211",
+        "census:13217",
+        "census:13223",
+        "census:13227",
+        "census:13231",
+        "census:13247",
+        "census:13255",
+        "census:13297"
+      ],
+      "definition": {
+        "title": "OMB Bulletin 23-01 delineation (July 2023): Atlanta-Sandy Springs-Roswell, GA Metropolitan Statistical Area (CBSA 12060)",
+        "url": "https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html"
+      },
+      "principal_cities": {
+        "Atlanta": "GA",
+        "Alpharetta": "GA",
+        "Marietta": "GA",
+        "Sandy Springs": "GA",
+        "Decatur": "GA",
+        "Kennesaw": "GA",
+        "Norcross": "GA",
+        "Duluth": "GA"
+      },
+      "city_aliases": {
+        "ATL": "Atlanta"
+      },
+      "notes": "The Atlanta-Sandy Springs-Roswell MSA, Georgia (29 counties)."
+    },
+    {
+      "id": "region:twin-cities",
+      "short_name": "Twin Cities",
+      "name": "Minneapolis–Saint Paul",
+      "country": "US",
+      "admin1": [
+        "MN",
+        "WI"
+      ],
+      "aliases": [
+        "Minneapolis-Saint Paul",
+        "Minneapolis-St. Paul",
+        "Minneapolis St Paul",
+        "Minneapolis-St Paul",
+        "MSP Area"
+      ],
+      "kind": "metro",
+      "members": [
+        "census:27003",
+        "census:27019",
+        "census:27025",
+        "census:27037",
+        "census:27053",
+        "census:27059",
+        "census:27079",
+        "census:27095",
+        "census:27123",
+        "census:27139",
+        "census:27141",
+        "census:27163",
+        "census:27171",
+        "census:55093",
+        "census:55109"
+      ],
+      "definition": {
+        "title": "OMB Bulletin 23-01 delineation (July 2023): Minneapolis-St. Paul-Bloomington, MN-WI Metropolitan Statistical Area (CBSA 33460)",
+        "url": "https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html"
+      },
+      "principal_cities": {
+        "Minneapolis": "MN",
+        "Saint Paul": "MN",
+        "St. Paul": "MN",
+        "Bloomington": "MN",
+        "Eden Prairie": "MN",
+        "Edina": "MN",
+        "Eagan": "MN",
+        "Maple Grove": "MN"
+      },
+      "city_aliases": {
+        "MPLS": "Minneapolis",
+        "MSP": "Minneapolis"
+      },
+      "notes": "The Minneapolis-St. Paul-Bloomington MSA, which takes in Pierce and St. Croix counties, Wisconsin."
+    },
+    {
+      "id": "region:research-triangle",
+      "short_name": "Research Triangle",
+      "name": "Research Triangle",
+      "country": "US",
+      "admin1": [
+        "NC"
+      ],
+      "aliases": [
+        "RTP",
+        "Research Triangle Park",
+        "The Triangle",
+        "Triangle Area",
+        "Raleigh-Durham",
+        "Raleigh Durham"
+      ],
+      "kind": "metro",
+      "members": [
+        "census:37037",
+        "census:37063",
+        "census:37069",
+        "census:37085",
+        "census:37101",
+        "census:37105",
+        "census:37135",
+        "census:37145",
+        "census:37181",
+        "census:37183"
+      ],
+      "definition": {
+        "title": "OMB Bulletin 23-01 delineation (July 2023): Raleigh-Durham-Cary, NC Combined Statistical Area (CSA 450)",
+        "url": "https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html"
+      },
+      "principal_cities": {
+        "Raleigh": "NC",
+        "Durham": "NC",
+        "Chapel Hill": "NC",
+        "Cary": "NC",
+        "Morrisville": "NC",
+        "Apex": "NC"
+      },
+      "city_aliases": {
+        "RDU": "Raleigh"
+      },
+      "notes": "The Raleigh-Durham-Cary CSA, North Carolina: the Raleigh-Cary and Durham-Chapel Hill metros around Research Triangle Park, with their neighbouring micropolitan areas."
+    },
+    {
+      "id": "region:las-vegas",
+      "short_name": "Greater Las Vegas",
+      "name": "Las Vegas metropolitan area",
+      "country": "US",
+      "admin1": [
+        "NV"
+      ],
+      "aliases": [
+        "Las Vegas Metro",
+        "Las Vegas Area",
+        "Las Vegas Metropolitan Area",
+        "Las Vegas Valley"
+      ],
+      "kind": "metro",
+      "members": [
+        "census:32003"
+      ],
+      "definition": {
+        "title": "OMB Bulletin 23-01 delineation (July 2023): Las Vegas-Henderson-North Las Vegas, NV Metropolitan Statistical Area (CBSA 29820)",
+        "url": "https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html"
+      },
+      "notes": "The Las Vegas-Henderson-North Las Vegas MSA, which is Clark County, Nevada. The Las Vegas Valley proper is smaller than the county; the Strip is in Paradise CDP, not Las Vegas city."
+    }
+  ]
+}
