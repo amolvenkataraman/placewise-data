@@ -1,0 +1,4 @@
+# Packs are release assets, never committed
+*.tar.xz
+packs/
+out/
