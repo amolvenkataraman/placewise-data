@@ -1,0 +1,1514 @@
+{
+  "_comment": "Names of Indian administrative units and cities: a curated dataset (CC BY 4.0, see datasets/LICENSE.md), keyed by Local Government Directory (LGD) code. packbuild.ind.names reads it for the India pack. units: lgd ('state:<code>', 'district:<code>' or 'ulb:<code>', LGD's codes), name (what placewise shows: the current official name in the English spelling in use, which may differ from LGD's own, lgd_name), former (names before a rename, with the year it changed), aliases (other names and spellings in use, India Post's among them, so the directory's districts match), source (title and url of the notification or a page citing it), notes. cities: urban areas drawn as one city though LGD's PIN table doesn't say so: id (the pack id, lgd:ulb:<code>), name, official_name, state (ISO 3166-2 suffix), lgd (the LGD local bodies it stands for, whose PIN areas it takes), pincodes (seed PIN areas, or null: the rule in notes), former, aliases, source, notes. not_neighbourhoods: words that make a post-office name an institution, not a neighbourhood ('St. Johns Medical College S.O'), matched as whole words, case ignored.",
+  "units": [
+    {
+      "lgd": "state:21",
+      "name": "Odisha",
+      "former": [
+        {
+          "name": "Orissa",
+          "until": "2011"
+        }
+      ],
+      "source": {
+        "title": "The Orissa (Alteration of Name) Act, 2011 (Act 15 of 2011), in force 1 November 2011",
+        "url": "https://en.wikipedia.org/wiki/Odisha"
+      }
+    },
+    {
+      "lgd": "state:5",
+      "name": "Uttarakhand",
+      "former": [
+        {
+          "name": "Uttaranchal",
+          "until": "2007"
+        }
+      ],
+      "source": {
+        "title": "The Uttaranchal (Alteration of Name) Act, 2006, in force 1 January 2007",
+        "url": "https://en.wikipedia.org/wiki/Uttarakhand"
+      }
+    },
+    {
+      "lgd": "state:34",
+      "name": "Puducherry",
+      "former": [
+        {
+          "name": "Pondicherry",
+          "until": "2006"
+        }
+      ],
+      "source": {
+        "title": "The Pondicherry (Alteration of Name) Act, 2006, in force 1 October 2006",
+        "url": "https://en.wikipedia.org/wiki/Puducherry_(union_territory)"
+      }
+    },
+    {
+      "lgd": "state:38",
+      "name": "Dadra and Nagar Haveli and Daman and Diu",
+      "lgd_name": "The Dadra And Nagar Haveli And Daman And Diu",
+      "source": {
+        "title": "The Dadra and Nagar Haveli and Daman and Diu (Merger of Union territories) Act, 2019, in force 26 January 2020",
+        "url": "https://en.wikipedia.org/wiki/Dadra_and_Nagar_Haveli_and_Daman_and_Diu"
+      }
+    },
+    {
+      "lgd": "district:525",
+      "name": "Bengaluru Urban",
+      "former": [
+        {
+          "name": "Bangalore Urban",
+          "until": "2014"
+        }
+      ],
+      "aliases": [
+        "Bangalore"
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "district:526",
+      "name": "Bengaluru Rural",
+      "former": [
+        {
+          "name": "Bangalore Rural",
+          "until": "2014"
+        }
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "district:631",
+      "name": "Bengaluru South",
+      "former": [
+        {
+          "name": "Ramanagara",
+          "until": "2025"
+        }
+      ],
+      "source": {
+        "title": "Government of Karnataka: Ramanagara district renamed Bengaluru South (2025)",
+        "url": "https://en.wikipedia.org/wiki/Bengaluru_South_district"
+      }
+    },
+    {
+      "lgd": "district:545",
+      "name": "Mysuru",
+      "former": [
+        {
+          "name": "Mysore",
+          "until": "2014"
+        }
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "district:538",
+      "name": "Kalaburagi",
+      "former": [
+        {
+          "name": "Gulbarga",
+          "until": "2014"
+        }
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "district:527",
+      "name": "Belagavi",
+      "former": [
+        {
+          "name": "Belgaum",
+          "until": "2014"
+        }
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "district:528",
+      "name": "Ballari",
+      "former": [
+        {
+          "name": "Bellary",
+          "until": "2014"
+        }
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "district:530",
+      "name": "Vijayapura",
+      "former": [
+        {
+          "name": "Bijapur",
+          "until": "2014"
+        }
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "district:547",
+      "name": "Shivamogga",
+      "former": [
+        {
+          "name": "Shimoga",
+          "until": "2014"
+        }
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "district:548",
+      "name": "Tumakuru",
+      "former": [
+        {
+          "name": "Tumkur",
+          "until": "2014"
+        }
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "district:532",
+      "name": "Chikkamagaluru",
+      "former": [
+        {
+          "name": "Chikmagalur",
+          "until": "2014"
+        }
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "district:524",
+      "name": "Bagalkote",
+      "aliases": [
+        "Bagalkot"
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "district:62",
+      "name": "Gurugram",
+      "former": [
+        {
+          "name": "Gurgaon",
+          "until": "2016"
+        }
+      ],
+      "source": {
+        "title": "Government of Haryana: Gurgaon city and district renamed Gurugram (notified 27 September 2016)",
+        "url": "https://en.wikipedia.org/wiki/Gurgaon_district"
+      }
+    },
+    {
+      "lgd": "district:604",
+      "name": "Nuh",
+      "former": [
+        {
+          "name": "Mewat",
+          "until": "2016"
+        }
+      ],
+      "source": {
+        "title": "Government of Haryana: Mewat district renamed Nuh (April 2016)",
+        "url": "https://en.wikipedia.org/wiki/Nuh_district"
+      }
+    },
+    {
+      "lgd": "district:469",
+      "name": "Chhatrapati Sambhajinagar",
+      "former": [
+        {
+          "name": "Aurangabad",
+          "until": "2023"
+        }
+      ],
+      "source": {
+        "title": "Government of Maharashtra gazette notification of 15 September 2023 renaming Aurangabad district and division (city renamed with the Ministry of Home Affairs' approval, 24 February 2023)",
+        "url": "https://en.wikipedia.org/wiki/Chhatrapati_Sambhajinagar_district"
+      }
+    },
+    {
+      "lgd": "district:488",
+      "name": "Dharashiv",
+      "former": [
+        {
+          "name": "Osmanabad",
+          "until": "2023"
+        }
+      ],
+      "source": {
+        "title": "Government of Maharashtra gazette notification of 15 September 2023 renaming Osmanabad district (city renamed with the Ministry of Home Affairs' approval, 24 February 2023)",
+        "url": "https://en.wikipedia.org/wiki/Dharashiv_district"
+      }
+    },
+    {
+      "lgd": "district:466",
+      "name": "Ahilyanagar",
+      "former": [
+        {
+          "name": "Ahmednagar",
+          "until": "2024"
+        },
+        {
+          "name": "Ahmadnagar",
+          "until": "2024"
+        }
+      ],
+      "source": {
+        "title": "Government of Maharashtra notification of 4 October 2024 renaming Ahmednagar (Ministry of Home Affairs approval, 1 October 2024); LGD lists the district as Ahilyanagar",
+        "url": "https://www.deccanherald.com/india/maharashtra/maharashtras-ahmednagar-officially-renamed-to-ahilyanagar-3220795"
+      }
+    },
+    {
+      "lgd": "district:409",
+      "name": "Narmadapuram",
+      "former": [
+        {
+          "name": "Hoshangabad",
+          "until": "2022"
+        }
+      ],
+      "source": {
+        "title": "Government of Madhya Pradesh: Hoshangabad renamed Narmadapuram (2022)",
+        "url": "https://en.wikipedia.org/wiki/Narmadapuram_district"
+      }
+    },
+    {
+      "lgd": "district:120",
+      "name": "Prayagraj",
+      "former": [
+        {
+          "name": "Allahabad",
+          "until": "2018"
+        }
+      ],
+      "source": {
+        "title": "Government of Uttar Pradesh: Allahabad district renamed Prayagraj (October 2018)",
+        "url": "https://en.wikipedia.org/wiki/Prayagraj_district"
+      }
+    },
+    {
+      "lgd": "district:140",
+      "name": "Ayodhya",
+      "former": [
+        {
+          "name": "Faizabad",
+          "until": "2018"
+        }
+      ],
+      "source": {
+        "title": "Government of Uttar Pradesh: Faizabad district renamed Ayodhya (November 2018)",
+        "url": "https://en.wikipedia.org/wiki/Ayodhya_district"
+      }
+    },
+    {
+      "lgd": "district:482",
+      "name": "Mumbai",
+      "former": [
+        {
+          "name": "Bombay",
+          "until": "1995"
+        }
+      ],
+      "aliases": [
+        "Mumbai City"
+      ],
+      "source": {
+        "title": "Government of Maharashtra: Bombay renamed Mumbai (1995)",
+        "url": "https://en.wikipedia.org/wiki/Mumbai_City_district"
+      }
+    },
+    {
+      "lgd": "district:483",
+      "name": "Mumbai Suburban",
+      "former": [
+        {
+          "name": "Bombay Suburban",
+          "until": "1995"
+        }
+      ],
+      "source": {
+        "title": "Government of Maharashtra: Bombay renamed Mumbai (1995)",
+        "url": "https://en.wikipedia.org/wiki/Mumbai_Suburban_district"
+      }
+    },
+    {
+      "lgd": "district:568",
+      "name": "Chennai",
+      "former": [
+        {
+          "name": "Madras",
+          "until": "1996"
+        }
+      ],
+      "source": {
+        "title": "Government of Tamil Nadu: Madras renamed Chennai (17 July 1996)",
+        "url": "https://en.wikipedia.org/wiki/Chennai_district"
+      }
+    },
+    {
+      "lgd": "district:315",
+      "name": "Kolkata",
+      "former": [
+        {
+          "name": "Calcutta",
+          "until": "2001"
+        }
+      ],
+      "source": {
+        "title": "Government of West Bengal: Calcutta renamed Kolkata (1 January 2001)",
+        "url": "https://en.wikipedia.org/wiki/Kolkata_district"
+      }
+    },
+    {
+      "lgd": "district:565",
+      "name": "Thiruvananthapuram",
+      "former": [
+        {
+          "name": "Trivandrum",
+          "until": "1991"
+        }
+      ],
+      "source": {
+        "title": "Government of Kerala: Trivandrum renamed Thiruvananthapuram (1991)",
+        "url": "https://en.wikipedia.org/wiki/Thiruvananthapuram_district"
+      }
+    },
+    {
+      "lgd": "district:561",
+      "name": "Kozhikode",
+      "aliases": [
+        "Calicut"
+      ],
+      "source": {
+        "title": "Wikipedia: Kozhikode district (Calicut is the English name still in use)",
+        "url": "https://en.wikipedia.org/wiki/Kozhikode_district"
+      }
+    },
+    {
+      "lgd": "district:490",
+      "name": "Pune",
+      "former": [
+        {
+          "name": "Poona",
+          "until": "1978"
+        }
+      ],
+      "source": {
+        "title": "Pune: the English spelling Poona was replaced by Pune (1978)",
+        "url": "https://en.wikipedia.org/wiki/Pune_district"
+      }
+    },
+    {
+      "lgd": "district:461",
+      "name": "Vadodara",
+      "former": [
+        {
+          "name": "Baroda",
+          "until": "1974"
+        }
+      ],
+      "source": {
+        "title": "Government of Gujarat: Baroda renamed Vadodara (1974)",
+        "url": "https://en.wikipedia.org/wiki/Vadodara_district"
+      }
+    },
+    {
+      "lgd": "district:23",
+      "name": "Shimla",
+      "former": [
+        {
+          "name": "Simla",
+          "until": "1972"
+        }
+      ],
+      "source": {
+        "title": "Shimla: the spelling Simla was replaced by Shimla",
+        "url": "https://en.wikipedia.org/wiki/Shimla_district"
+      }
+    },
+    {
+      "lgd": "district:600",
+      "name": "Puducherry",
+      "former": [
+        {
+          "name": "Pondicherry",
+          "until": "2006"
+        }
+      ],
+      "source": {
+        "title": "The Pondicherry (Alteration of Name) Act, 2006",
+        "url": "https://en.wikipedia.org/wiki/Puducherry_district"
+      }
+    },
+    {
+      "lgd": "district:594",
+      "name": "Thoothukkudi",
+      "former": [
+        {
+          "name": "Tuticorin",
+          "until": "1997"
+        }
+      ],
+      "aliases": [
+        "Thoothukudi"
+      ],
+      "source": {
+        "title": "Government of Tamil Nadu: Tuticorin renamed Thoothukudi (1997); LGD spells it Thoothukkudi",
+        "url": "https://en.wikipedia.org/wiki/Thoothukudi_district"
+      }
+    },
+    {
+      "lgd": "district:293",
+      "name": "Sribhumi",
+      "former": [
+        {
+          "name": "Karimganj",
+          "until": "2024"
+        }
+      ],
+      "source": {
+        "title": "Government of Assam: Karimganj district renamed Sribhumi (November 2024)",
+        "url": "https://en.wikipedia.org/wiki/Sribhumi_district"
+      }
+    },
+    {
+      "lgd": "district:686",
+      "name": "Hanumakonda",
+      "former": [
+        {
+          "name": "Warangal Urban",
+          "until": "2021"
+        }
+      ],
+      "source": {
+        "title": "Government of Telangana: Warangal Urban district renamed Hanumakonda (August 2021)",
+        "url": "https://en.wikipedia.org/wiki/Hanumakonda_district"
+      }
+    },
+    {
+      "lgd": "district:225",
+      "name": "Gangtok",
+      "former": [
+        {
+          "name": "East District",
+          "until": "2021"
+        },
+        {
+          "name": "East Sikkim",
+          "until": "2021"
+        }
+      ],
+      "source": {
+        "title": "Government of Sikkim: districts renamed after their headquarters (East District -> Gangtok, 2021)",
+        "url": "https://en.wikipedia.org/wiki/Gangtok_district"
+      }
+    },
+    {
+      "lgd": "district:504",
+      "name": "YSR Kadapa",
+      "lgd_name": "Y.S.R. Kadapa",
+      "former": [
+        {
+          "name": "Cuddapah",
+          "until": "2005"
+        },
+        {
+          "name": "Y.S.R.",
+          "until": "2023"
+        }
+      ],
+      "aliases": [
+        "Kadapa"
+      ],
+      "source": {
+        "title": "Government of Andhra Pradesh: Cuddapah district renamed YSR (2010) and YSR Kadapa (2023)",
+        "url": "https://en.wikipedia.org/wiki/YSR_Kadapa_district"
+      }
+    },
+    {
+      "lgd": "district:502",
+      "name": "Ananthapuramu",
+      "aliases": [
+        "Anantapur"
+      ],
+      "source": {
+        "title": "Government of Andhra Pradesh: Anantapur spelt Ananthapuramu",
+        "url": "https://en.wikipedia.org/wiki/Anantapur_district"
+      }
+    },
+    {
+      "lgd": "district:515",
+      "name": "Sri Potti Sriramulu Nellore",
+      "aliases": [
+        "SPSR Nellore",
+        "Nellore"
+      ],
+      "source": {
+        "title": "Government of Andhra Pradesh: Nellore district renamed Sri Potti Sriramulu Nellore (2008)",
+        "url": "https://en.wikipedia.org/wiki/Nellore_district"
+      }
+    },
+    {
+      "lgd": "district:520",
+      "name": "Visakhapatnam",
+      "aliases": [
+        "Visakhapatanam",
+        "Vizag"
+      ],
+      "source": {
+        "title": "Wikipedia: Visakhapatnam district (Vizag is the common short name)",
+        "url": "https://en.wikipedia.org/wiki/Visakhapatnam_district"
+      }
+    },
+    {
+      "lgd": "district:438",
+      "name": "Ahmedabad",
+      "aliases": [
+        "Ahmadabad",
+        "Amdavad"
+      ],
+      "source": {
+        "title": "Wikipedia: Ahmedabad district (Ahmadabad is the Census spelling)",
+        "url": "https://en.wikipedia.org/wiki/Ahmedabad_district"
+      }
+    },
+    {
+      "lgd": "district:303",
+      "name": "North 24 Parganas",
+      "aliases": [
+        "24 Paraganas North",
+        "North Twenty Four Parganas"
+      ],
+      "source": {
+        "title": "Wikipedia: North 24 Parganas district",
+        "url": "https://en.wikipedia.org/wiki/North_24_Parganas_district"
+      }
+    },
+    {
+      "lgd": "district:304",
+      "name": "South 24 Parganas",
+      "aliases": [
+        "24 Paraganas South",
+        "South Twenty Four Parganas"
+      ],
+      "source": {
+        "title": "Wikipedia: South 24 Parganas district",
+        "url": "https://en.wikipedia.org/wiki/South_24_Parganas_district"
+      }
+    },
+    {
+      "lgd": "district:317",
+      "name": "Purba Medinipur",
+      "aliases": [
+        "Medinipur East",
+        "East Midnapore"
+      ],
+      "source": {
+        "title": "Wikipedia: Purba Medinipur district",
+        "url": "https://en.wikipedia.org/wiki/Purba_Medinipur_district"
+      }
+    },
+    {
+      "lgd": "district:318",
+      "name": "Paschim Medinipur",
+      "aliases": [
+        "Medinipur West",
+        "West Midnapore"
+      ],
+      "source": {
+        "title": "Wikipedia: Paschim Medinipur district",
+        "url": "https://en.wikipedia.org/wiki/Paschim_Medinipur_district"
+      }
+    },
+    {
+      "lgd": "district:310",
+      "name": "Dakshin Dinajpur",
+      "aliases": [
+        "Dinajpur Dakshin",
+        "South Dinajpur"
+      ],
+      "source": {
+        "title": "Wikipedia: Dakshin Dinajpur district",
+        "url": "https://en.wikipedia.org/wiki/Dakshin_Dinajpur_district"
+      }
+    },
+    {
+      "lgd": "district:356",
+      "name": "Jajpur",
+      "aliases": [
+        "Jajapur"
+      ],
+      "source": {
+        "title": "Wikipedia: Jajpur district",
+        "url": "https://en.wikipedia.org/wiki/Jajpur_district"
+      }
+    },
+    {
+      "lgd": "district:31",
+      "name": "Ferozepur",
+      "aliases": [
+        "Firozepur",
+        "Firozpur"
+      ],
+      "source": {
+        "title": "Wikipedia: Firozpur district",
+        "url": "https://en.wikipedia.org/wiki/Firozpur_district"
+      }
+    },
+    {
+      "lgd": "district:181",
+      "name": "Shrawasti",
+      "aliases": [
+        "Shravasti"
+      ],
+      "source": {
+        "title": "Wikipedia: Shravasti district",
+        "url": "https://en.wikipedia.org/wiki/Shravasti_district"
+      }
+    },
+    {
+      "lgd": "district:445",
+      "name": "Dahod",
+      "aliases": [
+        "Dohad"
+      ],
+      "source": {
+        "title": "Wikipedia: Dahod district",
+        "url": "https://en.wikipedia.org/wiki/Dahod_district"
+      }
+    },
+    {
+      "lgd": "district:596",
+      "name": "Viluppuram",
+      "aliases": [
+        "Villupuram"
+      ],
+      "source": {
+        "title": "Wikipedia: Viluppuram district",
+        "url": "https://en.wikipedia.org/wiki/Viluppuram_district"
+      }
+    },
+    {
+      "lgd": "district:350",
+      "name": "Cuttack",
+      "lgd_name": "Kataka",
+      "aliases": [
+        "Kataka"
+      ],
+      "source": {
+        "title": "Government of Odisha district names; LGD lists the Odia transliteration",
+        "url": "https://en.wikipedia.org/wiki/List_of_districts_of_Odisha"
+      }
+    },
+    {
+      "lgd": "district:347",
+      "name": "Bargarh",
+      "lgd_name": "Baragada",
+      "aliases": [
+        "Baragada"
+      ],
+      "source": {
+        "title": "Government of Odisha district names; LGD lists the Odia transliteration",
+        "url": "https://en.wikipedia.org/wiki/List_of_districts_of_Odisha"
+      }
+    },
+    {
+      "lgd": "district:373",
+      "name": "Sundargarh",
+      "lgd_name": "Sundaragada",
+      "aliases": [
+        "Sundaragada"
+      ],
+      "source": {
+        "title": "Government of Odisha district names; LGD lists the Odia transliteration",
+        "url": "https://en.wikipedia.org/wiki/List_of_districts_of_Odisha"
+      }
+    },
+    {
+      "lgd": "district:344",
+      "name": "Angul",
+      "lgd_name": "Anugola",
+      "aliases": [
+        "Anugola"
+      ],
+      "source": {
+        "title": "Government of Odisha district names; LGD lists the Odia transliteration",
+        "url": "https://en.wikipedia.org/wiki/List_of_districts_of_Odisha"
+      }
+    },
+    {
+      "lgd": "district:351",
+      "name": "Deogarh",
+      "lgd_name": "Debagada",
+      "aliases": [
+        "Debagada"
+      ],
+      "source": {
+        "title": "Government of Odisha district names; LGD lists the Odia transliteration",
+        "url": "https://en.wikipedia.org/wiki/List_of_districts_of_Odisha"
+      }
+    },
+    {
+      "lgd": "district:367",
+      "name": "Nayagarh",
+      "lgd_name": "Nayagada",
+      "aliases": [
+        "Nayagada"
+      ],
+      "source": {
+        "title": "Government of Odisha district names; LGD lists the Odia transliteration",
+        "url": "https://en.wikipedia.org/wiki/List_of_districts_of_Odisha"
+      }
+    },
+    {
+      "lgd": "district:359",
+      "name": "Kandhamal",
+      "lgd_name": "Kandhamala",
+      "aliases": [
+        "Kandhamala"
+      ],
+      "source": {
+        "title": "Government of Odisha district names; LGD lists the Odia transliteration",
+        "url": "https://en.wikipedia.org/wiki/List_of_districts_of_Odisha"
+      }
+    },
+    {
+      "lgd": "district:346",
+      "name": "Balasore",
+      "lgd_name": "Baleshwar",
+      "aliases": [
+        "Baleshwar"
+      ],
+      "source": {
+        "title": "Government of Odisha district names; LGD lists the Odia transliteration",
+        "url": "https://en.wikipedia.org/wiki/List_of_districts_of_Odisha"
+      }
+    },
+    {
+      "lgd": "ulb:251488",
+      "name": "Mumbai",
+      "lgd_name": "Greater Mumbai",
+      "former": [
+        {
+          "name": "Bombay",
+          "until": "1995"
+        }
+      ],
+      "aliases": [
+        "Greater Mumbai",
+        "Brihanmumbai Municipal Corporation",
+        "BMC",
+        "MCGM"
+      ],
+      "source": {
+        "title": "Brihanmumbai Municipal Corporation (Municipal Corporation of Greater Mumbai); Bombay renamed Mumbai 1995",
+        "url": "https://en.wikipedia.org/wiki/Brihanmumbai_Municipal_Corporation"
+      }
+    },
+    {
+      "lgd": "ulb:252294",
+      "name": "Chennai",
+      "lgd_name": "Greater Chennai Corporation",
+      "former": [
+        {
+          "name": "Madras",
+          "until": "1996"
+        }
+      ],
+      "aliases": [
+        "Greater Chennai Corporation",
+        "GCC"
+      ],
+      "source": {
+        "title": "Greater Chennai Corporation; Madras renamed Chennai 1996",
+        "url": "https://en.wikipedia.org/wiki/Greater_Chennai_Corporation"
+      }
+    },
+    {
+      "lgd": "ulb:250299",
+      "name": "Kolkata",
+      "former": [
+        {
+          "name": "Calcutta",
+          "until": "2001"
+        }
+      ],
+      "aliases": [
+        "Kolkata Municipal Corporation",
+        "KMC"
+      ],
+      "source": {
+        "title": "Kolkata Municipal Corporation; Calcutta renamed Kolkata 2001",
+        "url": "https://en.wikipedia.org/wiki/Kolkata_Municipal_Corporation"
+      }
+    },
+    {
+      "lgd": "ulb:251664",
+      "name": "Hyderabad",
+      "aliases": [
+        "Greater Hyderabad Municipal Corporation",
+        "GHMC"
+      ],
+      "source": {
+        "title": "Greater Hyderabad Municipal Corporation (LGD: Hyderabad)",
+        "url": "https://en.wikipedia.org/wiki/Greater_Hyderabad_Municipal_Corporation"
+      }
+    },
+    {
+      "lgd": "ulb:276447",
+      "name": "New Delhi",
+      "lgd_name": "New Delhi Municipal Council",
+      "aliases": [
+        "New Delhi Municipal Council",
+        "NDMC"
+      ],
+      "source": {
+        "title": "New Delhi Municipal Council (NDMC Act, 1994)",
+        "url": "https://en.wikipedia.org/wiki/New_Delhi_Municipal_Council"
+      }
+    },
+    {
+      "lgd": "ulb:252260",
+      "name": "Thiruvananthapuram",
+      "former": [
+        {
+          "name": "Trivandrum",
+          "until": "1991"
+        }
+      ],
+      "source": {
+        "title": "Thiruvananthapuram Municipal Corporation",
+        "url": "https://en.wikipedia.org/wiki/Thiruvananthapuram_Municipal_Corporation"
+      }
+    },
+    {
+      "lgd": "ulb:252160",
+      "name": "Kozhikode",
+      "aliases": [
+        "Calicut"
+      ],
+      "source": {
+        "title": "Kozhikode Municipal Corporation",
+        "url": "https://en.wikipedia.org/wiki/Kozhikode_Corporation"
+      }
+    },
+    {
+      "lgd": "ulb:252220",
+      "name": "Kochi",
+      "former": [
+        {
+          "name": "Cochin",
+          "until": "1996"
+        }
+      ],
+      "source": {
+        "title": "Kochi Municipal Corporation; Cochin renamed Kochi 1996",
+        "url": "https://en.wikipedia.org/wiki/Kochi_Municipal_Corporation"
+      }
+    },
+    {
+      "lgd": "ulb:251530",
+      "name": "Pune",
+      "former": [
+        {
+          "name": "Poona",
+          "until": "1978"
+        }
+      ],
+      "aliases": [
+        "Pune Municipal Corporation",
+        "PMC"
+      ],
+      "source": {
+        "title": "Pune Municipal Corporation",
+        "url": "https://en.wikipedia.org/wiki/Pune_Municipal_Corporation"
+      }
+    },
+    {
+      "lgd": "ulb:251209",
+      "name": "Vadodara",
+      "former": [
+        {
+          "name": "Baroda",
+          "until": "1974"
+        }
+      ],
+      "source": {
+        "title": "Vadodara Municipal Corporation",
+        "url": "https://en.wikipedia.org/wiki/Vadodara_Municipal_Corporation"
+      }
+    },
+    {
+      "lgd": "ulb:251096",
+      "name": "Ahmedabad",
+      "lgd_name": "Ahmadabad",
+      "aliases": [
+        "Ahmadabad",
+        "Amdavad",
+        "Ahmedabad Municipal Corporation",
+        "AMC"
+      ],
+      "source": {
+        "title": "Ahmedabad Municipal Corporation (LGD: Ahmadabad)",
+        "url": "https://en.wikipedia.org/wiki/Ahmedabad_Municipal_Corporation"
+      }
+    },
+    {
+      "lgd": "ulb:252045",
+      "name": "Mysuru",
+      "former": [
+        {
+          "name": "Mysore",
+          "until": "2014"
+        }
+      ],
+      "aliases": [
+        "Mysuru City Corporation"
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "ulb:248127",
+      "name": "Kalaburagi",
+      "lgd_name": "Kalaburagi City Corporation",
+      "former": [
+        {
+          "name": "Gulbarga",
+          "until": "2014"
+        }
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "ulb:251824",
+      "name": "Belagavi",
+      "former": [
+        {
+          "name": "Belgaum",
+          "until": "2014"
+        }
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "ulb:251927",
+      "name": "Ballari",
+      "former": [
+        {
+          "name": "Bellary",
+          "until": "2014"
+        }
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "ulb:251893",
+      "name": "Hubballi-Dharwad",
+      "former": [
+        {
+          "name": "Hubli-Dharwad",
+          "until": "2014"
+        }
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "ulb:252021",
+      "name": "Mangaluru",
+      "former": [
+        {
+          "name": "Mangalore",
+          "until": "2014"
+        }
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "ulb:251951",
+      "name": "Shivamogga",
+      "former": [
+        {
+          "name": "Shimoga",
+          "until": "2014"
+        }
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "ulb:251973",
+      "name": "Tumakuru",
+      "former": [
+        {
+          "name": "Tumkur",
+          "until": "2014"
+        }
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "ulb:251993",
+      "name": "Vijayapura",
+      "former": [
+        {
+          "name": "Bijapur",
+          "until": "2014"
+        }
+      ],
+      "source": {
+        "title": "Government of Karnataka notification of 1 November 2014 renaming 12 cities (approved by the Ministry of Home Affairs, October 2014)",
+        "url": "https://en.wikipedia.org/wiki/List_of_renamed_places_in_India"
+      }
+    },
+    {
+      "lgd": "ulb:248576",
+      "name": "Gurugram",
+      "former": [
+        {
+          "name": "Gurgaon",
+          "until": "2016"
+        }
+      ],
+      "aliases": [
+        "Municipal Corporation of Gurugram",
+        "MCG"
+      ],
+      "source": {
+        "title": "Government of Haryana: Gurgaon renamed Gurugram (27 September 2016)",
+        "url": "https://en.wikipedia.org/wiki/Municipal_Corporation_of_Gurugram"
+      }
+    },
+    {
+      "lgd": "ulb:251428",
+      "name": "Chhatrapati Sambhajinagar",
+      "lgd_name": "Aurangabad",
+      "former": [
+        {
+          "name": "Aurangabad",
+          "until": "2023"
+        }
+      ],
+      "source": {
+        "title": "Ministry of Home Affairs approval of 24 February 2023 and Government of Maharashtra notification renaming Aurangabad city (LGD still lists the corporation as Aurangabad)",
+        "url": "https://en.wikipedia.org/wiki/Chhatrapati_Sambhajinagar"
+      }
+    },
+    {
+      "lgd": "ulb:251548",
+      "name": "Ahilyanagar",
+      "lgd_name": "Ahmadnagar",
+      "former": [
+        {
+          "name": "Ahmednagar",
+          "until": "2024"
+        },
+        {
+          "name": "Ahmadnagar",
+          "until": "2024"
+        }
+      ],
+      "source": {
+        "title": "Government of Maharashtra notification of 4 October 2024 renaming Ahmednagar city (LGD still lists the corporation as Ahmadnagar)",
+        "url": "https://www.deccanherald.com/india/maharashtra/maharashtras-ahmednagar-officially-renamed-to-ahilyanagar-3220795"
+      }
+    },
+    {
+      "lgd": "ulb:249369",
+      "name": "Prayagraj",
+      "former": [
+        {
+          "name": "Allahabad",
+          "until": "2018"
+        }
+      ],
+      "source": {
+        "title": "Government of Uttar Pradesh: Allahabad renamed Prayagraj (October 2018)",
+        "url": "https://en.wikipedia.org/wiki/Prayagraj"
+      }
+    },
+    {
+      "lgd": "ulb:250501",
+      "name": "Cuttack",
+      "lgd_name": "Kataka",
+      "aliases": [
+        "Kataka",
+        "Cuttack Municipal Corporation"
+      ],
+      "source": {
+        "title": "Government of Odisha district names; LGD lists the Odia transliteration",
+        "url": "https://en.wikipedia.org/wiki/List_of_districts_of_Odisha"
+      }
+    },
+    {
+      "lgd": "ulb:251782",
+      "name": "Kadapa",
+      "lgd_name": "Cuddapah",
+      "former": [
+        {
+          "name": "Cuddapah",
+          "until": "2005"
+        }
+      ],
+      "source": {
+        "title": "Kadapa Municipal Corporation (LGD: Cuddapah)",
+        "url": "https://en.wikipedia.org/wiki/Kadapa"
+      }
+    },
+    {
+      "lgd": "ulb:252970",
+      "name": "Thoothukudi",
+      "former": [
+        {
+          "name": "Tuticorin",
+          "until": "1997"
+        }
+      ],
+      "source": {
+        "title": "Thoothukudi City Municipal Corporation",
+        "url": "https://en.wikipedia.org/wiki/Thoothukudi"
+      }
+    },
+    {
+      "lgd": "ulb:248156",
+      "name": "Srinagar",
+      "lgd_name": "Srinagar Municipal Corporation",
+      "aliases": [
+        "Srinagar Municipal Corporation"
+      ],
+      "source": {
+        "title": "Srinagar Municipal Corporation",
+        "url": "https://en.wikipedia.org/wiki/Srinagar_Municipal_Corporation"
+      }
+    },
+    {
+      "lgd": "ulb:248194",
+      "name": "Jammu",
+      "lgd_name": "Jammu Municipal Corporation",
+      "aliases": [
+        "Jammu Municipal Corporation"
+      ],
+      "source": {
+        "title": "Jammu Municipal Corporation",
+        "url": "https://en.wikipedia.org/wiki/Jammu_Municipal_Corporation"
+      }
+    },
+    {
+      "lgd": "ulb:249694",
+      "name": "Gangtok",
+      "lgd_name": "Gangtok (M Corp.)",
+      "aliases": [
+        "Gangtok Municipal Corporation"
+      ],
+      "source": {
+        "title": "Gangtok Municipal Corporation",
+        "url": "https://en.wikipedia.org/wiki/Gangtok"
+      }
+    },
+    {
+      "lgd": "ulb:277318",
+      "name": "Aizawl",
+      "lgd_name": "Aizawl Municipal Co-Operation",
+      "aliases": [
+        "Aizawl Municipal Corporation"
+      ],
+      "source": {
+        "title": "Aizawl Municipal Corporation",
+        "url": "https://en.wikipedia.org/wiki/Aizawl"
+      }
+    },
+    {
+      "lgd": "ulb:252071",
+      "name": "Panaji",
+      "lgd_name": "City Corporation Panaji",
+      "former": [
+        {
+          "name": "Panjim",
+          "until": "1961"
+        }
+      ],
+      "aliases": [
+        "Corporation of the City of Panaji"
+      ],
+      "source": {
+        "title": "Corporation of the City of Panaji",
+        "url": "https://en.wikipedia.org/wiki/Panaji"
+      }
+    },
+    {
+      "lgd": "ulb:248325",
+      "name": "Mohali",
+      "lgd_name": "S.A.S.Nagar - Mohali",
+      "aliases": [
+        "Sahibzada Ajit Singh Nagar",
+        "S.A.S. Nagar"
+      ],
+      "source": {
+        "title": "Municipal Corporation Mohali",
+        "url": "https://en.wikipedia.org/wiki/Mohali"
+      }
+    },
+    {
+      "lgd": "ulb:248459",
+      "name": "Haldwani",
+      "lgd_name": "Haldwani-Cumkathgodam",
+      "aliases": [
+        "Haldwani-Kathgodam"
+      ],
+      "source": {
+        "title": "Haldwani Municipal Corporation",
+        "url": "https://en.wikipedia.org/wiki/Haldwani"
+      }
+    },
+    {
+      "lgd": "ulb:250979",
+      "name": "Katni",
+      "lgd_name": "Murwara - Katni",
+      "aliases": [
+        "Murwara"
+      ],
+      "source": {
+        "title": "Katni Municipal Corporation (Murwara)",
+        "url": "https://en.wikipedia.org/wiki/Katni"
+      }
+    }
+  ],
+  "cities": [
+    {
+      "id": "lgd:ulb:276600",
+      "name": "Bengaluru",
+      "official_name": "Bruhat Bengaluru Mahanagara Palike",
+      "state": "KA",
+      "lgd": [
+        "276600"
+      ],
+      "former": [
+        {
+          "name": "Bangalore",
+          "until": "2014"
+        }
+      ],
+      "aliases": [
+        "Bangalore",
+        "BBMP",
+        "Greater Bengaluru"
+      ],
+      "pincodes": [
+        "560001",
+        "560002",
+        "560003",
+        "560004",
+        "560005",
+        "560006",
+        "560007",
+        "560008",
+        "560009",
+        "560010",
+        "560011",
+        "560012",
+        "560013",
+        "560015",
+        "560016",
+        "560017",
+        "560018",
+        "560020",
+        "560021",
+        "560022",
+        "560023",
+        "560024",
+        "560025",
+        "560026",
+        "560027",
+        "560029",
+        "560030",
+        "560032",
+        "560033",
+        "560034",
+        "560035",
+        "560036",
+        "560037",
+        "560038",
+        "560040",
+        "560041",
+        "560042",
+        "560043",
+        "560045",
+        "560047",
+        "560048",
+        "560050",
+        "560051",
+        "560053",
+        "560054",
+        "560055",
+        "560056",
+        "560057",
+        "560058",
+        "560059",
+        "560061",
+        "560062",
+        "560063",
+        "560065",
+        "560066",
+        "560067",
+        "560068",
+        "560070",
+        "560071",
+        "560072",
+        "560073",
+        "560075",
+        "560076",
+        "560077",
+        "560078",
+        "560079",
+        "560080",
+        "560081",
+        "560082",
+        "560084",
+        "560085",
+        "560086",
+        "560088",
+        "560090",
+        "560091",
+        "560092",
+        "560093",
+        "560094",
+        "560095",
+        "560096",
+        "560097",
+        "560098",
+        "560102",
+        "560103",
+        "560104",
+        "560107",
+        "560108",
+        "560109",
+        "560110",
+        "560111",
+        "560112",
+        "560113",
+        "560114",
+        "560115"
+      ],
+      "source": {
+        "title": "Bruhat Bengaluru Mahanagara Palike (LGD local body 276600 until 2025); the Greater Bengaluru Governance Act, 2024 replaced it in September 2025 with five city corporations under the Greater Bengaluru Authority (LGD 305850-305854), which LGD's PIN table doesn't list yet",
+        "url": "https://en.wikipedia.org/wiki/Bruhat_Bengaluru_Mahanagara_Palike"
+      },
+      "notes": "Drawn as the BBMP area: the delivery PIN areas of Bengaluru (5600xx) of at most 40 km2, leaving out the bigger fringe areas (560049, 560060, 560064, 560074, 560083, 560087, 560089, 560099, 560105, 560116, 560117, 560119), Electronic City (560100, run by ELCITA, outside BBMP) and the airport (560300, Devanahalli). Until LGD's PIN table lists the five corporations, Bengaluru is one city here, as people name it."
+    },
+    {
+      "id": "lgd:ulb:276402",
+      "name": "Delhi",
+      "official_name": "Municipal Corporation of Delhi",
+      "state": "DL",
+      "lgd": [
+        "276400",
+        "276401",
+        "276402"
+      ],
+      "aliases": [
+        "MCD",
+        "Municipal Corporation of Delhi"
+      ],
+      "source": {
+        "title": "The Delhi Municipal Corporation (Amendment) Act, 2022 reunified the North, South and East Delhi Municipal Corporations as the Municipal Corporation of Delhi (22 May 2022); LGD still lists the three (276400, 276401, 276402)",
+        "url": "https://en.wikipedia.org/wiki/Municipal_Corporation_of_Delhi"
+      },
+      "notes": "One city with the id of LGD's South Delhi Municipal Corporation, the first listed."
+    }
+  ],
+  "not_neighbourhoods": [
+    "College",
+    "University",
+    "Hospital",
+    "Medical",
+    "Secretariat",
+    "High Court",
+    "Hostel",
+    "Factory",
+    "Institute",
+    "Polytechnic",
+    "I.I.T",
+    "IIT",
+    "Assembly",
+    "Raj Bhavan",
+    "Rajbhavan",
+    "Air Force",
+    "Airport",
+    "Refinery",
+    "Thermal",
+    "Project",
+    "Camp",
+    "Training Centre",
+    "Exchange",
+    "Stock Exchange",
+    "Parliament House",
+    "Sansad Marg",
+    "Govt Press",
+    "Mail Office",
+    "R.M.S",
+    "RMS",
+    "Sorting",
+    "NSH",
+    "Speed Post",
+    "Courts",
+    "Collectorate"
+  ]
+}
