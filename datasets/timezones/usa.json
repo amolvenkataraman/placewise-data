@@ -1,0 +1,480 @@
+{
+  "_comment": "Time zones of the US pack: a curated dataset (CC BY 4.0, see datasets/LICENSE.md). packbuild.timezones turns it into the usa pack's `timezones` polygon layer, which answers for points in the United States before the world pack's coarser layer. `admin1` has one entry per feature of the pack's states layer (iso:US-XX): an IANA zone for a state with one zone, or an object with `zone` (the rest of the state) and `parts` (counties, census:<GEOID> -> zone). A zone can be a list: the county is split along a line the pack doesn't draw; the first entry is its main zone and the nearest town inside it whose zone is listed decides. `shapes` take precedence: Census AIANNH areas (`aiannh`: the AIANNHCE code) or boxes [south, west, north, east]. Every zone must exist in the tz database; `sources` name entries of the top-level `sources`.",
+  "country": "US",
+  "tzdb": "2026f",
+  "sources": {
+    "tzdb": {
+      "title": "IANA Time Zone Database 2026f: zone.tab and the commentary in northamerica",
+      "url": "https://data.iana.org/time-zones/releases/tzdata2026f.tar.gz",
+      "licence": "public domain"
+    },
+    "cfr": {
+      "title": "49 CFR Part 71, Standard Time Zone Boundaries",
+      "url": "https://www.ecfr.gov/current/title-49/subtitle-A/part-71",
+      "licence": "public domain"
+    },
+    "census-aiannh": {
+      "title": "US Census Bureau, 2025 cartographic boundary file, American Indian/Alaska Native/Native Hawaiian Areas, 1:500,000",
+      "url": "https://www2.census.gov/geo/tiger/GENZ2025/shp/cb_2025_us_aiannh_500k.zip",
+      "licence": "public domain"
+    },
+    "geonames": {
+      "title": "GeoNames cities1000: the time zone GeoNames gives the towns of a county, where tzdb names a region but no counties",
+      "url": "https://www.geonames.org",
+      "licence": "CC BY 4.0"
+    }
+  },
+  "admin1": {
+    "iso:US-AR": "America/Chicago",
+    "iso:US-IL": "America/Chicago",
+    "iso:US-IA": "America/Chicago",
+    "iso:US-LA": "America/Chicago",
+    "iso:US-MN": "America/Chicago",
+    "iso:US-MS": "America/Chicago",
+    "iso:US-MO": "America/Chicago",
+    "iso:US-OK": "America/Chicago",
+    "iso:US-WI": "America/Chicago",
+    "iso:US-CT": "America/New_York",
+    "iso:US-DE": "America/New_York",
+    "iso:US-DC": "America/New_York",
+    "iso:US-GA": "America/New_York",
+    "iso:US-ME": "America/New_York",
+    "iso:US-MD": "America/New_York",
+    "iso:US-MA": "America/New_York",
+    "iso:US-NH": "America/New_York",
+    "iso:US-NJ": "America/New_York",
+    "iso:US-NY": "America/New_York",
+    "iso:US-NC": "America/New_York",
+    "iso:US-OH": "America/New_York",
+    "iso:US-PA": "America/New_York",
+    "iso:US-RI": "America/New_York",
+    "iso:US-SC": "America/New_York",
+    "iso:US-VT": "America/New_York",
+    "iso:US-VA": "America/New_York",
+    "iso:US-WV": "America/New_York",
+    "iso:US-CO": "America/Denver",
+    "iso:US-MT": "America/Denver",
+    "iso:US-NM": "America/Denver",
+    "iso:US-UT": "America/Denver",
+    "iso:US-WY": "America/Denver",
+    "iso:US-CA": "America/Los_Angeles",
+    "iso:US-WA": "America/Los_Angeles",
+    "iso:US-HI": "Pacific/Honolulu",
+    "iso:US-AS": "Pacific/Pago_Pago",
+    "iso:US-GU": "Pacific/Guam",
+    "iso:US-MP": "Pacific/Saipan",
+    "iso:US-PR": "America/Puerto_Rico",
+    "iso:US-VI": "America/St_Thomas",
+    "iso:US-AL": {
+      "zone": "America/Chicago",
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "All of Alabama is legally Central. Phenix City, Lanett, Smiths Station and Valley keep Eastern time unofficially (tzdb northamerica); tzdb has no zone for them, so they stay America/Chicago."
+    },
+    "iso:US-AK": {
+      "zone": "America/Anchorage",
+      "parts": {
+        "census:02110": "America/Juneau",
+        "census:02100": "America/Juneau",
+        "census:02230": "America/Juneau",
+        "census:02105": "America/Juneau",
+        "census:02220": "America/Sitka",
+        "census:02130": "America/Sitka",
+        "census:02195": "America/Sitka",
+        "census:02275": "America/Sitka",
+        "census:02198": [
+          "America/Sitka",
+          "America/Juneau"
+        ],
+        "census:02282": "America/Yakutat",
+        "census:02180": "America/Nome",
+        "census:02158": "America/Nome",
+        "census:02188": "America/Nome"
+      },
+      "sources": [
+        "tzdb",
+        "geonames"
+      ],
+      "notes": "zone.tab: Juneau area, Sitka area, Yakutat, Alaska (west), western Aleutians (a shape), Annette Island (a shape: the Census Annette Island Reserve). tzdb names no boroughs, so each borough takes the zone GeoNames gives its towns: Juneau, Haines, Skagway and Hoonah-Angoon; Sitka, Ketchikan, Petersburg and Wrangell; Nome, Kusilvak and Northwest Arctic. Prince of Wales-Hyder's towns disagree (Craig: Juneau), so the nearest town decides. All but Adak and Metlakatla have kept the same rules since 1983."
+    },
+    "iso:US-AZ": {
+      "zone": "America/Phoenix",
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Arizona keeps MST all year except the Navajo Nation, which observes DST (tzdb northamerica; America/Denver): a shape from the Census AIANNH boundary. The Hopi Reservation, a hole in the Navajo Nation, stays on MST."
+    },
+    "iso:US-FL": {
+      "zone": "America/New_York",
+      "parts": {
+        "census:12005": "America/Chicago",
+        "census:12013": "America/Chicago",
+        "census:12033": "America/Chicago",
+        "census:12059": "America/Chicago",
+        "census:12063": "America/Chicago",
+        "census:12091": "America/Chicago",
+        "census:12113": "America/Chicago",
+        "census:12131": "America/Chicago",
+        "census:12133": "America/Chicago",
+        "census:12045": [
+          "America/Chicago",
+          "America/New_York"
+        ]
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "tzdb northamerica lists the panhandle counties under America/Chicago (Bay, Calhoun, Escambia, Gulf, Holmes, Jackson, Okaloosa, Santa Rosa, Walton, Washington). Gulf County is split by the line in 49 CFR 71.5 (Port St. Joe is Eastern), so its towns decide."
+    },
+    "iso:US-ID": {
+      "zone": "America/Boise",
+      "parts": {
+        "census:16009": "America/Los_Angeles",
+        "census:16017": "America/Los_Angeles",
+        "census:16021": "America/Los_Angeles",
+        "census:16035": "America/Los_Angeles",
+        "census:16055": "America/Los_Angeles",
+        "census:16057": "America/Los_Angeles",
+        "census:16061": "America/Los_Angeles",
+        "census:16069": "America/Los_Angeles",
+        "census:16079": "America/Los_Angeles",
+        "census:16049": [
+          "America/Los_Angeles",
+          "America/Boise"
+        ]
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "tzdb northamerica: northern Idaho (Benewah, Bonner, Boundary, Clearwater, Kootenai, Latah, Lewis, Nez Perce, Shoshone counties and Idaho County north of the Salmon River) is Pacific. Idaho County is split, so its towns decide."
+    },
+    "iso:US-IN": {
+      "zone": "America/Indiana/Indianapolis",
+      "parts": {
+        "census:18051": "America/Chicago",
+        "census:18073": "America/Chicago",
+        "census:18089": "America/Chicago",
+        "census:18091": "America/Chicago",
+        "census:18111": "America/Chicago",
+        "census:18127": "America/Chicago",
+        "census:18129": "America/Chicago",
+        "census:18147": "America/Chicago",
+        "census:18163": "America/Chicago",
+        "census:18173": "America/Chicago",
+        "census:18029": "America/New_York",
+        "census:18115": "America/New_York",
+        "census:18019": "America/Kentucky/Louisville",
+        "census:18043": "America/Kentucky/Louisville",
+        "census:18061": "America/Kentucky/Louisville",
+        "census:18027": "America/Indiana/Vincennes",
+        "census:18037": "America/Indiana/Vincennes",
+        "census:18083": "America/Indiana/Vincennes",
+        "census:18101": "America/Indiana/Vincennes",
+        "census:18131": "America/Indiana/Winamac",
+        "census:18025": "America/Indiana/Marengo",
+        "census:18125": "America/Indiana/Petersburg",
+        "census:18155": "America/Indiana/Vevay",
+        "census:18123": "America/Indiana/Tell_City",
+        "census:18149": "America/Indiana/Knox"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "tzdb northamerica (Paul Eggert, 2007-08-17): Gibson, Jasper, Lake, LaPorte, Newton, Porter, Posey, Spencer, Vanderburgh and Warrick are like Chicago; Dearborn and Ohio like New York; Clark, Floyd and Harrison like Louisville; and zone.tab's own zones: Vincennes (Daviess, Dubois, Knox, Martin), Winamac (Pulaski), Marengo (Crawford), Petersburg (Pike), Vevay (Switzerland), Tell City (Perry), Knox (Starke)."
+    },
+    "iso:US-KS": {
+      "zone": "America/Chicago",
+      "parts": {
+        "census:20071": "America/Denver",
+        "census:20075": "America/Denver",
+        "census:20181": "America/Denver",
+        "census:20199": "America/Denver"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "Greeley, Hamilton, Sherman and Wallace counties are Mountain (49 CFR 71.8; tzdb northamerica: 'far western Kansas')."
+    },
+    "iso:US-KY": {
+      "zone": "America/New_York",
+      "parts": {
+        "census:21001": "America/Chicago",
+        "census:21003": "America/Chicago",
+        "census:21007": "America/Chicago",
+        "census:21009": "America/Chicago",
+        "census:21027": "America/Chicago",
+        "census:21031": "America/Chicago",
+        "census:21033": "America/Chicago",
+        "census:21035": "America/Chicago",
+        "census:21039": "America/Chicago",
+        "census:21047": "America/Chicago",
+        "census:21053": "America/Chicago",
+        "census:21055": "America/Chicago",
+        "census:21057": "America/Chicago",
+        "census:21059": "America/Chicago",
+        "census:21061": "America/Chicago",
+        "census:21075": "America/Chicago",
+        "census:21083": "America/Chicago",
+        "census:21085": "America/Chicago",
+        "census:21087": "America/Chicago",
+        "census:21091": "America/Chicago",
+        "census:21099": "America/Chicago",
+        "census:21101": "America/Chicago",
+        "census:21105": "America/Chicago",
+        "census:21107": "America/Chicago",
+        "census:21139": "America/Chicago",
+        "census:21141": "America/Chicago",
+        "census:21143": "America/Chicago",
+        "census:21145": "America/Chicago",
+        "census:21149": "America/Chicago",
+        "census:21157": "America/Chicago",
+        "census:21169": "America/Chicago",
+        "census:21171": "America/Chicago",
+        "census:21177": "America/Chicago",
+        "census:21183": "America/Chicago",
+        "census:21207": "America/Chicago",
+        "census:21213": "America/Chicago",
+        "census:21219": "America/Chicago",
+        "census:21221": "America/Chicago",
+        "census:21225": "America/Chicago",
+        "census:21227": "America/Chicago",
+        "census:21233": "America/Chicago",
+        "census:21111": "America/Kentucky/Louisville",
+        "census:21231": "America/Kentucky/Monticello"
+      },
+      "sources": [
+        "tzdb",
+        "geonames"
+      ],
+      "notes": "Western Kentucky's 41 counties are Central (49 CFR 71.7); Wayne County is America/Kentucky/Monticello (zone.tab). zone.tab's 'Louisville area' is drawn as Jefferson County, the county whose places GeoNames files under it."
+    },
+    "iso:US-MI": {
+      "zone": "America/Detroit",
+      "parts": {
+        "census:26043": "America/Menominee",
+        "census:26053": "America/Menominee",
+        "census:26071": "America/Menominee",
+        "census:26109": "America/Menominee"
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "tzdb northamerica: Dickinson, Gogebic, Iron and Menominee counties switched to Central in 1973 (America/Menominee)."
+    },
+    "iso:US-NE": {
+      "zone": "America/Chicago",
+      "parts": {
+        "census:31005": "America/Denver",
+        "census:31007": "America/Denver",
+        "census:31013": "America/Denver",
+        "census:31029": "America/Denver",
+        "census:31033": "America/Denver",
+        "census:31045": "America/Denver",
+        "census:31049": "America/Denver",
+        "census:31057": "America/Denver",
+        "census:31069": "America/Denver",
+        "census:31075": "America/Denver",
+        "census:31091": "America/Denver",
+        "census:31101": "America/Denver",
+        "census:31105": "America/Denver",
+        "census:31123": "America/Denver",
+        "census:31135": "America/Denver",
+        "census:31157": "America/Denver",
+        "census:31161": "America/Denver",
+        "census:31165": "America/Denver",
+        "census:31031": [
+          "America/Chicago",
+          "America/Denver"
+        ]
+      },
+      "sources": [
+        "tzdb",
+        "geonames"
+      ],
+      "notes": "Western Nebraska is Mountain (49 CFR 71.8; tzdb: 'western Nebraska'): Arthur, Banner, Box Butte, Chase, Cheyenne, Dawes, Deuel, Dundy, Garden, Grant, Hooker, Keith, Kimball, Morrill, Perkins, Scotts Bluff, Sheridan and Sioux. Cherry County is split, so its towns decide."
+    },
+    "iso:US-NV": {
+      "zone": "America/Los_Angeles",
+      "parts": {
+        "census:32007": [
+          "America/Los_Angeles",
+          "America/Denver"
+        ]
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "tzdb northamerica: the Nevada border towns Jackpot, Owyhee and Mountain City, and West Wendover, keep Mountain time; all are in Elko County, so its towns decide."
+    },
+    "iso:US-ND": {
+      "zone": "America/Chicago",
+      "parts": {
+        "census:38001": "America/Denver",
+        "census:38007": "America/Denver",
+        "census:38011": "America/Denver",
+        "census:38033": "America/Denver",
+        "census:38037": "America/Denver",
+        "census:38041": "America/Denver",
+        "census:38087": "America/Denver",
+        "census:38089": "America/Denver",
+        "census:38025": [
+          "America/Denver",
+          "America/Chicago"
+        ],
+        "census:38053": [
+          "America/Denver",
+          "America/Chicago"
+        ],
+        "census:38065": "America/North_Dakota/Center",
+        "census:38059": "America/North_Dakota/New_Salem",
+        "census:38057": "America/North_Dakota/Beulah"
+      },
+      "sources": [
+        "tzdb",
+        "geonames"
+      ],
+      "notes": "Southwestern North Dakota is Mountain (49 CFR 71.8): Adams, Billings, Bowman, Golden Valley, Grant, Hettinger, Slope, Stark; Dunn and McKenzie are split, so their towns decide. zone.tab: Oliver (Center), Morton (New Salem), Mercer (Beulah). Sioux County, officially partly Mountain, keeps Central (tzdb)."
+    },
+    "iso:US-OR": {
+      "zone": "America/Los_Angeles",
+      "parts": {
+        "census:41045": [
+          "America/Boise",
+          "America/Los_Angeles"
+        ]
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "tzdb northamerica: Oregon is Pacific except the northern three quarters of Malheur County (America/Boise); Malheur is split, so its towns decide."
+    },
+    "iso:US-SD": {
+      "zone": "America/Chicago",
+      "parts": {
+        "census:46007": "America/Denver",
+        "census:46019": "America/Denver",
+        "census:46031": "America/Denver",
+        "census:46033": "America/Denver",
+        "census:46041": "America/Denver",
+        "census:46047": "America/Denver",
+        "census:46055": "America/Denver",
+        "census:46063": "America/Denver",
+        "census:46071": "America/Denver",
+        "census:46081": "America/Denver",
+        "census:46093": "America/Denver",
+        "census:46102": "America/Denver",
+        "census:46103": "America/Denver",
+        "census:46105": "America/Denver",
+        "census:46137": "America/Denver"
+      },
+      "sources": [
+        "tzdb",
+        "geonames"
+      ],
+      "notes": "Western South Dakota is Mountain (49 CFR 71.8): Bennett, Butte, Corson, Custer, Dewey, Fall River, Haakon, Harding, Jackson, Lawrence, Meade, Oglala Lakota, Pennington, Perkins, Ziebach. Stanley County is legally Mountain but keeps Central in practice (tzdb northamerica, Fort Pierre)."
+    },
+    "iso:US-TN": {
+      "zone": "America/Chicago",
+      "parts": {
+        "census:47001": "America/New_York",
+        "census:47009": "America/New_York",
+        "census:47011": "America/New_York",
+        "census:47013": "America/New_York",
+        "census:47019": "America/New_York",
+        "census:47025": "America/New_York",
+        "census:47029": "America/New_York",
+        "census:47057": "America/New_York",
+        "census:47059": "America/New_York",
+        "census:47063": "America/New_York",
+        "census:47065": "America/New_York",
+        "census:47067": "America/New_York",
+        "census:47073": "America/New_York",
+        "census:47089": "America/New_York",
+        "census:47091": "America/New_York",
+        "census:47093": "America/New_York",
+        "census:47105": "America/New_York",
+        "census:47107": "America/New_York",
+        "census:47121": "America/New_York",
+        "census:47123": "America/New_York",
+        "census:47129": "America/New_York",
+        "census:47139": "America/New_York",
+        "census:47143": "America/New_York",
+        "census:47145": "America/New_York",
+        "census:47151": "America/New_York",
+        "census:47155": "America/New_York",
+        "census:47163": "America/New_York",
+        "census:47171": "America/New_York",
+        "census:47173": "America/New_York",
+        "census:47179": "America/New_York"
+      },
+      "sources": [
+        "tzdb",
+        "geonames"
+      ],
+      "notes": "East Tennessee's 30 counties are Eastern (49 CFR 71.5), the rest Central."
+    },
+    "iso:US-TX": {
+      "zone": "America/Chicago",
+      "parts": {
+        "census:48141": "America/Denver",
+        "census:48229": "America/Denver",
+        "census:48109": [
+          "America/Chicago",
+          "America/Denver"
+        ]
+      },
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "tzdb northamerica: far western Texas (El Paso and Hudspeth counties, and Pine Springs and Nickel Creek in Culberson County) is Mountain; Culberson is split, so its towns decide."
+    }
+  },
+  "shapes": [
+    {
+      "id": "tz:navajo-nation",
+      "name": "Navajo Nation",
+      "zone": "America/Denver",
+      "aiannh": "2430",
+      "sources": [
+        "tzdb",
+        "census-aiannh"
+      ],
+      "notes": "tzdb northamerica: 'only the Navajo Nation participates in the Daylight Saving Time policy' in Arizona; America/Denver. The Census boundary (AIANNHCE 2430) leaves the Hopi Reservation out as a hole, so Hopi land keeps America/Phoenix."
+    },
+    {
+      "id": "tz:annette-island",
+      "name": "Annette Island Reserve",
+      "zone": "America/Metlakatla",
+      "aiannh": "0110",
+      "sources": [
+        "tzdb",
+        "census-aiannh"
+      ],
+      "notes": "zone.tab: America/Metlakatla 'Alaska - Annette Island' (Census AIANNHCE 0110)."
+    },
+    {
+      "id": "tz:western-aleutians",
+      "name": "Western Aleutians",
+      "zone": "America/Adak",
+      "boxes": [
+        [
+          50.5,
+          -180.0,
+          55.0,
+          -169.5
+        ],
+        [
+          50.5,
+          171.0,
+          54.0,
+          180.0
+        ]
+      ],
+      "sources": [
+        "tzdb"
+      ],
+      "notes": "tzdb northamerica: 'America/Adak is for the Aleutian Islands that are part of Alaska and are west of 169.5° W'; south of 55°N, so the Pribilofs keep Alaska time."
+    }
+  ]
+}
