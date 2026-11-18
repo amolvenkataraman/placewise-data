@@ -11,7 +11,8 @@ The repository's git does hold the small **curated datasets** placewise maintain
 |---|---|
 | `datasets/country_groups/` | Geographic and legal country groups (continents, UN M49, EU, Schengen, NATO ...) with dated memberships and sources |
 | `datasets/regions/` | Metro and vernacular regions per country (GTA, GTHA, Bay Area, Delhi NCR ...) with official member units and cited definitions |
-| `datasets/cities/` | City aliases and nicknames (YYZ, Philly, Bangalore ...) |
+| `datasets/names/` | Names people type: city aliases, airport codes, nicknames and former names (YYZ, Philly, Bangalore, Madras ...) in `aliases.json`; India names and renames in `ind.json` |
+| `datasets/airports/` | The city each major airport serves (YYZ → Toronto, not Mississauga) |
 
 placewise's `packbuild` reads them from a checkout of this repository beside the placewise one
 (`../placewise-data/datasets`, or `$PACKBUILD_DATASETS`), validates them, and generates the offline

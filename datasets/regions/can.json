@@ -1,5 +1,5 @@
 {
-  "_comment": "Metro and vernacular regions of Canada: a curated dataset (CC BY 4.0, see datasets/LICENSE.md). packbuild.regions turns it into src/placewise/constants/countries/regions.py for location search (python -m packbuild.regions), and packbuild.regions_layer into the country pack's `regions` polygon layer. Fields: id (stable, region:<slug>), short_name (what a parsed place's `region` holds), name, country (ISO 3166-1 alpha-2), admin1 (every subdivision the region reaches into, by its ISO 3166-2 suffix), aliases, kind (metro: a statistical metro area; official-planning: an area a public body plans or governs as one; vernacular: a name in common use, drawn with official units), members (the official units whose union is the region, as ids in the country pack: census:<county GEOID>, statcan:<CDUID, CSDUID or CMAPUID>, pin:<PIN code>; the pack build fails if one is missing), districts (India only: the districts the definition names, as the India Post directory spells them; members are exactly the PIN areas filed under them), definition (title and url of the source that defines the region), search_as (optional: location search reads this region's names as that region, and has no entry for it), principal_cities (well-known member cities and their admin1, so a parsed city can be placed in the region offline), city_aliases (other names of member cities -> the name placewise prefers) and notes (why the region is drawn as it is).",
+  "_comment": "Metro and vernacular regions of Canada: a curated dataset (CC BY 4.0, see datasets/LICENSE.md). packbuild.regions turns it into src/placewise/constants/countries/regions.py for location search (python -m packbuild.regions), and packbuild.regions_layer into the country pack's `regions` polygon layer. Fields: id (stable, region:<slug>), short_name (what a parsed place's `region` holds), name, country (ISO 3166-1 alpha-2), admin1 (every subdivision the region reaches into, by its ISO 3166-2 suffix), aliases, kind (metro: a statistical metro area; official-planning: an area a public body plans or governs as one; vernacular: a name in common use, drawn with official units), members (the official units whose union is the region, as ids in the country pack: census:<county GEOID>, statcan:<CDUID, CSDUID or CMAPUID>, pin:<PIN code>; the pack build fails if one is missing), districts (India only: the districts the definition names, as the India Post directory spells them; members are exactly the PIN areas filed under them), definition (title and url of the source that defines the region), search_as (optional: location search reads this region's names as that region, and has no entry for it), principal_cities (well-known member cities and their admin1, so a parsed city can be placed in the region offline), city_aliases (optional, kept for compatibility: other names of member cities -> the name placewise prefers; city aliases belong in datasets/names/aliases.json) and notes (why the region is drawn as it is).",
   "regions": [
     {
       "id": "region:gta",
@@ -47,11 +47,6 @@
         "Aurora": "ON",
         "Caledon": "ON",
         "Hamilton": "ON"
-      },
-      "city_aliases": {
-        "TOR": "Toronto",
-        "YYZ": "Toronto",
-        "North York": "Toronto"
       },
       "notes": "Toronto and the regional municipalities of Durham, Halton, Peel and York (census divisions 3520, 3518, 3524, 3521, 3519). Location search reads the GTHA as the GTA, so Hamilton is listed among its cities; the packs draw the GTHA as a region of its own."
     },
@@ -158,10 +153,6 @@
         "Port Moody": "BC",
         "Maple Ridge": "BC"
       },
-      "city_aliases": {
-        "VAN": "Vancouver",
-        "YVR": "Vancouver"
-      },
       "notes": "The Metro Vancouver Regional District (Greater Vancouver), British Columbia."
     },
     {
@@ -195,10 +186,6 @@
         "Terrebonne": "QC",
         "Saint-Laurent": "QC"
       },
-      "city_aliases": {
-        "MTL": "Montreal",
-        "YUL": "Montreal"
-      },
       "notes": "Drawn as the Montreal census metropolitan area (CMA 462). The Montreal Metropolitan Community (82 municipalities) is slightly smaller; it is not a census unit."
     },
     {
@@ -231,10 +218,6 @@
         "Nepean": "ON",
         "Gatineau": "QC"
       },
-      "city_aliases": {
-        "OTT": "Ottawa",
-        "YOW": "Ottawa"
-      },
       "notes": "Canada's National Capital Region, across the Ontario-Quebec border, drawn as the Ottawa - Gatineau census metropolitan area (CMA 505, both provincial parts). The National Capital Act's region is smaller than the CMA and is not made of whole census units."
     },
     {
@@ -263,9 +246,6 @@
         "Kitchener": "ON",
         "Waterloo": "ON",
         "Cambridge": "ON"
-      },
-      "city_aliases": {
-        "KW": "Kitchener"
       },
       "notes": "The Regional Municipality of Waterloo, Ontario: Kitchener, Waterloo and Cambridge."
     }

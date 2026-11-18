@@ -1,5 +1,5 @@
 {
-  "_comment": "Metro and vernacular regions of India: a curated dataset (CC BY 4.0, see datasets/LICENSE.md). packbuild.regions turns it into src/placewise/constants/countries/regions.py for location search (python -m packbuild.regions), and packbuild.regions_layer into the country pack's `regions` polygon layer. Fields: id (stable, region:<slug>), short_name (what a parsed place's `region` holds), name, country (ISO 3166-1 alpha-2), admin1 (every subdivision the region reaches into, by its ISO 3166-2 suffix), aliases, kind (metro: a statistical metro area; official-planning: an area a public body plans or governs as one; vernacular: a name in common use, drawn with official units), members (the official units whose union is the region, as ids in the country pack: census:<county GEOID>, statcan:<CDUID, CSDUID or CMAPUID>, pin:<PIN code>; the pack build fails if one is missing), districts (India only: the districts the definition names, as the India Post directory spells them; members are exactly the PIN areas filed under them), definition (title and url of the source that defines the region), search_as (optional: location search reads this region's names as that region, and has no entry for it), principal_cities (well-known member cities and their admin1, so a parsed city can be placed in the region offline), city_aliases (other names of member cities -> the name placewise prefers) and notes (why the region is drawn as it is).",
+  "_comment": "Metro and vernacular regions of India: a curated dataset (CC BY 4.0, see datasets/LICENSE.md). packbuild.regions turns it into src/placewise/constants/countries/regions.py for location search (python -m packbuild.regions), and packbuild.regions_layer into the country pack's `regions` polygon layer. Fields: id (stable, region:<slug>), short_name (what a parsed place's `region` holds), name, country (ISO 3166-1 alpha-2), admin1 (every subdivision the region reaches into, by its ISO 3166-2 suffix), aliases, kind (metro: a statistical metro area; official-planning: an area a public body plans or governs as one; vernacular: a name in common use, drawn with official units), members (the official units whose union is the region, as ids in the country pack: census:<county GEOID>, statcan:<CDUID, CSDUID or CMAPUID>, pin:<PIN code>; the pack build fails if one is missing), districts (India only: the districts the definition names, as the India Post directory spells them; members are exactly the PIN areas filed under them), definition (title and url of the source that defines the region), search_as (optional: location search reads this region's names as that region, and has no entry for it), principal_cities (well-known member cities and their admin1, so a parsed city can be placed in the region offline), city_aliases (optional, kept for compatibility: other names of member cities -> the name placewise prefers; city aliases belong in datasets/names/aliases.json) and notes (why the region is drawn as it is).",
   "regions": [
     {
       "id": "region:delhi-ncr",
@@ -600,9 +600,6 @@
         "Greater Noida": "UP",
         "Ghaziabad": "UP"
       },
-      "city_aliases": {
-        "Gurgaon": "Gurugram"
-      },
       "notes": "India's National Capital Region as the NCR Planning Board defines it: all of Delhi, 14 districts of Haryana, 8 of Uttar Pradesh and Alwar and Bharatpur in Rajasthan (about 55,000 km²; Rajasthan's newer districts carved from those two are inside it). The bare short name NCR is read as this one; Canada's capital region is named in full. India has no openly licensed district polygons, so districts are drawn as the PIN code areas the India Post directory files under them (a PIN area's district is the one most of its offices name); PIN areas can cross district lines, so the outline is the postal approximation of the districts, not their legal boundary."
     },
     {
@@ -1007,10 +1004,6 @@
         "Thane": "MH",
         "Navi Mumbai": "MH"
       },
-      "city_aliases": {
-        "Bombay": "Mumbai",
-        "Greater Mumbai": "Mumbai"
-      },
       "notes": "The Mumbai Metropolitan Region, Maharashtra: Mumbai, Thane, Navi Mumbai and neighbouring cities. MMRDA's region is Mumbai City and Mumbai Suburban districts with parts of Thane, Palghar and Raigad; it is drawn here as the Mumbai, Mumbai Suburban and Thane districts, so the parts in Palghar (Vasai-Virar) and Raigad (Panvel, Uran) are left out. India has no openly licensed district polygons, so districts are drawn as the PIN code areas the India Post directory files under them (a PIN area's district is the one most of its offices name); PIN areas can cross district lines, so the outline is the postal approximation of the districts, not their legal boundary."
     },
     {
@@ -1154,10 +1147,6 @@
       },
       "principal_cities": {
         "Bengaluru": "KA"
-      },
-      "city_aliases": {
-        "Bangalore": "Bengaluru",
-        "Bengaluru": "Bengaluru"
       },
       "notes": "Bengaluru is the official name since 2014; Bangalore is read as an alias. Drawn as Bengaluru Urban district. India has no openly licensed district polygons, so districts are drawn as the PIN code areas the India Post directory files under them (a PIN area's district is the one most of its offices name); PIN areas can cross district lines, so the outline is the postal approximation of the districts, not their legal boundary."
     },
