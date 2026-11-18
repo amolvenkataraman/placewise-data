@@ -1,0 +1,2192 @@
+{
+  "_comment": "Names people type for places, beyond each place's own name: a curated dataset (CC BY 4.0, see datasets/LICENSE.md). One entry per alias text. Fields: text (the alias as written); kind (code: an IATA airport or metro code; short: a short form or abbreviation, 'NYC', 'Vegas'; colloquial: a nickname, 'Philly', 'Vizag'; former: a name before a rename, with until (the year it changed); exonym: an English name of a place that has another name locally; name: the place's own name or official name, listed so location search places it without a gazetteer; suppress: a GeoNames alternate name of the target that is not a name of it, dropped from the packs); the target: city (the name placewise shows), country (ISO 3166-1 alpha-2), admin1 (ISO 3166-2 suffix, where placewise has the country's table) and geonames (the GeoNames id of the city), or country alone for a country's former name; reads_as (required when the text is also an ISO 3166-1 code or a US, Canadian or UK subdivision code: 'city' reads it alone as the city, its code meanings kept as alternatives; 'code' keeps the code meaning alone and in remote scopes, and reads it as the city only next to the city's own name, 'Guangzhou (CAN)'); source (title and url: the OurAirports page of a code, a page citing a rename); notes. packbuild.aliases checks every target against GeoNames and writes src/placewise/constants/countries/city_aliases.py (python -m packbuild.cities); packbuild.world adds the aliases to the world pack's cities, admin1 and countries layers.",
+  "aliases": [
+    {
+      "text": "PDX",
+      "kind": "code",
+      "city": "Portland",
+      "country": "US",
+      "admin1": "OR",
+      "geonames": 5746545,
+      "source": {
+        "title": "OurAirports: Portland International Airport (KPDX)",
+        "url": "https://ourairports.com/airports/KPDX/"
+      }
+    },
+    {
+      "text": "PHX",
+      "kind": "code",
+      "city": "Phoenix",
+      "country": "US",
+      "admin1": "AZ",
+      "geonames": 5308655,
+      "source": {
+        "title": "OurAirports: Phoenix Sky Harbor International Airport (KPHX)",
+        "url": "https://ourairports.com/airports/KPHX/"
+      }
+    },
+    {
+      "text": "DT",
+      "kind": "colloquial",
+      "city": "Detroit",
+      "country": "US",
+      "admin1": "MI",
+      "geonames": 4990729
+    },
+    {
+      "text": "DEN",
+      "kind": "code",
+      "city": "Denver",
+      "country": "US",
+      "admin1": "CO",
+      "geonames": 5419384,
+      "source": {
+        "title": "OurAirports: Denver International Airport (KDEN)",
+        "url": "https://ourairports.com/airports/KDEN/"
+      }
+    },
+    {
+      "text": "SLC",
+      "kind": "code",
+      "city": "Salt Lake City",
+      "country": "US",
+      "admin1": "UT",
+      "geonames": 5780993,
+      "source": {
+        "title": "OurAirports: Salt Lake City International Airport (KSLC)",
+        "url": "https://ourairports.com/airports/KSLC/"
+      }
+    },
+    {
+      "text": "STL",
+      "kind": "code",
+      "city": "St. Louis",
+      "country": "US",
+      "admin1": "MO",
+      "geonames": 4407066,
+      "source": {
+        "title": "OurAirports: St. Louis Lambert International Airport (KSTL)",
+        "url": "https://ourairports.com/airports/KSTL/"
+      }
+    },
+    {
+      "text": "NOLA",
+      "kind": "short",
+      "city": "New Orleans",
+      "country": "US",
+      "admin1": "LA",
+      "geonames": 4335045
+    },
+    {
+      "text": "LV",
+      "kind": "short",
+      "city": "Las Vegas",
+      "country": "US",
+      "admin1": "NV",
+      "geonames": 5506956,
+      "reads_as": "city"
+    },
+    {
+      "text": "Vegas",
+      "kind": "short",
+      "city": "Las Vegas",
+      "country": "US",
+      "admin1": "NV",
+      "geonames": 5506956
+    },
+    {
+      "text": "SD",
+      "kind": "short",
+      "city": "San Diego",
+      "country": "US",
+      "admin1": "CA",
+      "geonames": 5391811,
+      "reads_as": "city"
+    },
+    {
+      "text": "PGH",
+      "kind": "short",
+      "city": "Pittsburgh",
+      "country": "US",
+      "admin1": "PA",
+      "geonames": 5206379
+    },
+    {
+      "text": "CLT",
+      "kind": "code",
+      "city": "Charlotte",
+      "country": "US",
+      "admin1": "NC",
+      "geonames": 4460243,
+      "source": {
+        "title": "OurAirports: Charlotte Douglas International Airport (KCLT)",
+        "url": "https://ourairports.com/airports/KCLT/"
+      }
+    },
+    {
+      "text": "SA",
+      "kind": "short",
+      "city": "San Antonio",
+      "country": "US",
+      "admin1": "TX",
+      "geonames": 4726206,
+      "reads_as": "city"
+    },
+    {
+      "text": "AUS",
+      "kind": "code",
+      "city": "Austin",
+      "country": "US",
+      "admin1": "TX",
+      "geonames": 4671654,
+      "reads_as": "city",
+      "source": {
+        "title": "OurAirports: Austin Bergstrom International Airport (KAUS)",
+        "url": "https://ourairports.com/airports/KAUS/"
+      }
+    },
+    {
+      "text": "ATX",
+      "kind": "colloquial",
+      "city": "Austin",
+      "country": "US",
+      "admin1": "TX",
+      "geonames": 4671654
+    },
+    {
+      "text": "JAX",
+      "kind": "code",
+      "city": "Jacksonville",
+      "country": "US",
+      "admin1": "FL",
+      "geonames": 4160021,
+      "source": {
+        "title": "OurAirports: Jacksonville International Airport (KJAX)",
+        "url": "https://ourairports.com/airports/KJAX/"
+      }
+    },
+    {
+      "text": "CBUS",
+      "kind": "colloquial",
+      "city": "Columbus",
+      "country": "US",
+      "admin1": "OH",
+      "geonames": 4509177
+    },
+    {
+      "text": "Indy",
+      "kind": "short",
+      "city": "Indianapolis",
+      "country": "US",
+      "admin1": "IN",
+      "geonames": 4259418
+    },
+    {
+      "text": "MKE",
+      "kind": "code",
+      "city": "Milwaukee",
+      "country": "US",
+      "admin1": "WI",
+      "geonames": 5263045,
+      "source": {
+        "title": "OurAirports: General Mitchell International Airport (KMKE)",
+        "url": "https://ourairports.com/airports/KMKE/"
+      }
+    },
+    {
+      "text": "KC",
+      "kind": "short",
+      "city": "Kansas City",
+      "country": "US",
+      "admin1": "MO",
+      "geonames": 4393217
+    },
+    {
+      "text": "KCMO",
+      "kind": "short",
+      "city": "Kansas City",
+      "country": "US",
+      "admin1": "MO",
+      "geonames": 4393217
+    },
+    {
+      "text": "ORL",
+      "kind": "short",
+      "city": "Orlando",
+      "country": "US",
+      "admin1": "FL",
+      "geonames": 4167147
+    },
+    {
+      "text": "TPA",
+      "kind": "code",
+      "city": "Tampa",
+      "country": "US",
+      "admin1": "FL",
+      "geonames": 4174757,
+      "source": {
+        "title": "OurAirports: Tampa International Airport (KTPA)",
+        "url": "https://ourairports.com/airports/KTPA/"
+      }
+    },
+    {
+      "text": "RVA",
+      "kind": "colloquial",
+      "city": "Richmond",
+      "country": "US",
+      "admin1": "VA",
+      "geonames": 4781708
+    },
+    {
+      "text": "Bmore",
+      "kind": "colloquial",
+      "city": "Baltimore",
+      "country": "US",
+      "admin1": "MD",
+      "geonames": 4347778
+    },
+    {
+      "text": "ABQ",
+      "kind": "code",
+      "city": "Albuquerque",
+      "country": "US",
+      "admin1": "NM",
+      "geonames": 5454711,
+      "source": {
+        "title": "OurAirports: Albuquerque International Sunport (KABQ)",
+        "url": "https://ourairports.com/airports/KABQ/"
+      }
+    },
+    {
+      "text": "Reno",
+      "kind": "name",
+      "city": "Reno",
+      "country": "US",
+      "admin1": "NV",
+      "geonames": 5511077
+    },
+    {
+      "text": "OKC",
+      "kind": "code",
+      "city": "Oklahoma City",
+      "country": "US",
+      "admin1": "OK",
+      "geonames": 4544349,
+      "source": {
+        "title": "OurAirports: OKC Will Rogers World Airport (KOKC)",
+        "url": "https://ourairports.com/airports/KOKC/"
+      }
+    },
+    {
+      "text": "SF",
+      "kind": "short",
+      "city": "San Francisco",
+      "country": "US",
+      "admin1": "CA",
+      "geonames": 5391959
+    },
+    {
+      "text": "South SF",
+      "kind": "short",
+      "city": "South San Francisco",
+      "country": "US",
+      "admin1": "CA",
+      "geonames": 5397765
+    },
+    {
+      "text": "SFO",
+      "kind": "code",
+      "city": "San Francisco",
+      "country": "US",
+      "admin1": "CA",
+      "geonames": 5391959,
+      "source": {
+        "title": "OurAirports: San Francisco International Airport (KSFO)",
+        "url": "https://ourairports.com/airports/KSFO/"
+      }
+    },
+    {
+      "text": "SSF",
+      "kind": "short",
+      "city": "South San Francisco",
+      "country": "US",
+      "admin1": "CA",
+      "geonames": 5397765
+    },
+    {
+      "text": "SJ",
+      "kind": "short",
+      "city": "San Jose",
+      "country": "US",
+      "admin1": "CA",
+      "geonames": 5392171,
+      "reads_as": "city"
+    },
+    {
+      "text": "SJC",
+      "kind": "code",
+      "city": "San Jose",
+      "country": "US",
+      "admin1": "CA",
+      "geonames": 5392171,
+      "source": {
+        "title": "OurAirports: Mineta San Jose International Airport (KSJC)",
+        "url": "https://ourairports.com/airports/KSJC/"
+      }
+    },
+    {
+      "text": "LA",
+      "kind": "short",
+      "city": "Los Angeles",
+      "country": "US",
+      "admin1": "CA",
+      "geonames": 5368361,
+      "reads_as": "city"
+    },
+    {
+      "text": "LAX",
+      "kind": "code",
+      "city": "Los Angeles",
+      "country": "US",
+      "admin1": "CA",
+      "geonames": 5368361,
+      "source": {
+        "title": "OurAirports: Los Angeles International Airport (KLAX)",
+        "url": "https://ourairports.com/airports/KLAX/"
+      }
+    },
+    {
+      "text": "NYC",
+      "kind": "short",
+      "city": "New York City",
+      "country": "US",
+      "admin1": "NY",
+      "geonames": 5128581
+    },
+    {
+      "text": "New York City",
+      "kind": "name",
+      "city": "New York City",
+      "country": "US",
+      "admin1": "NY",
+      "geonames": 5128581
+    },
+    {
+      "text": "New York",
+      "kind": "name",
+      "city": "New York City",
+      "country": "US",
+      "admin1": "NY",
+      "geonames": 5128581,
+      "notes": "the city's official name (City of New York); alone it reads as the city, as listings mean it"
+    },
+    {
+      "text": "NY City",
+      "kind": "short",
+      "city": "New York City",
+      "country": "US",
+      "admin1": "NY",
+      "geonames": 5128581
+    },
+    {
+      "text": "NY",
+      "kind": "short",
+      "city": "New York City",
+      "country": "US",
+      "admin1": "NY",
+      "geonames": 5128581,
+      "reads_as": "city"
+    },
+    {
+      "text": "JFK",
+      "kind": "code",
+      "city": "New York City",
+      "country": "US",
+      "admin1": "NY",
+      "geonames": 5128581,
+      "source": {
+        "title": "OurAirports: John F. Kennedy International Airport (KJFK)",
+        "url": "https://ourairports.com/airports/KJFK/"
+      }
+    },
+    {
+      "text": "BOS",
+      "kind": "code",
+      "city": "Boston",
+      "country": "US",
+      "admin1": "MA",
+      "geonames": 4930956,
+      "source": {
+        "title": "OurAirports: Boston Logan International Airport (KBOS)",
+        "url": "https://ourairports.com/airports/KBOS/"
+      }
+    },
+    {
+      "text": "SEA",
+      "kind": "code",
+      "city": "Seattle",
+      "country": "US",
+      "admin1": "WA",
+      "geonames": 5809844,
+      "source": {
+        "title": "OurAirports: Seattle–Tacoma International Airport (KSEA)",
+        "url": "https://ourairports.com/airports/KSEA/"
+      }
+    },
+    {
+      "text": "HOU",
+      "kind": "code",
+      "city": "Houston",
+      "country": "US",
+      "admin1": "TX",
+      "geonames": 4699066,
+      "source": {
+        "title": "OurAirports: William P. Hobby Airport (KHOU)",
+        "url": "https://ourairports.com/airports/KHOU/"
+      }
+    },
+    {
+      "text": "IAH",
+      "kind": "code",
+      "city": "Houston",
+      "country": "US",
+      "admin1": "TX",
+      "geonames": 4699066,
+      "source": {
+        "title": "OurAirports: George Bush Intercontinental Airport (KIAH)",
+        "url": "https://ourairports.com/airports/KIAH/"
+      }
+    },
+    {
+      "text": "DC",
+      "kind": "short",
+      "city": "Washington",
+      "country": "US",
+      "admin1": "DC",
+      "geonames": 4140963,
+      "reads_as": "city"
+    },
+    {
+      "text": "Philly",
+      "kind": "colloquial",
+      "city": "Philadelphia",
+      "country": "US",
+      "admin1": "PA",
+      "geonames": 4560349
+    },
+    {
+      "text": "PHL",
+      "kind": "code",
+      "city": "Philadelphia",
+      "country": "US",
+      "admin1": "PA",
+      "geonames": 4560349,
+      "reads_as": "city",
+      "source": {
+        "title": "OurAirports: Philadelphia International Airport (KPHL)",
+        "url": "https://ourairports.com/airports/KPHL/"
+      }
+    },
+    {
+      "text": "CHI",
+      "kind": "short",
+      "city": "Chicago",
+      "country": "US",
+      "admin1": "IL",
+      "geonames": 4887398
+    },
+    {
+      "text": "ORD",
+      "kind": "code",
+      "city": "Chicago",
+      "country": "US",
+      "admin1": "IL",
+      "geonames": 4887398,
+      "source": {
+        "title": "OurAirports: Chicago O'Hare International Airport (KORD)",
+        "url": "https://ourairports.com/airports/KORD/"
+      }
+    },
+    {
+      "text": "ATL",
+      "kind": "code",
+      "city": "Atlanta",
+      "country": "US",
+      "admin1": "GA",
+      "geonames": 4180439,
+      "source": {
+        "title": "OurAirports: Hartsfield Jackson Atlanta International Airport (KATL)",
+        "url": "https://ourairports.com/airports/KATL/"
+      }
+    },
+    {
+      "text": "MPLS",
+      "kind": "short",
+      "city": "Minneapolis",
+      "country": "US",
+      "admin1": "MN",
+      "geonames": 5037649
+    },
+    {
+      "text": "MSP",
+      "kind": "code",
+      "city": "Minneapolis",
+      "country": "US",
+      "admin1": "MN",
+      "geonames": 5037649,
+      "source": {
+        "title": "OurAirports: Minneapolis–Saint Paul International Airport / Wold–Chamberlain Field (KMSP)",
+        "url": "https://ourairports.com/airports/KMSP/"
+      }
+    },
+    {
+      "text": "RDU",
+      "kind": "code",
+      "city": "Raleigh",
+      "country": "US",
+      "admin1": "NC",
+      "geonames": 4487042,
+      "source": {
+        "title": "OurAirports: Raleigh-Durham International Airport (KRDU)",
+        "url": "https://ourairports.com/airports/KRDU/"
+      }
+    },
+    {
+      "text": "MIA",
+      "kind": "code",
+      "city": "Miami",
+      "country": "US",
+      "admin1": "FL",
+      "geonames": 4164138,
+      "source": {
+        "title": "OurAirports: Miami International Airport (KMIA)",
+        "url": "https://ourairports.com/airports/KMIA/"
+      }
+    },
+    {
+      "text": "DTW",
+      "kind": "code",
+      "city": "Detroit",
+      "country": "US",
+      "admin1": "MI",
+      "geonames": 4990729,
+      "source": {
+        "title": "OurAirports: Detroit Metropolitan Wayne County Airport (KDTW)",
+        "url": "https://ourairports.com/airports/KDTW/"
+      }
+    },
+    {
+      "text": "IND",
+      "kind": "code",
+      "city": "Indianapolis",
+      "country": "US",
+      "admin1": "IN",
+      "geonames": 4259418,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Indianapolis International Airport (KIND)",
+        "url": "https://ourairports.com/airports/KIND/"
+      }
+    },
+    {
+      "text": "MCO",
+      "kind": "code",
+      "city": "Orlando",
+      "country": "US",
+      "admin1": "FL",
+      "geonames": 4167147,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Orlando International Airport (KMCO)",
+        "url": "https://ourairports.com/airports/KMCO/"
+      }
+    },
+    {
+      "text": "SYR",
+      "kind": "code",
+      "city": "Syracuse",
+      "country": "US",
+      "admin1": "NY",
+      "geonames": 5140405,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Syracuse Hancock International Airport (KSYR)",
+        "url": "https://ourairports.com/airports/KSYR/"
+      }
+    },
+    {
+      "text": "ALB",
+      "kind": "code",
+      "city": "Albany",
+      "country": "US",
+      "admin1": "NY",
+      "geonames": 5106834,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Albany International Airport (KALB)",
+        "url": "https://ourairports.com/airports/KALB/"
+      }
+    },
+    {
+      "text": "CAL",
+      "kind": "short",
+      "city": "Calgary",
+      "country": "CA",
+      "admin1": "AB",
+      "geonames": 5913490
+    },
+    {
+      "text": "YYC",
+      "kind": "code",
+      "city": "Calgary",
+      "country": "CA",
+      "admin1": "AB",
+      "geonames": 5913490,
+      "source": {
+        "title": "OurAirports: Calgary International Airport (CYYC)",
+        "url": "https://ourairports.com/airports/CYYC/"
+      }
+    },
+    {
+      "text": "EDM",
+      "kind": "short",
+      "city": "Edmonton",
+      "country": "CA",
+      "admin1": "AB",
+      "geonames": 5946768
+    },
+    {
+      "text": "YEG",
+      "kind": "code",
+      "city": "Edmonton",
+      "country": "CA",
+      "admin1": "AB",
+      "geonames": 5946768,
+      "source": {
+        "title": "OurAirports: Edmonton International Airport (CYEG)",
+        "url": "https://ourairports.com/airports/CYEG/"
+      }
+    },
+    {
+      "text": "WIN",
+      "kind": "short",
+      "city": "Winnipeg",
+      "country": "CA",
+      "admin1": "MB",
+      "geonames": 6183235
+    },
+    {
+      "text": "YWG",
+      "kind": "code",
+      "city": "Winnipeg",
+      "country": "CA",
+      "admin1": "MB",
+      "geonames": 6183235,
+      "source": {
+        "title": "OurAirports: Winnipeg / James Armstrong Richardson International Airport (CYWG)",
+        "url": "https://ourairports.com/airports/CYWG/"
+      }
+    },
+    {
+      "text": "Quebec City",
+      "kind": "name",
+      "city": "Quebec City",
+      "country": "CA",
+      "admin1": "QC",
+      "geonames": 6325494
+    },
+    {
+      "text": "Ville de Québec",
+      "kind": "name",
+      "city": "Quebec City",
+      "country": "CA",
+      "admin1": "QC",
+      "geonames": 6325494,
+      "notes": "the city's French name"
+    },
+    {
+      "text": "YQB",
+      "kind": "code",
+      "city": "Quebec City",
+      "country": "CA",
+      "admin1": "QC",
+      "geonames": 6325494,
+      "source": {
+        "title": "OurAirports: Quebec Jean Lesage International Airport (CYQB)",
+        "url": "https://ourairports.com/airports/CYQB/"
+      }
+    },
+    {
+      "text": "YHZ",
+      "kind": "code",
+      "city": "Halifax",
+      "country": "CA",
+      "admin1": "NS",
+      "geonames": 6324729,
+      "source": {
+        "title": "OurAirports: Halifax / Stanfield International Airport (CYHZ)",
+        "url": "https://ourairports.com/airports/CYHZ/"
+      }
+    },
+    {
+      "text": "TOR",
+      "kind": "short",
+      "city": "Toronto",
+      "country": "CA",
+      "admin1": "ON",
+      "geonames": 6167865
+    },
+    {
+      "text": "YYZ",
+      "kind": "code",
+      "city": "Toronto",
+      "country": "CA",
+      "admin1": "ON",
+      "geonames": 6167865,
+      "source": {
+        "title": "OurAirports: Toronto Pearson International Airport (CYYZ)",
+        "url": "https://ourairports.com/airports/CYYZ/"
+      }
+    },
+    {
+      "text": "YTO",
+      "kind": "short",
+      "city": "Toronto",
+      "country": "CA",
+      "admin1": "ON",
+      "geonames": 6167865
+    },
+    {
+      "text": "North York",
+      "kind": "former",
+      "city": "Toronto",
+      "country": "CA",
+      "admin1": "ON",
+      "geonames": 6167865,
+      "until": "1998",
+      "source": {
+        "title": "Toronto: name history",
+        "url": "https://en.wikipedia.org/wiki/Toronto"
+      },
+      "notes": "a city until it merged into Toronto in 1998; now a district of Toronto"
+    },
+    {
+      "text": "VAN",
+      "kind": "short",
+      "city": "Vancouver",
+      "country": "CA",
+      "admin1": "BC",
+      "geonames": 6173331
+    },
+    {
+      "text": "YVR",
+      "kind": "code",
+      "city": "Vancouver",
+      "country": "CA",
+      "admin1": "BC",
+      "geonames": 6173331,
+      "source": {
+        "title": "OurAirports: Vancouver International Airport (CYVR)",
+        "url": "https://ourairports.com/airports/CYVR/"
+      }
+    },
+    {
+      "text": "MTL",
+      "kind": "short",
+      "city": "Montreal",
+      "country": "CA",
+      "admin1": "QC",
+      "geonames": 6077243
+    },
+    {
+      "text": "YUL",
+      "kind": "code",
+      "city": "Montreal",
+      "country": "CA",
+      "admin1": "QC",
+      "geonames": 6077243,
+      "source": {
+        "title": "OurAirports: Montreal / Pierre Elliott Trudeau International Airport (CYUL)",
+        "url": "https://ourairports.com/airports/CYUL/"
+      }
+    },
+    {
+      "text": "OTT",
+      "kind": "short",
+      "city": "Ottawa",
+      "country": "CA",
+      "admin1": "ON",
+      "geonames": 6094817
+    },
+    {
+      "text": "YOW",
+      "kind": "code",
+      "city": "Ottawa",
+      "country": "CA",
+      "admin1": "ON",
+      "geonames": 6094817,
+      "source": {
+        "title": "OurAirports: Ottawa Macdonald-Cartier International Airport (CYOW)",
+        "url": "https://ourairports.com/airports/CYOW/"
+      }
+    },
+    {
+      "text": "KW",
+      "kind": "short",
+      "city": "Kitchener",
+      "country": "CA",
+      "admin1": "ON",
+      "geonames": 5992996,
+      "reads_as": "city"
+    },
+    {
+      "text": "LDN",
+      "kind": "short",
+      "city": "London",
+      "country": "GB",
+      "admin1": "ENG",
+      "geonames": 2643743
+    },
+    {
+      "text": "LHR",
+      "kind": "code",
+      "city": "London",
+      "country": "GB",
+      "admin1": "ENG",
+      "geonames": 2643743,
+      "source": {
+        "title": "OurAirports: London Heathrow Airport (EGLL)",
+        "url": "https://ourairports.com/airports/EGLL/"
+      }
+    },
+    {
+      "text": "Gurgaon",
+      "kind": "former",
+      "city": "Gurugram",
+      "country": "IN",
+      "admin1": "HR",
+      "geonames": 1270642,
+      "until": "2016",
+      "source": {
+        "title": "Gurugram: name history",
+        "url": "https://en.wikipedia.org/wiki/Gurugram"
+      }
+    },
+    {
+      "text": "Bombay",
+      "kind": "former",
+      "city": "Mumbai",
+      "country": "IN",
+      "admin1": "MH",
+      "geonames": 1275339,
+      "until": "1995",
+      "source": {
+        "title": "Mumbai: name history",
+        "url": "https://en.wikipedia.org/wiki/Mumbai"
+      },
+      "notes": "renamed Mumbai in 1995"
+    },
+    {
+      "text": "Greater Mumbai",
+      "kind": "name",
+      "city": "Mumbai",
+      "country": "IN",
+      "admin1": "MH",
+      "geonames": 1275339,
+      "notes": "the municipal corporation's name (Brihanmumbai)"
+    },
+    {
+      "text": "BOM",
+      "kind": "code",
+      "city": "Mumbai",
+      "country": "IN",
+      "admin1": "MH",
+      "geonames": 1275339,
+      "source": {
+        "title": "OurAirports: Chhatrapati Shivaji Maharaj International Airport (VABB)",
+        "url": "https://ourairports.com/airports/VABB/"
+      }
+    },
+    {
+      "text": "Bangalore",
+      "kind": "former",
+      "city": "Bengaluru",
+      "country": "IN",
+      "admin1": "KA",
+      "geonames": 1277333,
+      "until": "2014",
+      "source": {
+        "title": "Bengaluru: name history",
+        "url": "https://en.wikipedia.org/wiki/Bengaluru"
+      },
+      "notes": "one of the twelve Karnataka renames of 1 November 2014"
+    },
+    {
+      "text": "Bengaluru",
+      "kind": "name",
+      "city": "Bengaluru",
+      "country": "IN",
+      "admin1": "KA",
+      "geonames": 1277333
+    },
+    {
+      "text": "BLR",
+      "kind": "code",
+      "city": "Bengaluru",
+      "country": "IN",
+      "admin1": "KA",
+      "geonames": 1277333,
+      "reads_as": "city",
+      "source": {
+        "title": "OurAirports: Kempegowda International Airport Bengaluru (VOBL)",
+        "url": "https://ourairports.com/airports/VOBL/"
+      }
+    },
+    {
+      "text": "Madras",
+      "kind": "former",
+      "city": "Chennai",
+      "country": "IN",
+      "admin1": "TN",
+      "geonames": 1264527,
+      "until": "1996",
+      "source": {
+        "title": "Chennai: name history",
+        "url": "https://en.wikipedia.org/wiki/Chennai"
+      },
+      "notes": "renamed Chennai in 1996"
+    },
+    {
+      "text": "MAA",
+      "kind": "code",
+      "city": "Chennai",
+      "country": "IN",
+      "admin1": "TN",
+      "geonames": 1264527,
+      "source": {
+        "title": "OurAirports: Chennai International Airport (VOMM)",
+        "url": "https://ourairports.com/airports/VOMM/"
+      }
+    },
+    {
+      "text": "Calcutta",
+      "kind": "former",
+      "city": "Kolkata",
+      "country": "IN",
+      "admin1": "WB",
+      "geonames": 1275004,
+      "until": "2001",
+      "source": {
+        "title": "Kolkata: name history",
+        "url": "https://en.wikipedia.org/wiki/Kolkata"
+      },
+      "notes": "renamed Kolkata on 1 January 2001"
+    },
+    {
+      "text": "CCU",
+      "kind": "code",
+      "city": "Kolkata",
+      "country": "IN",
+      "admin1": "WB",
+      "geonames": 1275004,
+      "source": {
+        "title": "OurAirports: Netaji Subhash Chandra Bose International Airport (VECC)",
+        "url": "https://ourairports.com/airports/VECC/"
+      }
+    },
+    {
+      "text": "DEL",
+      "kind": "code",
+      "city": "Delhi",
+      "country": "IN",
+      "admin1": "DL",
+      "geonames": 1273294,
+      "source": {
+        "title": "OurAirports: Indira Gandhi International Airport (VIDP)",
+        "url": "https://ourairports.com/airports/VIDP/"
+      }
+    },
+    {
+      "text": "HYD",
+      "kind": "code",
+      "city": "Hyderabad",
+      "country": "IN",
+      "admin1": "TS",
+      "geonames": 1269843,
+      "source": {
+        "title": "OurAirports: Rajiv Gandhi International Airport (VOHS)",
+        "url": "https://ourairports.com/airports/VOHS/"
+      }
+    },
+    {
+      "text": "Trivandrum",
+      "kind": "former",
+      "city": "Thiruvananthapuram",
+      "country": "IN",
+      "admin1": "KL",
+      "geonames": 1254163,
+      "until": "1991",
+      "source": {
+        "title": "Thiruvananthapuram: name history",
+        "url": "https://en.wikipedia.org/wiki/Thiruvananthapuram"
+      }
+    },
+    {
+      "text": "TRV",
+      "kind": "code",
+      "city": "Thiruvananthapuram",
+      "country": "IN",
+      "admin1": "KL",
+      "geonames": 1254163,
+      "source": {
+        "title": "OurAirports: Thiruvananthapuram International Airport (VOTV)",
+        "url": "https://ourairports.com/airports/VOTV/"
+      }
+    },
+    {
+      "text": "Cochin",
+      "kind": "former",
+      "city": "Kochi",
+      "country": "IN",
+      "admin1": "KL",
+      "geonames": 1273874,
+      "until": "1996",
+      "source": {
+        "title": "Kochi: name history",
+        "url": "https://en.wikipedia.org/wiki/Kochi"
+      }
+    },
+    {
+      "text": "COK",
+      "kind": "code",
+      "city": "Kochi",
+      "country": "IN",
+      "admin1": "KL",
+      "geonames": 1273874,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Cochin International Airport (VOCI)",
+        "url": "https://ourairports.com/airports/VOCI/"
+      }
+    },
+    {
+      "text": "Calicut",
+      "kind": "former",
+      "city": "Kozhikode",
+      "country": "IN",
+      "admin1": "KL",
+      "geonames": 1265873,
+      "source": {
+        "title": "Kozhikode: name history",
+        "url": "https://en.wikipedia.org/wiki/Kozhikode"
+      }
+    },
+    {
+      "text": "CCJ",
+      "kind": "code",
+      "city": "Kozhikode",
+      "country": "IN",
+      "admin1": "KL",
+      "geonames": 1265873,
+      "source": {
+        "title": "OurAirports: Calicut International Airport (VOCL)",
+        "url": "https://ourairports.com/airports/VOCL/"
+      }
+    },
+    {
+      "text": "Baroda",
+      "kind": "former",
+      "city": "Vadodara",
+      "country": "IN",
+      "admin1": "GJ",
+      "geonames": 1253573,
+      "until": "1974",
+      "source": {
+        "title": "Vadodara: name history",
+        "url": "https://en.wikipedia.org/wiki/Vadodara"
+      }
+    },
+    {
+      "text": "Poona",
+      "kind": "former",
+      "city": "Pune",
+      "country": "IN",
+      "admin1": "MH",
+      "geonames": 1259229,
+      "until": "1978",
+      "source": {
+        "title": "Pune: name history",
+        "url": "https://en.wikipedia.org/wiki/Pune"
+      }
+    },
+    {
+      "text": "PNQ",
+      "kind": "code",
+      "city": "Pune",
+      "country": "IN",
+      "admin1": "MH",
+      "geonames": 1259229,
+      "source": {
+        "title": "OurAirports: Pune International Airport (VAPO)",
+        "url": "https://ourairports.com/airports/VAPO/"
+      }
+    },
+    {
+      "text": "AMD",
+      "kind": "code",
+      "city": "Ahmedabad",
+      "country": "IN",
+      "admin1": "GJ",
+      "geonames": 1279233,
+      "source": {
+        "title": "OurAirports: Sardar Vallabh Patel International Airport (VAAH)",
+        "url": "https://ourairports.com/airports/VAAH/"
+      }
+    },
+    {
+      "text": "Benares",
+      "kind": "former",
+      "city": "Varanasi",
+      "country": "IN",
+      "admin1": "UP",
+      "geonames": 1253405,
+      "until": "1956",
+      "source": {
+        "title": "Varanasi: name history",
+        "url": "https://en.wikipedia.org/wiki/Varanasi"
+      }
+    },
+    {
+      "text": "Banaras",
+      "kind": "former",
+      "city": "Varanasi",
+      "country": "IN",
+      "admin1": "UP",
+      "geonames": 1253405,
+      "until": "1956",
+      "source": {
+        "title": "Varanasi: name history",
+        "url": "https://en.wikipedia.org/wiki/Varanasi"
+      }
+    },
+    {
+      "text": "Simla",
+      "kind": "former",
+      "city": "Shimla",
+      "country": "IN",
+      "admin1": "HP",
+      "geonames": 1256237,
+      "until": "1972",
+      "source": {
+        "title": "Shimla: name history",
+        "url": "https://en.wikipedia.org/wiki/Shimla"
+      }
+    },
+    {
+      "text": "Cawnpore",
+      "kind": "former",
+      "city": "Kanpur",
+      "country": "IN",
+      "admin1": "UP",
+      "geonames": 1267995,
+      "until": "1948",
+      "source": {
+        "title": "Kanpur: name history",
+        "url": "https://en.wikipedia.org/wiki/Kanpur"
+      }
+    },
+    {
+      "text": "Allahabad",
+      "kind": "former",
+      "city": "Prayagraj",
+      "country": "IN",
+      "admin1": "UP",
+      "geonames": 1278994,
+      "until": "2018",
+      "source": {
+        "title": "Prayagraj: name history",
+        "url": "https://en.wikipedia.org/wiki/Prayagraj"
+      }
+    },
+    {
+      "text": "Osmanabad",
+      "kind": "former",
+      "city": "Dharashiv",
+      "country": "IN",
+      "admin1": "MH",
+      "geonames": 1261012,
+      "until": "2023",
+      "source": {
+        "title": "Dharashiv: name history",
+        "url": "https://en.wikipedia.org/wiki/Dharashiv"
+      }
+    },
+    {
+      "text": "Ahmednagar",
+      "kind": "former",
+      "city": "Ahilyanagar",
+      "country": "IN",
+      "admin1": "MH",
+      "geonames": 1279228,
+      "until": "2024",
+      "source": {
+        "title": "Ahilyanagar: name history",
+        "url": "https://en.wikipedia.org/wiki/Ahilyanagar"
+      }
+    },
+    {
+      "text": "Hoshangabad",
+      "kind": "former",
+      "city": "Narmadapuram",
+      "country": "IN",
+      "admin1": "MP",
+      "geonames": 1269939,
+      "until": "2022",
+      "source": {
+        "title": "Narmadapuram: name history",
+        "url": "https://en.wikipedia.org/wiki/Narmadapuram"
+      }
+    },
+    {
+      "text": "Mysore",
+      "kind": "former",
+      "city": "Mysuru",
+      "country": "IN",
+      "admin1": "KA",
+      "geonames": 1262321,
+      "until": "2014",
+      "source": {
+        "title": "Mysuru: name history",
+        "url": "https://en.wikipedia.org/wiki/Mysuru"
+      }
+    },
+    {
+      "text": "Mangalore",
+      "kind": "former",
+      "city": "Mangaluru",
+      "country": "IN",
+      "admin1": "KA",
+      "geonames": 1263780,
+      "until": "2014",
+      "source": {
+        "title": "Mangaluru: name history",
+        "url": "https://en.wikipedia.org/wiki/Mangaluru"
+      }
+    },
+    {
+      "text": "IXE",
+      "kind": "code",
+      "city": "Mangaluru",
+      "country": "IN",
+      "admin1": "KA",
+      "geonames": 1263780,
+      "source": {
+        "title": "OurAirports: Mangaluru International Airport (VOML)",
+        "url": "https://ourairports.com/airports/VOML/"
+      }
+    },
+    {
+      "text": "Belgaum",
+      "kind": "former",
+      "city": "Belagavi",
+      "country": "IN",
+      "admin1": "KA",
+      "geonames": 1276533,
+      "until": "2014",
+      "source": {
+        "title": "Belagavi: name history",
+        "url": "https://en.wikipedia.org/wiki/Belagavi"
+      }
+    },
+    {
+      "text": "Gulbarga",
+      "kind": "former",
+      "city": "Kalaburagi",
+      "country": "IN",
+      "admin1": "KA",
+      "geonames": 1270752,
+      "until": "2014",
+      "source": {
+        "title": "Kalaburagi: name history",
+        "url": "https://en.wikipedia.org/wiki/Kalaburagi"
+      }
+    },
+    {
+      "text": "Hubli",
+      "kind": "former",
+      "city": "Hubballi",
+      "country": "IN",
+      "admin1": "KA",
+      "geonames": 1269920,
+      "until": "2014",
+      "source": {
+        "title": "Hubballi: name history",
+        "url": "https://en.wikipedia.org/wiki/Hubballi"
+      }
+    },
+    {
+      "text": "Bellary",
+      "kind": "former",
+      "city": "Ballari",
+      "country": "IN",
+      "admin1": "KA",
+      "geonames": 1276509,
+      "until": "2014",
+      "source": {
+        "title": "Ballari: name history",
+        "url": "https://en.wikipedia.org/wiki/Ballari"
+      }
+    },
+    {
+      "text": "Bijapur",
+      "kind": "former",
+      "city": "Vijayapura",
+      "country": "IN",
+      "admin1": "KA",
+      "geonames": 1275701,
+      "until": "2014",
+      "source": {
+        "title": "Vijayapura: name history",
+        "url": "https://en.wikipedia.org/wiki/Vijayapura"
+      }
+    },
+    {
+      "text": "Shimoga",
+      "kind": "former",
+      "city": "Shivamogga",
+      "country": "IN",
+      "admin1": "KA",
+      "geonames": 1256515,
+      "until": "2014",
+      "source": {
+        "title": "Shivamogga: name history",
+        "url": "https://en.wikipedia.org/wiki/Shivamogga"
+      }
+    },
+    {
+      "text": "Tumkur",
+      "kind": "former",
+      "city": "Tumakuru",
+      "country": "IN",
+      "admin1": "KA",
+      "geonames": 1254089,
+      "until": "2014",
+      "source": {
+        "title": "Tumakuru: name history",
+        "url": "https://en.wikipedia.org/wiki/Tumakuru"
+      }
+    },
+    {
+      "text": "Chikmagalur",
+      "kind": "former",
+      "city": "Chikkamagaluru",
+      "country": "IN",
+      "admin1": "KA",
+      "geonames": 1274220,
+      "until": "2014",
+      "source": {
+        "title": "Chikkamagaluru: name history",
+        "url": "https://en.wikipedia.org/wiki/Chikkamagaluru"
+      }
+    },
+    {
+      "text": "Hospet",
+      "kind": "former",
+      "city": "Hosapete",
+      "country": "IN",
+      "admin1": "KA",
+      "geonames": 1269935,
+      "until": "2014",
+      "source": {
+        "title": "Hosapete: name history",
+        "url": "https://en.wikipedia.org/wiki/Hosapete"
+      }
+    },
+    {
+      "text": "Pondicherry",
+      "kind": "former",
+      "city": "Puducherry",
+      "country": "IN",
+      "admin1": "PY",
+      "geonames": 1259425,
+      "until": "2006",
+      "source": {
+        "title": "Puducherry: name history",
+        "url": "https://en.wikipedia.org/wiki/Puducherry"
+      },
+      "notes": "the city (and the union territory) were renamed Puducherry in 2006"
+    },
+    {
+      "text": "Pondy",
+      "kind": "colloquial",
+      "city": "Puducherry",
+      "country": "IN",
+      "admin1": "PY",
+      "geonames": 1259425
+    },
+    {
+      "text": "Vizag",
+      "kind": "colloquial",
+      "city": "Visakhapatnam",
+      "country": "IN",
+      "admin1": "AP",
+      "geonames": 1253102
+    },
+    {
+      "text": "VTZ",
+      "kind": "code",
+      "city": "Visakhapatnam",
+      "country": "IN",
+      "admin1": "AP",
+      "geonames": 1253102,
+      "source": {
+        "title": "OurAirports: Alluri Sitarama Raju International Airport (Vizag) (VOVI)",
+        "url": "https://ourairports.com/airports/VOVI/"
+      }
+    },
+    {
+      "text": "Trichy",
+      "kind": "colloquial",
+      "city": "Tiruchirappalli",
+      "country": "IN",
+      "admin1": "TN",
+      "geonames": 1254388
+    },
+    {
+      "text": "Ooty",
+      "kind": "colloquial",
+      "city": "Udhagamandalam",
+      "country": "IN",
+      "admin1": "TN",
+      "geonames": 1253993
+    },
+    {
+      "text": "JAI",
+      "kind": "code",
+      "city": "Jaipur",
+      "country": "IN",
+      "admin1": "RJ",
+      "geonames": 1269515,
+      "source": {
+        "title": "OurAirports: Jaipur International Airport (VIJP)",
+        "url": "https://ourairports.com/airports/VIJP/"
+      }
+    },
+    {
+      "text": "LKO",
+      "kind": "code",
+      "city": "Lucknow",
+      "country": "IN",
+      "admin1": "UP",
+      "geonames": 1264733,
+      "source": {
+        "title": "OurAirports: Chaudhary Charan Singh International Airport (VILK)",
+        "url": "https://ourairports.com/airports/VILK/"
+      }
+    },
+    {
+      "text": "IXC",
+      "kind": "code",
+      "city": "Chandigarh",
+      "country": "IN",
+      "admin1": "CH",
+      "geonames": 1274746,
+      "source": {
+        "title": "OurAirports: Shaheed Bhagat Singh International Airport (VICG)",
+        "url": "https://ourairports.com/airports/VICG/"
+      }
+    },
+    {
+      "text": "IDR",
+      "kind": "code",
+      "city": "Indore",
+      "country": "IN",
+      "admin1": "MP",
+      "geonames": 1269743,
+      "source": {
+        "title": "OurAirports: Devi Ahilya Bai Holkar International Airport (VAID)",
+        "url": "https://ourairports.com/airports/VAID/"
+      }
+    },
+    {
+      "text": "NAG",
+      "kind": "code",
+      "city": "Nagpur",
+      "country": "IN",
+      "admin1": "MH",
+      "geonames": 1262180,
+      "source": {
+        "title": "OurAirports: Dr. Babasaheb Ambedkar International Airport (VANP)",
+        "url": "https://ourairports.com/airports/VANP/"
+      }
+    },
+    {
+      "text": "CJB",
+      "kind": "code",
+      "city": "Coimbatore",
+      "country": "IN",
+      "admin1": "TN",
+      "geonames": 1273865,
+      "source": {
+        "title": "OurAirports: Coimbatore International Airport (VOCB)",
+        "url": "https://ourairports.com/airports/VOCB/"
+      }
+    },
+    {
+      "text": "BBI",
+      "kind": "code",
+      "city": "Bhubaneswar",
+      "country": "IN",
+      "admin1": "OD",
+      "geonames": 1275817,
+      "source": {
+        "title": "OurAirports: Biju Patnaik International Airport (VEBS)",
+        "url": "https://ourairports.com/airports/VEBS/"
+      }
+    },
+    {
+      "text": "PAT",
+      "kind": "code",
+      "city": "Patna",
+      "country": "IN",
+      "admin1": "BR",
+      "geonames": 1260086,
+      "source": {
+        "title": "OurAirports: Jay Prakash Narayan Airport (VEPT)",
+        "url": "https://ourairports.com/airports/VEPT/"
+      }
+    },
+    {
+      "text": "GAU",
+      "kind": "code",
+      "city": "Guwahati",
+      "country": "IN",
+      "admin1": "AS",
+      "geonames": 1271476,
+      "source": {
+        "title": "OurAirports: Lokpriya Gopinath Bordoloi International Airport (VEGT)",
+        "url": "https://ourairports.com/airports/VEGT/"
+      }
+    },
+    {
+      "text": "HK",
+      "kind": "short",
+      "city": "Hong Kong",
+      "country": "HK",
+      "geonames": 1819729,
+      "reads_as": "city"
+    },
+    {
+      "text": "SG",
+      "kind": "short",
+      "city": "Singapore",
+      "country": "SG",
+      "geonames": 1880252,
+      "reads_as": "city"
+    },
+    {
+      "text": "SIN",
+      "kind": "code",
+      "city": "Singapore",
+      "country": "SG",
+      "geonames": 1880252,
+      "source": {
+        "title": "OurAirports: Singapore Changi Airport (WSSS)",
+        "url": "https://ourairports.com/airports/WSSS/"
+      }
+    },
+    {
+      "text": "Frankfurt",
+      "kind": "short",
+      "city": "Frankfurt am Main",
+      "country": "DE",
+      "geonames": 2925533,
+      "notes": "Frankfurt am Main, not Frankfurt (Oder)"
+    },
+    {
+      "text": "Cologne",
+      "kind": "exonym",
+      "city": "Cologne",
+      "country": "DE",
+      "geonames": 2886242
+    },
+    {
+      "text": "Zurich",
+      "kind": "name",
+      "city": "Zurich",
+      "country": "CH",
+      "geonames": 2657896
+    },
+    {
+      "text": "ZRH",
+      "kind": "code",
+      "city": "Zurich",
+      "country": "CH",
+      "geonames": 2657896,
+      "source": {
+        "title": "OurAirports: Zürich Airport (LSZH)",
+        "url": "https://ourairports.com/airports/LSZH/"
+      }
+    },
+    {
+      "text": "Saigon",
+      "kind": "former",
+      "city": "Ho Chi Minh City",
+      "country": "VN",
+      "geonames": 1566083,
+      "until": "1976",
+      "source": {
+        "title": "Ho Chi Minh City: name history",
+        "url": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City"
+      }
+    },
+    {
+      "text": "SGN",
+      "kind": "code",
+      "city": "Ho Chi Minh City",
+      "country": "VN",
+      "geonames": 1566083,
+      "source": {
+        "title": "OurAirports: Tan Son Nhat International Airport (VVTS)",
+        "url": "https://ourairports.com/airports/VVTS/"
+      }
+    },
+    {
+      "text": "Peking",
+      "kind": "former",
+      "city": "Beijing",
+      "country": "CN",
+      "geonames": 1816670,
+      "until": "1958",
+      "source": {
+        "title": "Beijing: name history",
+        "url": "https://en.wikipedia.org/wiki/Beijing"
+      }
+    },
+    {
+      "text": "Rangoon",
+      "kind": "former",
+      "city": "Yangon",
+      "country": "MM",
+      "geonames": 1298824,
+      "until": "1989",
+      "source": {
+        "title": "Yangon: name history",
+        "url": "https://en.wikipedia.org/wiki/Yangon"
+      }
+    },
+    {
+      "text": "Dacca",
+      "kind": "former",
+      "city": "Dhaka",
+      "country": "BD",
+      "geonames": 1185241,
+      "until": "1982",
+      "source": {
+        "title": "Dhaka: name history",
+        "url": "https://en.wikipedia.org/wiki/Dhaka"
+      }
+    },
+    {
+      "text": "Kiev",
+      "kind": "former",
+      "city": "Kyiv",
+      "country": "UA",
+      "geonames": 703448,
+      "until": "1995",
+      "source": {
+        "title": "Kyiv: name history",
+        "url": "https://en.wikipedia.org/wiki/Kyiv"
+      }
+    },
+    {
+      "text": "Leningrad",
+      "kind": "former",
+      "city": "Saint Petersburg",
+      "country": "RU",
+      "geonames": 498817,
+      "until": "1991",
+      "source": {
+        "title": "Saint Petersburg: name history",
+        "url": "https://en.wikipedia.org/wiki/Saint_Petersburg"
+      }
+    },
+    {
+      "text": "CDG",
+      "kind": "code",
+      "city": "Paris",
+      "country": "FR",
+      "geonames": 2988507,
+      "source": {
+        "title": "OurAirports: Charles de Gaulle International Airport (LFPG)",
+        "url": "https://ourairports.com/airports/LFPG/"
+      }
+    },
+    {
+      "text": "DXB",
+      "kind": "code",
+      "city": "Dubai",
+      "country": "AE",
+      "geonames": 292223,
+      "source": {
+        "title": "OurAirports: Dubai International Airport (OMDB)",
+        "url": "https://ourairports.com/airports/OMDB/"
+      }
+    },
+    {
+      "text": "AMS",
+      "kind": "code",
+      "city": "Amsterdam",
+      "country": "NL",
+      "geonames": 2759794,
+      "source": {
+        "title": "OurAirports: Amsterdam Airport Schiphol (EHAM)",
+        "url": "https://ourairports.com/airports/EHAM/"
+      }
+    },
+    {
+      "text": "NRT",
+      "kind": "code",
+      "city": "Tokyo",
+      "country": "JP",
+      "geonames": 1850147,
+      "source": {
+        "title": "OurAirports: Narita International Airport (RJAA)",
+        "url": "https://ourairports.com/airports/RJAA/"
+      }
+    },
+    {
+      "text": "ALA",
+      "kind": "code",
+      "city": "Almaty",
+      "country": "KZ",
+      "geonames": 1526384,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Almaty International Airport (UAAA)",
+        "url": "https://ourairports.com/airports/UAAA/"
+      }
+    },
+    {
+      "text": "BEL",
+      "kind": "code",
+      "city": "Belém",
+      "country": "BR",
+      "geonames": 3405870,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Val de Cans/Júlio Cezar Ribeiro International Airport (SBBE)",
+        "url": "https://ourairports.com/airports/SBBE/"
+      }
+    },
+    {
+      "text": "BEN",
+      "kind": "code",
+      "city": "Benghazi",
+      "country": "LY",
+      "geonames": 88319,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Benina International Airport (HLLB)",
+        "url": "https://ourairports.com/airports/HLLB/"
+      }
+    },
+    {
+      "text": "BES",
+      "kind": "code",
+      "city": "Brest",
+      "country": "FR",
+      "geonames": 3030300,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Brest Bretagne airport (LFRB)",
+        "url": "https://ourairports.com/airports/LFRB/"
+      }
+    },
+    {
+      "text": "BLZ",
+      "kind": "code",
+      "city": "Blantyre",
+      "country": "MW",
+      "geonames": 931755,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Chileka International Airport (FWCL)",
+        "url": "https://ourairports.com/airports/FWCL/"
+      }
+    },
+    {
+      "text": "BWA",
+      "kind": "code",
+      "city": "Siddharthanagar",
+      "country": "NP",
+      "geonames": 1283621,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Gautam Buddha International Airport (VNBW)",
+        "url": "https://ourairports.com/airports/VNBW/"
+      }
+    },
+    {
+      "text": "CAN",
+      "kind": "code",
+      "city": "Guangzhou",
+      "country": "CN",
+      "geonames": 1809858,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Guangzhou Baiyun International Airport (ZGGG)",
+        "url": "https://ourairports.com/airports/ZGGG/"
+      }
+    },
+    {
+      "text": "CCK",
+      "kind": "code",
+      "city": "West Island",
+      "country": "CC",
+      "geonames": 7304591,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Cocos (Keeling) Islands Airport (YPCC)",
+        "url": "https://ourairports.com/airports/YPCC/"
+      }
+    },
+    {
+      "text": "CXR",
+      "kind": "code",
+      "city": "Nha Trang",
+      "country": "VN",
+      "geonames": 1572151,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Cam Ranh International Airport / Cam Ranh Air Base (VVCR)",
+        "url": "https://ourairports.com/airports/VVCR/"
+      }
+    },
+    {
+      "text": "DZA",
+      "kind": "code",
+      "city": "Dzaoudzi",
+      "country": "YT",
+      "geonames": 921900,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Dzaoudzi Pamandzi International Airport (FMCZ)",
+        "url": "https://ourairports.com/airports/FMCZ/"
+      }
+    },
+    {
+      "text": "FRA",
+      "kind": "code",
+      "city": "Frankfurt am Main",
+      "country": "DE",
+      "geonames": 2925533,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Frankfurt Main Airport (EDDF)",
+        "url": "https://ourairports.com/airports/EDDF/"
+      }
+    },
+    {
+      "text": "GEO",
+      "kind": "code",
+      "city": "Georgetown",
+      "country": "GY",
+      "geonames": 3378644,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Cheddi Jagan International Airport (SYCJ)",
+        "url": "https://ourairports.com/airports/SYCJ/"
+      }
+    },
+    {
+      "text": "GIB",
+      "kind": "code",
+      "city": "Gibraltar",
+      "country": "GI",
+      "geonames": 2411585,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Gibraltar Airport (LXGB)",
+        "url": "https://ourairports.com/airports/LXGB/"
+      }
+    },
+    {
+      "text": "GUM",
+      "kind": "code",
+      "city": "Hagåtña",
+      "country": "GU",
+      "geonames": 4044012,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Antonio B. Won Pat International Airport (PGUM)",
+        "url": "https://ourairports.com/airports/PGUM/"
+      }
+    },
+    {
+      "text": "HKG",
+      "kind": "code",
+      "city": "Hong Kong",
+      "country": "HK",
+      "geonames": 1819729,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Hong Kong International Airport (VHHH)",
+        "url": "https://ourairports.com/airports/VHHH/"
+      }
+    },
+    {
+      "text": "HND",
+      "kind": "code",
+      "city": "Tokyo",
+      "country": "JP",
+      "geonames": 1850147,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Tokyo Haneda International Airport (RJTT)",
+        "url": "https://ourairports.com/airports/RJTT/"
+      }
+    },
+    {
+      "text": "HUN",
+      "kind": "code",
+      "city": "Hualien City",
+      "country": "TW",
+      "geonames": 1674504,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Hualien Chiashan Airport (RCYU)",
+        "url": "https://ourairports.com/airports/RCYU/"
+      }
+    },
+    {
+      "text": "ISL",
+      "kind": "code",
+      "city": "Istanbul",
+      "country": "TR",
+      "geonames": 745044,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: İstanbul Atatürk Airport (LTBA)",
+        "url": "https://ourairports.com/airports/LTBA/"
+      }
+    },
+    {
+      "text": "LAO",
+      "kind": "code",
+      "city": "Laoag",
+      "country": "PH",
+      "geonames": 1707404,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Laoag International Airport (RPLI)",
+        "url": "https://ourairports.com/airports/RPLI/"
+      }
+    },
+    {
+      "text": "LCA",
+      "kind": "code",
+      "city": "Larnaca",
+      "country": "CY",
+      "geonames": 146400,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Larnaca International Airport (LCLK)",
+        "url": "https://ourairports.com/airports/LCLK/"
+      }
+    },
+    {
+      "text": "LUX",
+      "kind": "code",
+      "city": "Luxembourg",
+      "country": "LU",
+      "geonames": 2960316,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Luxembourg-Findel International Airport (ELLX)",
+        "url": "https://ourairports.com/airports/ELLX/"
+      }
+    },
+    {
+      "text": "MAR",
+      "kind": "code",
+      "city": "Maracaibo",
+      "country": "VE",
+      "geonames": 3633009,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: La Chinita International Airport (SVMC)",
+        "url": "https://ourairports.com/airports/SVMC/"
+      }
+    },
+    {
+      "text": "MEX",
+      "kind": "code",
+      "city": "Mexico City",
+      "country": "MX",
+      "geonames": 3530597,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Mexico City Benito Juárez International Airport (MMMX)",
+        "url": "https://ourairports.com/airports/MMMX/"
+      }
+    },
+    {
+      "text": "NCL",
+      "kind": "code",
+      "city": "Newcastle upon Tyne",
+      "country": "GB",
+      "admin1": "ENG",
+      "geonames": 2641673,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Newcastle International Airport (EGNT)",
+        "url": "https://ourairports.com/airports/EGNT/"
+      }
+    },
+    {
+      "text": "PER",
+      "kind": "code",
+      "city": "Perth",
+      "country": "AU",
+      "geonames": 2063523,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Perth International Airport (YPPH)",
+        "url": "https://ourairports.com/airports/YPPH/"
+      }
+    },
+    {
+      "text": "REU",
+      "kind": "code",
+      "city": "Reus",
+      "country": "ES",
+      "geonames": 3111933,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Reus Airport (LERS)",
+        "url": "https://ourairports.com/airports/LERS/"
+      }
+    },
+    {
+      "text": "SXM",
+      "kind": "code",
+      "city": "Philipsburg",
+      "country": "SX",
+      "geonames": 3513392,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Princess Juliana International Airport (TNCM)",
+        "url": "https://ourairports.com/airports/TNCM/"
+      }
+    },
+    {
+      "text": "TLS",
+      "kind": "code",
+      "city": "Toulouse",
+      "country": "FR",
+      "geonames": 2972315,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Toulouse-Blagnac Airport (LFBO)",
+        "url": "https://ourairports.com/airports/LFBO/"
+      }
+    },
+    {
+      "text": "TUN",
+      "kind": "code",
+      "city": "Tunis",
+      "country": "TN",
+      "geonames": 2464470,
+      "reads_as": "code",
+      "source": {
+        "title": "OurAirports: Tunis Carthage International Airport (DTTA)",
+        "url": "https://ourairports.com/airports/DTTA/"
+      }
+    },
+    {
+      "text": "Zaire",
+      "kind": "former",
+      "country": "CD",
+      "until": "1997",
+      "source": {
+        "title": "Democratic Republic of the Congo: name history",
+        "url": "https://en.wikipedia.org/wiki/Democratic_Republic_of_the_Congo"
+      }
+    },
+    {
+      "text": "Ceylon",
+      "kind": "former",
+      "country": "LK",
+      "until": "1972",
+      "source": {
+        "title": "Sri Lanka: name history",
+        "url": "https://en.wikipedia.org/wiki/Sri_Lanka"
+      }
+    },
+    {
+      "text": "Siam",
+      "kind": "former",
+      "country": "TH",
+      "until": "1939",
+      "source": {
+        "title": "Thailand: name history",
+        "url": "https://en.wikipedia.org/wiki/Thailand"
+      }
+    },
+    {
+      "text": "Persia",
+      "kind": "former",
+      "country": "IR",
+      "until": "1935",
+      "source": {
+        "title": "Iran: name history",
+        "url": "https://en.wikipedia.org/wiki/Iran"
+      }
+    },
+    {
+      "text": "Upper Volta",
+      "kind": "former",
+      "country": "BF",
+      "until": "1984",
+      "source": {
+        "title": "Burkina Faso: name history",
+        "url": "https://en.wikipedia.org/wiki/Burkina_Faso"
+      }
+    },
+    {
+      "text": "East Pakistan",
+      "kind": "former",
+      "country": "BD",
+      "until": "1971",
+      "source": {
+        "title": "Bangladesh: name history",
+        "url": "https://en.wikipedia.org/wiki/Bangladesh"
+      }
+    },
+    {
+      "text": "Ernakulam",
+      "kind": "suppress",
+      "city": "Kochi",
+      "country": "IN",
+      "geonames": 1273874,
+      "notes": "a district and a part of the city, not another name for Kochi"
+    },
+    {
+      "text": "Fort Cochin",
+      "kind": "suppress",
+      "city": "Kochi",
+      "country": "IN",
+      "geonames": 1273874,
+      "notes": "a neighbourhood of Kochi, not another name for it"
+    },
+    {
+      "text": "Sealdah",
+      "kind": "suppress",
+      "city": "Kolkata",
+      "country": "IN",
+      "geonames": 1275004,
+      "notes": "a neighbourhood and railway station of Kolkata, not another name for it"
+    }
+  ]
+}

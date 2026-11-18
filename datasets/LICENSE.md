@@ -1,6 +1,6 @@
 # Licence of the curated datasets
 
-The datasets in this folder (`regions/`, `cities/`, `country_groups/`, `timezones/` and any added later) are
+The datasets in this folder (`regions/`, `names/`, `airports/`, `country_groups/`, `timezones/` and any added later) are
 curated by the placewise project and licensed under the
 [Creative Commons Attribution 4.0 International licence (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 The placewise code is under its own licence; this notice covers the data in `datasets/` and the

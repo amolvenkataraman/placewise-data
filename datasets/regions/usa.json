@@ -1,5 +1,5 @@
 {
-  "_comment": "Metro and vernacular regions of United States: a curated dataset (CC BY 4.0, see datasets/LICENSE.md). packbuild.regions turns it into src/placewise/constants/countries/regions.py for location search (python -m packbuild.regions), and packbuild.regions_layer into the country pack's `regions` polygon layer. Fields: id (stable, region:<slug>), short_name (what a parsed place's `region` holds), name, country (ISO 3166-1 alpha-2), admin1 (every subdivision the region reaches into, by its ISO 3166-2 suffix), aliases, kind (metro: a statistical metro area; official-planning: an area a public body plans or governs as one; vernacular: a name in common use, drawn with official units), members (the official units whose union is the region, as ids in the country pack: census:<county GEOID>, statcan:<CDUID, CSDUID or CMAPUID>, pin:<PIN code>; the pack build fails if one is missing), districts (India only: the districts the definition names, as the India Post directory spells them; members are exactly the PIN areas filed under them), definition (title and url of the source that defines the region), search_as (optional: location search reads this region's names as that region, and has no entry for it), principal_cities (well-known member cities and their admin1, so a parsed city can be placed in the region offline), city_aliases (other names of member cities -> the name placewise prefers) and notes (why the region is drawn as it is).",
+  "_comment": "Metro and vernacular regions of United States: a curated dataset (CC BY 4.0, see datasets/LICENSE.md). packbuild.regions turns it into src/placewise/constants/countries/regions.py for location search (python -m packbuild.regions), and packbuild.regions_layer into the country pack's `regions` polygon layer. Fields: id (stable, region:<slug>), short_name (what a parsed place's `region` holds), name, country (ISO 3166-1 alpha-2), admin1 (every subdivision the region reaches into, by its ISO 3166-2 suffix), aliases, kind (metro: a statistical metro area; official-planning: an area a public body plans or governs as one; vernacular: a name in common use, drawn with official units), members (the official units whose union is the region, as ids in the country pack: census:<county GEOID>, statcan:<CDUID, CSDUID or CMAPUID>, pin:<PIN code>; the pack build fails if one is missing), districts (India only: the districts the definition names, as the India Post directory spells them; members are exactly the PIN areas filed under them), definition (title and url of the source that defines the region), search_as (optional: location search reads this region's names as that region, and has no entry for it), principal_cities (well-known member cities and their admin1, so a parsed city can be placed in the region offline), city_aliases (optional, kept for compatibility: other names of member cities -> the name placewise prefers; city aliases belong in datasets/names/aliases.json) and notes (why the region is drawn as it is).",
   "regions": [
     {
       "id": "region:sf-bay-area",
@@ -69,14 +69,6 @@
         "Napa": "CA",
         "Santa Rosa": "CA"
       },
-      "city_aliases": {
-        "SF": "San Francisco",
-        "South SF": "South San Francisco",
-        "SFO": "San Francisco",
-        "SSF": "South San Francisco",
-        "SJ": "San Jose",
-        "SJC": "San Jose"
-      },
       "notes": "The nine counties ABAG and MTC plan for: Alameda, Contra Costa, Marin, Napa, San Francisco, San Mateo, Santa Clara, Solano and Sonoma. Silicon Valley, its southern part, is read as the Bay Area by location search; it has no county-based outline (it would be a hand-drawn shape)."
     },
     {
@@ -120,10 +112,6 @@
         "Costa Mesa": "CA",
         "Newport Beach": "CA",
         "Huntington Beach": "CA"
-      },
-      "city_aliases": {
-        "LA": "Los Angeles",
-        "LAX": "Los Angeles"
       },
       "notes": "The Los Angeles-Long Beach-Anaheim MSA: Los Angeles and Orange counties, California. The wider Los Angeles CSA (348) adds Riverside, San Bernardino and Ventura counties."
     },
@@ -204,13 +192,6 @@
         "Stamford": "CT",
         "Greenwich": "CT"
       },
-      "city_aliases": {
-        "NYC": "New York City",
-        "New York City": "New York City",
-        "New York": "New York City",
-        "NY City": "New York City",
-        "NY": "New York City"
-      },
       "notes": "The New York-Newark CSA (the Tri-State Area): New York City, Long Island and the Hudson Valley, northern New Jersey, southwestern Connecticut and Pike County, Pennsylvania."
     },
     {
@@ -260,9 +241,6 @@
         "Watertown": "MA",
         "Lexington": "MA"
       },
-      "city_aliases": {
-        "BOS": "Boston"
-      },
       "notes": "The Boston-Cambridge-Newton MSA, which reaches into Rockingham and Strafford counties, New Hampshire. Nashua (Hillsborough County) is in the Boston CSA but not the MSA, so it is not a principal city here."
     },
     {
@@ -306,9 +284,6 @@
         "Lynnwood": "WA",
         "Woodinville": "WA",
         "Federal Way": "WA"
-      },
-      "city_aliases": {
-        "SEA": "Seattle"
       },
       "notes": "The Seattle-Tacoma-Bellevue MSA around Puget Sound, Washington: King, Pierce and Snohomish counties."
     },
@@ -406,9 +381,6 @@
         "Katy": "TX",
         "Pearland": "TX"
       },
-      "city_aliases": {
-        "HOU": "Houston"
-      },
       "notes": "The Houston-Pasadena-The Woodlands MSA, Texas."
     },
     {
@@ -478,9 +450,6 @@
         "Gaithersburg": "MD",
         "College Park": "MD"
       },
-      "city_aliases": {
-        "DC": "Washington"
-      },
       "notes": "The Washington-Arlington-Alexandria MSA: DC, Maryland and Virginia (with its independent cities), as people say it, and Jefferson County, West Virginia."
     },
     {
@@ -525,10 +494,6 @@
         "Camden": "NJ",
         "Cherry Hill": "NJ",
         "Wilmington": "DE"
-      },
-      "city_aliases": {
-        "Philly": "Philadelphia",
-        "PHL": "Philadelphia"
       },
       "notes": "The Philadelphia-Camden-Wilmington MSA (the Delaware Valley): parts of Pennsylvania, New Jersey, Delaware and Cecil County, Maryland."
     },
@@ -582,9 +547,6 @@
         "Gary": "IN",
         "Hammond": "IN",
         "Kenosha": "WI"
-      },
-      "city_aliases": {
-        "CHI": "Chicago"
       },
       "notes": "The Chicago-Naperville-Elgin MSA (Illinois and northwest Indiana) plus Kenosha County, Wisconsin, which was in the MSA until the 2023 delineation made it a metro of its own; it stays in the Chicago CSA."
     },
@@ -648,9 +610,6 @@
         "Norcross": "GA",
         "Duluth": "GA"
       },
-      "city_aliases": {
-        "ATL": "Atlanta"
-      },
       "notes": "The Atlanta-Sandy Springs-Roswell MSA, Georgia (29 counties)."
     },
     {
@@ -701,10 +660,6 @@
         "Eagan": "MN",
         "Maple Grove": "MN"
       },
-      "city_aliases": {
-        "MPLS": "Minneapolis",
-        "MSP": "Minneapolis"
-      },
       "notes": "The Minneapolis-St. Paul-Bloomington MSA, which takes in Pierce and St. Croix counties, Wisconsin."
     },
     {
@@ -747,9 +702,6 @@
         "Cary": "NC",
         "Morrisville": "NC",
         "Apex": "NC"
-      },
-      "city_aliases": {
-        "RDU": "Raleigh"
       },
       "notes": "The Raleigh-Durham-Cary CSA, North Carolina: the Raleigh-Cary and Durham-Chapel Hill metros around Research Triangle Park, with their neighbouring micropolitan areas."
     },
