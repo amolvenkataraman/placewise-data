@@ -1329,6 +1329,47 @@
         "title": "Katni Municipal Corporation (Murwara)",
         "url": "https://en.wikipedia.org/wiki/Katni"
       }
+    },
+    {
+      "lgd": "ulb:253094",
+      "name": "Puducherry",
+      "lgd_name": "Pondicherry",
+      "former": [
+        {
+          "name": "Pondicherry",
+          "until": "2006"
+        }
+      ],
+      "source": {
+        "title": "The Pondicherry (Alteration of Name) Act, 2006 (LGD still lists the municipality as Pondicherry)",
+        "url": "https://en.wikipedia.org/wiki/Puducherry"
+      }
+    },
+    {
+      "lgd": "ulb:274823",
+      "name": "Greater Noida",
+      "lgd_name": "Gnida",
+      "aliases": [
+        "Greater Noida Industrial Development Authority",
+        "GNIDA"
+      ],
+      "source": {
+        "title": "Greater Noida Industrial Development Authority (LGD: Gnida)",
+        "url": "https://en.wikipedia.org/wiki/Greater_Noida"
+      }
+    },
+    {
+      "lgd": "ulb:274822",
+      "name": "Yamuna Expressway",
+      "lgd_name": "Yeida",
+      "aliases": [
+        "Yamuna Expressway Industrial Development Authority",
+        "YEIDA"
+      ],
+      "source": {
+        "title": "Yamuna Expressway Industrial Development Authority (LGD: Yeida)",
+        "url": "https://en.wikipedia.org/wiki/Yamuna_Expressway_Industrial_Development_Authority"
+      }
     }
   ],
   "cities": [
@@ -1472,6 +1513,120 @@
         "url": "https://en.wikipedia.org/wiki/Municipal_Corporation_of_Delhi"
       },
       "notes": "One city with the id of LGD's South Delhi Municipal Corporation, the first listed."
+    },
+    {
+      "id": "lgd:ulb:301210",
+      "name": "Noida",
+      "official_name": "New Okhla Industrial Development Authority",
+      "state": "UP",
+      "lgd": [
+        "301210"
+      ],
+      "aliases": [
+        "New Okhla Industrial Development Authority",
+        "NOIDA"
+      ],
+      "pincodes": [
+        "201301",
+        "201303",
+        "201304",
+        "201305",
+        "201307",
+        "201309",
+        "201313",
+        "201316"
+      ],
+      "source": {
+        "title": "Noida is governed by the New Okhla Industrial Development Authority (LGD local body 301210, whose PIN table is empty; LGD lists Noida's head office PIN code under Greater Noida's authority)",
+        "url": "https://en.wikipedia.org/wiki/Noida"
+      },
+      "notes": "Drawn as the India Post PIN areas named after Noida's sectors and its head office (Noida H.O 201301, Sec37 201303, Maharshi Nagar 201304, NEPZ 201305, Sec34 201307, Sec62 201309, Amity University 201313, Sec 122 201316); Greater Noida's (201306, 201308, 201310, 201318 ...) are left to its own authority."
+    },
+    {
+      "id": "lgd:ulb:251472",
+      "name": "Navi Mumbai",
+      "official_name": "Navi Mumbai Municipal Corporation",
+      "state": "MH",
+      "lgd": [
+        "251472"
+      ],
+      "aliases": [
+        "Navi Mumbai Municipal Corporation",
+        "NMMC",
+        "New Bombay"
+      ],
+      "pincodes": [
+        "400614",
+        "400701",
+        "400703",
+        "400705",
+        "400706",
+        "400708",
+        "400709",
+        "400710"
+      ],
+      "source": {
+        "title": "Navi Mumbai Municipal Corporation (LGD local body 251472; LGD's PIN table lists only 400614)",
+        "url": "https://en.wikipedia.org/wiki/Navi_Mumbai_Municipal_Corporation"
+      },
+      "notes": "Drawn as the PIN areas of the corporation's nodes in Thane district (Belapur/Konkan Bhavan 400614, Ghansoli 400701, Vashi 400703, Sanpada 400705, Nerul 400706, Airoli 400708, Kopar Khairane 400709, Millennium Business Park 400710); the CIDCO nodes in Raigad (Kharghar, Panvel, Uran) are outside the corporation."
+    },
+    {
+      "id": "lgd:ulb:252220",
+      "name": "Kochi",
+      "official_name": "Kochi Municipal Corporation",
+      "state": "KL",
+      "lgd": [
+        "252220"
+      ],
+      "former": [
+        {
+          "name": "Cochin",
+          "until": "1996"
+        }
+      ],
+      "aliases": [
+        "Cochin",
+        "Ernakulam",
+        "Kochi Municipal Corporation"
+      ],
+      "pincodes": [
+        "682001",
+        "682002",
+        "682003",
+        "682004",
+        "682005",
+        "682006",
+        "682009",
+        "682010",
+        "682011",
+        "682012",
+        "682013",
+        "682015",
+        "682016",
+        "682017",
+        "682018",
+        "682019",
+        "682020",
+        "682023",
+        "682024",
+        "682025",
+        "682026",
+        "682028",
+        "682029",
+        "682031",
+        "682032",
+        "682033",
+        "682035",
+        "682036",
+        "682038",
+        "682041"
+      ],
+      "source": {
+        "title": "Kochi Municipal Corporation (LGD local body 252220; LGD's PIN table gives it only 682001, which it lists for every corporation of Kerala)",
+        "url": "https://en.wikipedia.org/wiki/Kochi_Municipal_Corporation"
+      },
+      "notes": "Drawn as the PIN areas of the corporation's divisions: Fort Kochi, Mattancherry, Willingdon Island, Thoppumpady, Palluruthy, Edakochi, Ernakulam, Kaloor, Vyttila, Kadavanthra, Edappally, Palarivattom, Elamakkara, Vaduthala, Vennala, Poonithura, Ponekkara and the rest of 6820xx; the neighbouring municipalities and panchayats (Thrikkakara, Kakkanad, Kalamassery, Maradu, Cheranallur, Kumbalangi) are left out."
     }
   ],
   "not_neighbourhoods": [
@@ -1509,6 +1664,13 @@
     "NSH",
     "Speed Post",
     "Courts",
-    "Collectorate"
+    "Collectorate",
+    "Court",
+    "Bhawan",
+    "Bhavan",
+    "Building",
+    "Collectoriate",
+    "Caves",
+    "Treasury"
   ]
 }
