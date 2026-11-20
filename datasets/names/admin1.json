@@ -1,0 +1,10 @@
+{
+  "_comment": "English names of first-level subdivisions where Natural Earth's name_en is wrong or misleading: a curated dataset (CC BY 4.0, see datasets/LICENSE.md). packbuild's world pack takes each admin-1 unit's name from here, else Natural Earth's name_en (unless another unit of the same country has the same name_en, or it is the country's own name: then Natural Earth's name), else its name. Fields: id (the world pack's admin1 id, iso:<ISO 3166-2 code>); name (the English name placewise shows); ne_name_en (Natural Earth's name_en, for reading); notes.",
+  "names": [
+    {"id": "iso:MX-DIF", "name": "Mexico City", "ne_name_en": "Mexico", "notes": "the Federal District became Mexico City (Ciudad de México) in 2016"},
+    {"id": "iso:BR-DF", "name": "Federal District", "ne_name_en": "Federal", "notes": "Distrito Federal, Brasília's district"},
+    {"id": "iso:FR-64", "name": "Pyrénées-Atlantiques", "ne_name_en": "Pyrenees-Atlantics", "notes": "a French department's name is used as is in English"},
+    {"id": "iso:IT-BZ", "name": "South Tyrol", "ne_name_en": "Trentino-South Tyrol", "notes": "the province of Bolzano, not its region (Trentino-Alto Adige)"},
+    {"id": "iso:DK-84", "name": "Capital Region of Denmark", "ne_name_en": "Denmark", "notes": "Region Hovedstaden"}
+  ]
+}
